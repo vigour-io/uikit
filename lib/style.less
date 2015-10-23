@@ -1,9 +1,20 @@
 @margin: 7px;
 
+/* reset: */
 .app {
   font-family: Avenir-Book;
   margin: 0;
   padding: 0;
+}
+
+.ui-textarea {
+  border: none;
+  resize: none;
+  overflow: auto;
+  outline: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
 }
 
 .ui-button {
@@ -31,17 +42,42 @@
   // line-height: 13px;
 }
 
-.ui-input {
-  /* bg: */
-  textarea {
-    border: none;
-    resize: none;
-    overflow: auto;
-    outline: none;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
+.ui-badge {
+  // padding: @margin;
+  // line-height:30px;
+  font-family: Avenir-Book;
+  font-size: 13px;
+  color: #1D1D26;
+  letter-spacing: 0.86px;
+  border: 1px solid #eee;
+  display: inline-block;
+  .label {
+    border-right: 1px solid #eee;
+    background-color: #eee;
   }
+  * {
+    display: inline-block;
+    padding: @margin;
+  }
+
+  &.input {
+    .message {
+      .ui-textarea;
+      // border: 1px solid red;
+      overflow:hidden;
+      height:13px;
+      padding-top: 0px;
+      padding-bottom: 0px;
+      padding-right:0px;
+      font-family: inherit;
+      font-size: inherit;
+      color: inherit;
+      letter-spacing: inherit;
+    }
+  }
+}
+
+.ui-input {
   text-align: left;
   .label {
     text-transform: capitalize;
@@ -55,6 +91,7 @@
     letter-spacing: 0.86px;
   }
   .input {
+    .ui-textarea;
     width: 100%;
     height:20px;
     // border:1px solid red;
