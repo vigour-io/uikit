@@ -33,8 +33,17 @@
     "url": "https://github.com/vigour-io/hub/issues"
   },
   "dependencies": {
+    "babel-core": "^6.0.14",
+    "babel-loader": "^6.0.0",
+    "babel-preset-es2015": "^6.0.14",
+    "css-loader": "^0.21.0",
     "element": "git+ssh://git@github.com:vigour-io/element.git#develop",
-    "vjs": "git+ssh://git@github.com:vigour-io/vjs.git#develop"
+    "extract-text-webpack-plugin": "^0.8.2",
+    "less": "^2.5.3",
+    "less-loader": "^2.2.1",
+    "style-loader": "^0.13.0",
+    "vjs": "git+ssh://git@github.com:vigour-io/vjs.git#develop",
+    "webpack": "^1.12.2"
   },
   "homepage": "https://github.com/vigour-io/hub#readme",
   "vigour": {
