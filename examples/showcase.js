@@ -1,19 +1,25 @@
-'use strict'
+// 'use strict'
 
-require('./style.less')
+// require('./style.less')
 
-var Element = require('element')
+// var Element = require('element')
 
-var app = new Element({
-  node: document.body
-})
+// Element.prototype.inject(
+//   require('element/lib/property/text'),
+//   require('element/lib/property/transform'),
+//   require('element/lib/property/css'),
+//   require('element/lib/property/attributes')
+// )
 
-var uikit = require('../lib')
+// var app = new Element({
+//   node: document.body
+// })
 
-app.set({
-  input: new uikit.Input(),
-  badge: new uikit.Badge({
-    label: { text: 'label' },
-    message: { text: 'messge' }
-  })
-})
+// var uikit = require('../lib')
+
+// app.set({
+//   asd: new Element({
+//     text: 'test',
+//     css: 'test'
+//   })
+// })

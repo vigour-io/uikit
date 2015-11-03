@@ -11,8 +11,5 @@ var app = new Element({
 var uikit = require('~/lib')
 
 app.set({
-  header: new Element({
-    node: 'header',
-    text: 'header'
-  })
+  header: require('./components/header')
 })
