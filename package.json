@@ -34,6 +34,7 @@
   },
   "dependencies": {
     "element": "git+ssh://git@github.com:vigour-io/element.git#develop",
+    "vigour-scratch": "git+ssh://git@github.com:vigour-io/scratch.git#master",
     "vjs": "git+ssh://git@github.com:vigour-io/vjs.git#develop"
   },
   "homepage": "https://github.com/vigour-io/hub#readme",
