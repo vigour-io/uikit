@@ -2,13 +2,25 @@ header.header {
   &:before {
     content: "";
     display: block;
-    height: 8px;
+    height: 100px;
     background: @primary;
+    .absolute(-50px, -65px);
+    width: calc(100% + 50px);
+    z-index: 0;
+    .rotate(-3.5deg);
   }
 
   > .logo {
-    color: @primary;
-    font-size: @h1;
+    color: @primary-contrast;
+    font-size: 3.5vw;
     margin: 1rem;
+    position: relative;
+
+    .title {
+      display: inline-block;
+      vertical-align: middle;
+      font-size: .7em;
+      font-family: @font-family-sans-serif;
+    }
   }
 }

@@ -17,6 +17,10 @@ logo.set({
   node: 'a',
   attributes: {
     href: ''
+  },
+  title: {
+    text: 'UIKit',
+    node: 'span'
   }
 })
 
