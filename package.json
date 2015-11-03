@@ -1,5 +1,5 @@
 {
-  "name": "uikit",
+  "name": "vigour-uikit",
   "version": "0.0.1",
   "description": "uikit containing basic ui elements",
   "engines": {
@@ -21,6 +21,11 @@
     "websocket",
     "xhr"
   ],
+  "contributors": [
+    "Jim de Beer <jim@vigour.io>",
+    "Nika Tomadze <nika@vigour.io>",
+    "Shawn Inder <shawn@vigour.io"
+  ],
   "gaston": {
     "source-maps": false,
     "less-options": {
@@ -33,9 +38,9 @@
     "url": "https://github.com/vigour-io/hub/issues"
   },
   "dependencies": {
-    "element": "git+ssh://git@github.com:vigour-io/element.git#develop",
-    "vigour-scratch": "git+ssh://git@github.com:vigour-io/scratch.git",
-    "vjs": "git+ssh://git@github.com:vigour-io/vjs.git#develop"
+    "vigour-element": "0.0.3",
+    "vigour-js": "^0.2.2",
+    "vigour-scratch": "git+ssh://git@github.com:vigour-io/scratch.git"
   },
   "homepage": "https://github.com/vigour-io/hub#readme",
   "vigour": {
