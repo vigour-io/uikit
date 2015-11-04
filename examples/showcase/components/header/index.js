@@ -2,14 +2,14 @@
 
 require('./style.less')
 
-var Element = require('element')
+var Element = require('vigour-element')
 var Icon = require('~/lib/icon')
 
 Element.prototype.inject(
-  require('element/lib/property/text'),
-  require('element/lib/property/transform'),
-  require('element/lib/property/css'),
-  require('element/lib/property/attributes')
+  require('vigour-element/lib/property/text'),
+  require('vigour-element/lib/property/transform'),
+  require('vigour-element/lib/property/css'),
+  require('vigour-element/lib/property/attributes')
 )
 
 var logo = new Icon('vigour')
