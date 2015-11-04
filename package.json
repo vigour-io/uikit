@@ -40,7 +40,7 @@
   "dependencies": {
     "vigour-element": "0.0.3",
     "vigour-js": "^0.2.2",
-    "vigour-scratch": "git+ssh://git@github.com:vigour-io/scratch.git"
+    "vigour-scratch": "^1.1.2"
   },
   "homepage": "https://github.com/vigour-io/hub#readme",
   "vigour": {
