@@ -4,22 +4,33 @@ header.header {
     display: block;
     height: 100px;
     background: @primary;
-    .absolute(-50px, -65px);
-    width: calc(100% + 50px);
+    .absolute(-50px, -75px);
+    width: calc(100% - 200px);
     z-index: 0;
     .rotate(-3.5deg);
   }
 
+  &:after {
+    content: "";
+    display: block;
+    height: 160px;
+    background: @whitegray;
+    .absolute(-50px, -65px);
+    width: calc(100% + 80px);
+    z-index: -1;
+    .rotate(3.5deg);
+  }
+
   > .logo {
     color: @primary-contrast;
-    font-size: 3.5vw;
+    font-size: @h1;
     margin: 1rem;
     position: relative;
 
     .title {
       display: inline-block;
       vertical-align: middle;
-      font-size: .7em;
+      font-size: @h3;
       font-family: @font-family-sans-serif;
     }
   }
