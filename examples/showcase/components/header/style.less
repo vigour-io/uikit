@@ -1,11 +1,13 @@
 header.header {
+  height: 52px;
+
   &:before {
     content: "";
     display: block;
-    height: 100px;
+    height: 105px;
     background: @primary;
     .absolute(-50px, -75px);
-    width: calc(100% - 200px);
+    width: @container-tiny;
     z-index: 0;
     .rotate(-3.5deg);
   }
@@ -15,8 +17,8 @@ header.header {
     display: block;
     height: 160px;
     background: @whitegray;
-    .absolute(-50px, -65px);
-    width: calc(100% + 80px);
+    .absolute(-50px, -75px);
+    width: @container-medium;
     z-index: -1;
     .rotate(3.5deg);
   }
@@ -24,7 +26,7 @@ header.header {
   > .logo {
     color: @primary-contrast;
     font-size: @h1;
-    margin: 1rem;
+    padding: 1rem;
     position: relative;
 
     .title {
@@ -33,5 +35,15 @@ header.header {
       font-size: @h3;
       font-family: @font-family-sans-serif;
     }
+  }
+
+  > .hamburger {
+    background: @grayscale;
+    .size(20px, 3px);
+    .radius(@radius);
+    float: right;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 2rem;
   }
 }
