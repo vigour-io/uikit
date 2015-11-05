@@ -1,5 +1,41 @@
+  @hamburger-size: @icon-size;
+
+  @hamburger-width: 1em;
+  @hamburger-height: 0.15em;
+  @hamburger-gap: 0.25em;
+
 .@{icon-prefix} {
   &.vigour:before {
     content: "\e900";
+  }
+
+
+  &.hamburger {
+    position: relative;
+    cursor: pointer;
+    font-size: @hamburger-size;
+
+    &:after,
+    &:before {
+      content: "";
+      position: absolute;
+    }
+
+    &,
+    &:after,
+    &:before {
+      background: @grayscale-lighten;
+      .size(@hamburger-width, @hamburger-height);
+      .radius(@radius-big);
+      display: block;
+    }
+
+    &:before {
+      top: -@hamburger-gap;
+    }
+
+    &:after {
+      top: @hamburger-gap;
+    }
   }
 }

@@ -27,7 +27,5 @@ logo.set({
 module.exports = exports = new Element({
   node: 'header',
   logo: logo,
-  hamburger: new Element({
-    node: 'i'
-  })
+  hamburger: new Icon('hamburger')
 })
