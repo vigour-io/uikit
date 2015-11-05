@@ -2,7 +2,7 @@
 
 require('./style.less')
 
-var Element = require('element')
+var Element = require('vigour-element')
 
 var app = new Element({
   node: document.body
