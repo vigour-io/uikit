@@ -7,7 +7,7 @@ header.header {
     height: 105px;
     background: @primary;
     .absolute(-50px, -75px);
-    width: @container-tiny;
+    width: 100%;
     z-index: 0;
     .rotate(-3.5deg);
   }
@@ -18,7 +18,7 @@ header.header {
     height: 160px;
     background: @whitegray;
     .absolute(-50px, -75px);
-    width: @container-medium;
+    width: calc(100% + 200px);
     z-index: -1;
     .rotate(3.5deg);
   }
@@ -26,7 +26,7 @@ header.header {
   > .logo {
     color: @primary-contrast;
     font-size: @h1;
-    padding: 1rem;
+    padding: 1%;
     position: relative;
 
     .title {
@@ -39,7 +39,7 @@ header.header {
 
   > .hamburger {
     float: right;
-    margin: 2.4rem 2rem;
+    margin: 2.4% 2%;
     font-size: 20px;
   }
 }
