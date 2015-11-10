@@ -6,6 +6,10 @@ var Observable = require('vigour-js/lib/observable')
 var Element = require('vigour-element')
 var ui = require('~/lib')
 
+Observable.prototype.inject(require('vigour-js/lib/operator/add'))
+Observable.prototype.inject(require('vigour-js/lib/operator/subscribe'))
+Observable.prototype.inject(require('vigour-js/lib/operator/transform'))
+
 const BASE_FONT_SIZE = 10
 const HEADER_TEXT = 'The quick brown fox jumps over the lazy dog.'
 
@@ -36,8 +40,14 @@ module.exports = exports = new Element({
   node: 'section',
   sansSerif: {
     family: {
-      title: "Sans Serif",
-      list: new ui.List('a')
+      list: new ui.List({
+        $: '.../listitems'
+      })
+    },
+    anotherlist: {
+      list: new ui.List({
+        $: '.../listitems'
+      })
     },
     headers: new Headers({}),
     weight: {
@@ -48,7 +58,9 @@ module.exports = exports = new Element({
         },
         example: {
           css: 'ui-h2 ui-slim',
-          text: 'The'
+          text: {
+            $: 'upward.defaultText'
+          }
         }
       },
       light: {
@@ -57,7 +69,9 @@ module.exports = exports = new Element({
         },
         example: {
           css: 'ui-h2 ui-light',
-          text: 'The'
+          text: {
+            $: 'upward.defaultText'
+          }
         }
       },
       regular: {
@@ -66,7 +80,9 @@ module.exports = exports = new Element({
         },
         example: {
           css: 'ui-h2 ui-regular',
-          text: 'The'
+          text: {
+            $: 'upward.defaultText'
+          }
         }
       },
       semibold: {
@@ -75,7 +91,9 @@ module.exports = exports = new Element({
         },
         example: {
           css: 'ui-h2 ui-semibold',
-          text: 'The'
+          text: {
+            $: 'upward.defaultText'
+          }
         }
       },
       bold: {
@@ -84,7 +102,9 @@ module.exports = exports = new Element({
         },
         example: {
           css: 'ui-h2 ui-bold',
-          text: 'The'
+          text: {
+            $: 'upward.defaultText'
+          }
         }
       },
       extrabold: {
@@ -93,7 +113,9 @@ module.exports = exports = new Element({
         },
         example: {
           css: 'ui-h2 ui-extrabold',
-          text: 'The'
+          text: {
+            $: 'upward.defaultText'
+          }
         }
       }
     },
