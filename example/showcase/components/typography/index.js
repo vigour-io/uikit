@@ -128,11 +128,8 @@ module.exports = exports = new Element({
       },
     }
   },
-  hr: {
-    node: 'hr'
-  },
   serif: {
-    css: 'serif',
+    css: 'serif ui-hide',
     family: {
       title: "Serif",
       list: new ui.List('a')

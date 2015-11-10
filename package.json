@@ -1,6 +1,6 @@
 {
   "name": "vigour-uikit",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "uikit containing basic ui elements",
   "engines": {
     "node": "^4.1.1"
@@ -39,8 +39,7 @@
   },
   "dependencies": {
     "vigour-element": "0.0.3",
-    "vigour-js": "^0.2.2",
-    "vigour-scratch": "^1.1.5"
+    "vigour-js": "^0.2.2"
   },
   "homepage": "https://github.com/vigour-io/hub#readme",
   "vigour": {
