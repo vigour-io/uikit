@@ -1,6 +1,6 @@
 {
   "name": "vigour-uikit",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "uikit containing basic ui elements",
   "engines": {
     "node": "^4.1.1"
