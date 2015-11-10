@@ -39,23 +39,12 @@ app.set({
         node: 'section',
 
         labelsCaption: new ui.P('Pure labels:'),
-
         label: new ui.Label('Label:'),
-        primary: new ui.Label('Label:'),
         secondary: new ui.Label('Label:'),
-        tertiary: new ui.Label('Label:'),
         grayscale: new ui.Label('Label:'),
 
         labelsWithIconsCaption: new ui.P('Labels with Icons:'),
-
-        labelWithIcons: new ui.IconLabel('email').set({
-          // input: {
-          //   attributes: {
-          //     placeholder: 'Email'
-          //   }
-          // }
-        }),
-
+        labelWithIcons: new ui.IconLabel('email'),
         labelWithIcons2: new ui.IconLabel('locked').set({
           css: {
             addClass: 'tertiary'
