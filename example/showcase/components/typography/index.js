@@ -35,90 +35,33 @@ Element.prototype.inject(
   require('vigour-element/lib/property/attributes')
 )
 
+var ListA = new ui.List({
+  $:'listitems.items'
+}).Constructor
+
 module.exports = exports = new Element({
   title: new ui.H3('Typography:'),
   node: 'section',
   sansSerif: {
+    nested:{
+      fart:new ListA()
+    },
     family: {
       list: new ui.List({
-        $: '.../listitems'
+        $: 'upward.listitems2.items'
       })
     },
     anotherlist: {
       list: new ui.List({
-        $: '.../listitems'
+        $: '.../listitems.items'
+      })
+    },
+    funlist: {
+      list: new ui.List({
+        $: 'listitems.items'
       })
     },
     headers: new Headers({}),
-    weight: {
-      node: 'section',
-      slim: {
-        caption: {
-          text: 'slim'
-        },
-        example: {
-          css: 'ui-h2 ui-slim',
-          text: {
-            $: 'upward.defaultText'
-          }
-        }
-      },
-      light: {
-        caption: {
-          text: 'light'
-        },
-        example: {
-          css: 'ui-h2 ui-light',
-          text: {
-            $: 'upward.defaultText'
-          }
-        }
-      },
-      regular: {
-        caption: {
-          text: 'regular'
-        },
-        example: {
-          css: 'ui-h2 ui-regular',
-          text: {
-            $: 'upward.defaultText'
-          }
-        }
-      },
-      semibold: {
-        caption: {
-          text: 'semibold'
-        },
-        example: {
-          css: 'ui-h2 ui-semibold',
-          text: {
-            $: 'upward.defaultText'
-          }
-        }
-      },
-      bold: {
-        caption: {
-          text: 'bold'
-        },
-        example: {
-          css: 'ui-h2 ui-bold',
-          text: {
-            $: 'upward.defaultText'
-          }
-        }
-      },
-      extrabold: {
-        caption: {
-          text: 'extrabold'
-        },
-        example: {
-          css: 'ui-h2 ui-extrabold',
-          text: {
-            $: 'upward.defaultText'
-          }
-        }
-      }
-    },
     styles: {
       node: 'section',
       italic: {
@@ -147,7 +90,7 @@ module.exports = exports = new Element({
           css: 'ui-h2 ui-line-through',
           text: 'The'
         }
-      },
+      }
     }
   },
   serif: {

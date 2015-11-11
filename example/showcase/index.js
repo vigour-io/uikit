@@ -6,148 +6,90 @@ Observable.prototype.inject(require('vigour-js/lib/operator/add'))
 Observable.prototype.inject(require('vigour-js/lib/operator/subscribe'))
 Observable.prototype.inject(require('vigour-js/lib/operator/transform'))
 
+
+
 require('./style.less')
 
-var app = new Element({
-  val: new Observable({
-    listitems: [
-      'one thing',
-      'two thing',
-      'three thing',
-      'four thing',
-      'five thing'
-    ],
-    defaultText: 'The'
-  }),
+var data = new Observable({
+  listitems: {
+    items: [{
+      title: 'one thing',
+      subtitle: 'subsubsubsubs11'
+    }, {
+      title: 'two thing',
+      subtitle: 'subsubsubsubs22'
+    }, {
+      title: 'three thing',
+      subtitle: 'subsubsubsubs33'
+    }, {
+      title: 'four thing',
+      subtitle: 'subsubsubsubs44'
+    }, {
+      title: 'five thing',
+      subtitle: 'subsubsubsubs55'
+    }]
+  },
+  listitems2: {
+    items: [
+      'one thing2222222222',
+      'two thing2222222222',
+      'three thing2222222222',
+      'four thing2222222222',
+      'five thing2222222222'
+    ]
+  },
+  defaultText: 'The'
+})
 
+window.data = data
+
+var app = new Element({
+  val: data,
   node: document.body
 })
 
-var ui = require('~/lib')
+// setInterval(function () {
+//   data.listitems.items.each(function(prop){
+//     prop.remove()
+//     return true
+//   })
+//   data.listitems2.items.set({
+//     [Math.random()]: Math.random()
+//   })
+// }, 2000)
+
+var Input = require('~/lib').Input
 
 app.set({
-
-
   header: require('./components/header'),
   container: {
     css: 'main',
-
-    forms: {
-      title: new ui.H3('Forms:'),
-      node: 'section',
-      inputs: {
-        title: new ui.H5('Inputs:'),
-        node: 'section',
-
-        sizesCaption: new ui.P('Input sizes:'),
-        large: new ui.Input({
-          val: new Observable({
-            defaultText:'hahah'
-          }),
-          $: 'defaultText'
-        }),
-        big: new ui.Input({
-          // $: 'parent.parent.upward.defaultText'
-        }),
-        medium: new ui.Input({
-          // $: 'upward.defaultText'
-        }),
-        small: new ui.Input({
-          // $: 'upward.defaultText'
-        }),
-
-        // colorCaption: new ui.P('Input colors:'),
-        // primary: new ui.Input('Primary'),
-        // secondary: new ui.Input('Secondary'),
-        // tertiary: new ui.Input('Tertiary'),
-        // grayscale: new ui.Input('Grayscale')
-      },
-
-      // labels: {
-      //   title: new ui.H5('Labels:'),
-      //   node: 'section',
-
-      //   labelsCaption: new ui.P('Pure labels:'),
-
-      //   label: new ui.Label('Label:'),
-      //   primary: new ui.Label('Label:'),
-      //   secondary: new ui.Label('Label:'),
-      //   tertiary: new ui.Label('Label:'),
-      //   grayscale: new ui.Label('Label:'),
-
-      //   labelsWithIconsCaption: new ui.P('Labels with Icons:'),
-
-      //   labelWithIcons: new ui.IconLabel('email').set({
-      //     // input: {
-      //     //   attributes: {
-      //     //     placeholder: 'Email'
-      //     //   }
-      //     // }
-      //   }),
-
-      //   labelWithIcons2: new ui.IconLabel('locked').set({
-      //     css: {
-      //       addClass: 'tertiary'
-      //     },
-      //   })
-      // },
-
-      buttons: {
-        title: new ui.H5('Buttons:'),
-        node: 'section',
-
-        sizesCaption: new ui.P('Button sizes:'),
-        large: new ui.Button('Large'),
-        big: new ui.Button('Big'),
-        medium: new ui.Button('Medium'),
-        small: new ui.Button('Small'),
-
-        colorCaption: new ui.P('Button colors:'),
-        primary: new ui.Button(),
-        secondary: new ui.Button('Secondary'),
-        tertiary: new ui.Button('Tertiary'),
-        grayscale: new ui.Button('Grayscale')
-      },
-
-      formGroups: {
-        title: new ui.H5('Form Groups:'),
-        node: 'section',
-
-        formGroup: {
-          css: 'ui-form-group',
-          input: new ui.Input(),
-          button: new ui.Button('Button')
-        },
-
-        br: new ui.Br(),
-
-        // formGroupWithIcon: {
-        //   css: 'ui-form-group',
-        //   input: new ui.IconLabel('email'),
-        //   button: new ui.Button('Button')
-        // }
+    ChildConstructor: new Element({
+      titlefield: new Input({
+        $: 'title'
+      }),
+      subtitlefield: new Input({
+        $:'subtitle'
+      })
+    }).Constructor,
+    $: 'listitems.items'
+  },
+  things:{
+    ChildConstructor:new Element({
+      text:{
+        $:'title.upward.listitems.items.0.title'
       }
-    },
-
-    hr: new ui.Hr(),
-
-    // colors: {
-    //   title: new ui.H3('Colors:'),
-    //   node: 'section'
-    //   // primary: '',
-    //   // grayscale: '',
-    //   // other: ''
-    // },
-
-    // colorsSchemes: {
-    //   title: new ui.H3('Color models (schemes):'),
-    //   node: 'section'
-    //   // primary: '',
-    //   // secondary: '',
-    //   // tertiary: '',
-    //   // grayscale: ''
-    // },
-
-    typography: require('./components/typography')
+    }).Constructor,
+    $:'listitems.items'
   }
 })
+
+
+window.app = app
+
+// console.log('=====>', app.container._cache[0])
+// data.listitems.items[1].title.val = 'smurk'
+
+// app.container._cache[0].set({
+//   $subscribe:data.listitems.items[0].title
+//   })
