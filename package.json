@@ -7,7 +7,13 @@
   },
   "main": "lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "gaston",
+    "test": "gaston test",
+    "build": "gaston build -s example/showcase -o . -i",
+    "all": "npm run build && ./node_modules/.bin/vNative build",
+    "ios": "npm run build && ./node_modules/.bin/vNative build --native '{\"selectedPlatforms\":\"ios\"}'",
+    "android": "npm run build && ./node_modules/.bin/vNative build --native '{\"selectedPlatforms\":\"android\"}'",
+    "samsungtv": "npm run build && ./node_modules/.bin/vNative build --native '{\"selectedPlatforms\":\"samsungtv\"}'"
   },
   "repository": {
     "type": "git",
@@ -40,10 +46,38 @@
   },
   "dependencies": {
     "vigour-element": "0.0.3",
-    "vigour-js": "^0.2.2"
+    "vigour-js": "^0.2.2",
+    "vigour-status-bar": "^1.0.1",
+    "vigour-env": "^1.0.1",
+    "vigour-wrapper": "^1.0.0"
   },
   "homepage": "https://github.com/vigour-io/hub#readme",
   "vigour": {
+    "native": {
+      "plugins": [
+        "status-bar",
+        "env",
+        "network"
+      ],
+      "platforms": {
+        "ios": {
+          "productName": "Vigour UI Kit",
+          "organizationName": "Vigour",
+          "organizationIdentifier": "io.vigour.uikit",
+          "appIcon": "assets/img/icon.png",
+          "splashScreen": "assets/img/splash.png",
+          "buildNumber": "1",
+          "appIndexPath": "build.html",
+          "NSAllowsArbitraryLoads": true,
+          "assets": {
+            "build.html": true,
+            "build.js": true,
+            "build.css": true,
+            "assets": "*"
+          }
+        }
+      }
+    },
     "services": {
       "sentinel": {
         "branches": [],

@@ -1,33 +1,35 @@
 header.header {
-  height: 52px;
+  position: absolute;
+  z-index: 180;
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
 
+  // green
   &:before {
     content: "";
     display: block;
     height: 105px;
     background: @primary;
-    .absolute(-50px, -75px);
-    width: 100%;
+    .absolute(-75px, -50px);
+    width: calc(100% + 100px);
     z-index: 0;
     .rotate(-3.5deg);
-  }
 
-  &:after {
-    content: "";
-    display: block;
-    height: 160px;
-    background: @whitegray;
-    .absolute(-50px, -75px);
-    width: calc(100% + 200px);
-    z-index: -1;
-    .rotate(3.5deg);
+    @media @under-tablet {
+      top: -65px;
+    }
   }
 
   > .logo {
     color: @primary-contrast;
     font-size: @h1;
     padding: 1%;
-    position: relative;
+    position: absolute;
+
+    @media @under-tablet {
+      padding: 2.5%;
+    }
 
     .title {
       display: inline-block;
@@ -38,8 +40,8 @@ header.header {
   }
 
   > .hamburger {
+    .absolute(16%, 2%);
     float: right;
-    margin: 2.4% 2%;
     font-size: 20px;
   }
 }

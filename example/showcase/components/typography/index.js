@@ -9,11 +9,11 @@ var ui = require('~/lib')
 const BASE_FONT_SIZE = 10
 const HEADER_TEXT = 'The quick brown fox jumps over the lazy dog.'
 
-var headers = []
+var headings = []
 var sizes = [3.2, 2.4, 2, 1.8, 1.6, 1.4, 1.3, 1.2, 1.1, 1]
 
 for (let i = 0; i < 10; i++) {
-  headers[i] = new Element({
+  headings[i] = new Element({
     caption: {
       node: 'span',
       text: `h${i + 1} - ${parseInt(sizes[i] * BASE_FONT_SIZE)}px`
@@ -22,7 +22,7 @@ for (let i = 0; i < 10; i++) {
   })
 }
 
-var Headers = new Element(headers).Constructor
+var Headers = new Element(headings).Constructor
 
 Element.prototype.inject(
   require('vigour-element/lib/property/text'),
@@ -39,7 +39,7 @@ module.exports = exports = new Element({
       title: "Sans Serif",
       list: new ui.List('a')
     },
-    headers: new Headers({}),
+    headings: new Headers({}),
     weight: {
       node: 'section',
       slim: {
@@ -134,7 +134,7 @@ module.exports = exports = new Element({
       title: "Serif",
       list: new ui.List('a')
     },
-    headers: new Headers({}),
+    headings: new Headers({}),
     weight: {
       node: 'section',
       slim: {

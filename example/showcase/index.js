@@ -1,5 +1,6 @@
 'use strict'
 var Element = require('vigour-element')
+var Observable = require('vigour-js/lib/observable')
 
 require('./style.less')
 
@@ -9,7 +10,25 @@ var app = new Element({
 
 var ui = require('~/lib')
 
+document.body.addEventListener('touchstart', function (event) {
+  event.preventDefault()
+})
+
+Element.prototype.inject(
+  require('vigour-element/lib/property/text'),
+  require('vigour-element/lib/property/css'),
+  require('vigour-element/lib/property/size'),
+  require('vigour-element/lib/property/scroll/top'),
+  require('vigour-element/lib/property/scroll/left'),
+  require('vigour-element/lib/property/transform'),
+  require('vigour-element/lib/events/click'),
+  require('vigour-element/lib/events/scroll')
+)
+
 app.set({
+  on: {
+  },
+
   header: require('./components/header'),
   container: {
     css: 'main',
@@ -57,7 +76,16 @@ app.set({
         node: 'section',
 
         sizesCaption: new ui.P('Button sizes:'),
-        large: new ui.Button('Large'),
+        large: new ui.Button({
+          val:'Large',
+          on:{
+            click(){
+              app.set({
+
+              })
+            }
+          }
+        }),
         big: new ui.Button('Big'),
         medium: new ui.Button('Medium'),
         small: new ui.Button('Small'),
