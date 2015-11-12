@@ -21,8 +21,7 @@ Element.prototype.inject(
   require('vigour-element/lib/property/scroll/top'),
   require('vigour-element/lib/property/scroll/left'),
   require('vigour-element/lib/property/transform'),
-  require('vigour-element/lib/events/click'),
-  require('vigour-element/lib/events/scroll')
+  require('vigour-element/lib/events/click')
 )
 
 app.set({
