@@ -11,6 +11,7 @@ Element.prototype.inject(require('vigour-element/lib/property/style'))
 require('./style.less')
 
 var data = new Observable({
+  key:'data',
   list: [{
     title: 'one thing',
     subtitle: 'subsubsubsubs11'
@@ -31,6 +32,7 @@ var data = new Observable({
 
 
 var videoData = new Observable({
+  key:'video',
   list: [{
     title: 'video 1',
     subtitle: 'subsubsubsubs11'
@@ -52,6 +54,7 @@ var videoData = new Observable({
 window.data = data
 
 var app = new Element({
+  key:'app',
   node: document.body
 })
 
@@ -66,14 +69,17 @@ var app = new Element({
 // }, 2000)
 
 var Input = require('~/lib').Input
-
+console.clear()
+console.log('----adding title sub')
 var Block = new Element({
+  key:'smileyblock',
   titlefield: new Input({
+    key:'iiiii',
     $: 'title'
   }),
-  subtitlefield: new Input({
-    $: 'subtitle'
-  })
+  // subtitlefield: new Input({
+  //   $: 'subtitle'
+  // })
 }).Constructor
 
 var List = new Element({
@@ -81,16 +87,28 @@ var List = new Element({
   $: 'list'
 }).Constructor
 
+console.clear()
+console.log('--------- add video')
+
 app.set({
   // val: data,
-  header: require('./components/header'),
-  container:new List(data),
-  things:new List(data),
-  specialVideoSection:new List(videoData)
+  // header: require('./components/header'),
+  onething: new List(),
+  things: new List(),
+  specialVideoSection: new List({
+    val:videoData,
+    style:{
+      border:'10px solid blue'
+    }
+  })
 })
 
+// console.log('--------- add data')
 
-window.app = app
+app.set(data)
+
+
+// window.app = app
 
 // console.log('=====>', app.container._cache[0])
 // data.list[1].title.val = 'smurk'
