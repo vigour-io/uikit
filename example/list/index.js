@@ -13,12 +13,17 @@ var TextElement = new Element({
   titlefield: {
     text: {
       $: 'title'
+    },
+    title2field: {
+      text: {
+        $: 'title'
+      }
     }
   },
   info: {
     nested: {
       text: {
-        $: 'title'
+        $: 'description'
       }
     }
   }
