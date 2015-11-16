@@ -18,7 +18,7 @@ var TextElement = new Element({
   info: {
     nested: {
       text: {
-        $: 'description'
+        $: 'title'
       }
     }
   }
@@ -28,22 +28,22 @@ var Input = new Element({
   node: 'input',
   $: 'title',
   on: {
-    data() {
-        var node = this.node
-        var value = this.val
-        if (node.value !== value) {
-          node.value = value
-        }
-      },
-      keyup() {
-        this.$subscribe.origin.val = this.node.value
+    data () {
+      var node = this.node
+      var value = this.val
+      if (node.value !== value) {
+        node.value = value
       }
+    },
+    keyup () {
+      this.$subscribe.origin.val = this.node.value
+    }
   }
 }).Constructor
 
 var app = new Element({
-  val: contentdata,
   node: document.body,
+  val: contentdata,
   topbar: {
     text: 'topbar?!'
   },
