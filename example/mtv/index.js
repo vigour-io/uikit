@@ -72,8 +72,8 @@ app.set({
         blackwhite: new ui.Label('Label:'),
 
         labelsWithIconsCaption: new ui.P('Labels with Icons:'),
-        labelWithIcons: new ui.IconLabel('email'),
-        labelWithIcons2: new ui.IconLabel('locked').set({
+        labelWithIcons: new ui.Label('email'),
+        labelWithIcons2: new ui.Label('locked').set({
           css: {
             addClass: 'tertiary'
           },
@@ -122,7 +122,7 @@ app.set({
 
         formGroupWithIcon: {
           css: 'ui-form-group',
-          input: new ui.IconLabel('email'),
+          input: new ui.Label('email'),
           button: new ui.Button('Button')
         }
       }

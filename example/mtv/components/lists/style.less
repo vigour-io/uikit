@@ -1,32 +1,95 @@
 aside.aside {
   width: 400px;
   .scheme(@secondary-scheme-inverse);
-  padding: 20px;
+  padding: 15px;
   .radius(@input-radius);
 
-  .list {
-    li {
-      display: block;
+  ul.list {
+    &:not(:last-child) {
+      margin-bottom: 4rem;
+    }
+
+    li.item {
       height: 60px;
-      padding: 1rem 0;
       .sizing;
 
       .scheme(@secondary-scheme-inverse);
       .scheme-additions(@secondary-scheme-inverse, true, children-color);
 
-      &:not(:last-child) {
-        border-bottom: 1px solid;
+      &.active {
+        .scheme(@tertiary-scheme);
       }
+
+      &:first-child {
+        border-top-style: solid;
+        border-top-width: 1px;
+      }
+
+      border-bottom-style: solid;
+      border-bottom-width: 1px;
 
       cursor: pointer;
       text-transform: capitalize;
+
+      .flex-display;
+      .flex-direction(row);
+      .align-items(center);
+
+      &.horizontal,
+      .horizontal {
+        .flex-display;
+        .flex-direction(column);
+        .align-items(flex-start);
+        width: 100%;
+      }
 
       .ui-heading {
         margin: 0;
         line-height: 1.4;
         font-weight: @font-regular;
         .text-overflow;
+        .justify-content(center);
       }
+
+      .ui-icon {
+        margin-right: 1rem;
+        .ui-h2;
+      }
+
+      &.with {
+        &.arrow {
+          &:after {
+            .icon('\e626');
+          }
+        }
+
+        &.label {
+          cursor: text;
+          width: 100%;
+
+          .ui-label {
+            .ui-label;
+            .secondary;
+            position: relative;
+            width: 100%;
+            height: 100%;
+
+            .ui-icon {
+              cursor: pointer;
+              .ui-h8;
+            }
+
+            .ui-input {
+              font-size: @h5;
+            }
+          }
+        }
+      }
+    }
+
+    button {
+      width: 100%;
+      margin: 1rem 0 0;
     }
   }
 }

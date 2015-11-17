@@ -4,7 +4,6 @@ require('./style.less')
 
 var Element = require('vigour-element')
 var ui = require('~/lib')
-var Icon = require('~/lib/icon')
 
 Element.prototype.inject(
   require('vigour-element/lib/property/text'),
@@ -15,17 +14,101 @@ Element.prototype.inject(
 
 module.exports = exports = new Element({
   node: 'aside',
-  list: {
+  items: {
+    css: 'list',
     node: 'ul',
     0: {
       node: 'li',
-      title: new ui.H5('Language'),
-      subtitle: new ui.H8({
-        text: 'Change language.',
-        css: {
-          addClass: 'ui-additional'
-        }
-      })
+      css: 'item',
+      horizontal: {
+        title: new ui.H5('English')
+      }
+    },
+    1: {
+      node: 'li',
+      css: 'item with arrow',
+      horizontal: {
+        title: new ui.H5('Language')
+      }
+    },
+    2: {
+      node: 'li',
+      css: 'item with arrow',
+      horizontal: {
+        title: new ui.H5('Language'),
+        subtitle: new ui.H8({
+          text: 'Change language.',
+          css: {
+            addClass: 'ui-additional'
+          }
+        })
+      }
+    },
+    3: {
+      node: 'li',
+      css: 'active item with arrow',
+      horizontal: {
+        title: new ui.H5('Language'),
+        subtitle: new ui.H8({
+          text: 'Change language.',
+          css: {
+            addClass: 'ui-additional'
+          }
+        })
+      }
+    },
+    4: {
+      node: 'li',
+      css: 'item with arrow',
+      icon: new ui.Icon('age'),
+      horizontal: {
+        title: new ui.H5('Language'),
+        subtitle: new ui.H8({
+          text: 'Change language.',
+          css: {
+            addClass: 'ui-additional'
+          }
+        })
+      }
     }
+  },
+  labels: {
+    node: 'ul',
+    css: 'list',
+    0: {
+      node: 'li',
+      css: 'item with label',
+      label: {
+        css: 'ui-label',
+        node: 'label',
+        caption: new ui.Icon('email'),
+        input: new ui.Input({
+          attributes: {
+            placeholder: 'E-mail',
+            type: 'email'
+          }
+        })
+      }
+    },
+    1: {
+      node: 'li',
+      css: 'item with label',
+      label: {
+        css: 'ui-label',
+        node: 'label',
+        caption: new ui.Icon('locked'),
+        input: new ui.Input({
+          attributes: {
+            placeholder: 'Password',
+            type: 'password'
+          }
+        })
+      }
+    },
+    2: new ui.Button({
+      css: {
+        addClass: 'large tertiary'
+      }
+    })
   }
 })
