@@ -27,10 +27,6 @@
 
 // weights
 @font-slim:      300;
-@font-light:     300;
-@font-regular:   400;
-@font-semibold:  600;
-@font-bold:      700;
 @font-extrabold: 800;
 
 
@@ -38,6 +34,9 @@
  * Colors
  */
 @purple: #3B1D58;
+@purple-dark: #241431;
+@purple-light: #5d4078;
+@purple-additional: #ac99b9;
 
 @yellow: #FFE900;
 
@@ -53,14 +52,14 @@
 // secondary
 @secondary:                 @purple;
 @secondary-focus:           @primary;
-
 @secondary-contrast-focus:  @primary-contrast-focus;
+@secondary-border:          @purple-light;
+@secondary-additional:      @purple-additional;
 
 // tertiary
 @tertiary:                  @yellow;
 @tertiary-hover:            darken(@tertiary, 3%);
 @tertiary-focus:            @primary;
-
 @tertiary-contrast:         @secondary;
 @tertiary-contrast-hover:   @secondary-hover;
 @tertiary-contrast-focus:   @primary-contrast-focus;

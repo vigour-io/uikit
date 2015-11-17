@@ -27,6 +27,19 @@ app.set({
   container: {
     css: 'main',
 
+    components: {
+      title: new ui.H3('Components:'),
+      node: 'section',
+
+      lists: {
+        title: new ui.H5('List items:'),
+        node: 'section',
+
+        titleSubtitle: new ui.P('Aside items:'),
+        aside: require('./components/lists')
+      }
+    },
+
     forms: {
       title: new ui.H3('Forms:'),
       node: 'section',

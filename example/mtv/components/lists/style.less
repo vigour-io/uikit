@@ -1,0 +1,32 @@
+aside.aside {
+  width: 400px;
+  .scheme(@secondary-scheme-inverse);
+  padding: 20px;
+  .radius(@input-radius);
+
+  .list {
+    li {
+      display: block;
+      height: 60px;
+      padding: 1rem 0;
+      .sizing;
+
+      .scheme(@secondary-scheme-inverse, false, false, true, children-color, border);
+      .transition(0.1s linear background);
+
+      &:not(:last-child) {
+        border-bottom: 1px solid;
+      }
+
+      cursor: pointer;
+      text-transform: capitalize;
+
+      .ui-heading {
+        margin: 0;
+        line-height: 1.4;
+        font-weight: @font-regular;
+        .text-overflow;
+      }
+    }
+  }
+}
