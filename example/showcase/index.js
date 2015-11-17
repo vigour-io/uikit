@@ -10,10 +10,6 @@ var app = new Element({
 
 var ui = require('~/lib')
 
-document.body.addEventListener('touchstart', function (event) {
-  event.preventDefault()
-})
-
 Element.prototype.inject(
   require('vigour-element/lib/property/text'),
   require('vigour-element/lib/property/css'),
@@ -25,9 +21,6 @@ Element.prototype.inject(
 )
 
 app.set({
-  on: {
-  },
-
   header: require('./components/header'),
   container: {
     css: 'main',
@@ -49,7 +42,9 @@ app.set({
         primary: new ui.Input('Primary'),
         secondary: new ui.Input('Secondary'),
         tertiary: new ui.Input('Tertiary'),
-        grayscale: new ui.Input('Grayscale')
+        'grayscale-light': new ui.Input('Grayscale Light'),
+        'grayscale-dark': new ui.Input('Grayscale Dark'),
+        blackwhite: new ui.Input('Black n White')
       },
 
       labels: {

@@ -21,6 +21,22 @@ header.header {
     }
   }
 
+  // gray
+  &:after {
+    content: "";
+    display: block;
+    height: 150px;
+    background: @whitegray;
+    .absolute(-75px, -50px);
+    width: calc(100% + 200px);
+    z-index: -1;
+    .rotate(3.5deg);
+
+    @media @under-tablet {
+      top: -500px;
+    }
+  }
+
   > .logo {
     color: @primary-contrast;
     font-size: @h1;
