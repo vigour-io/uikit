@@ -2,6 +2,7 @@
 var Element = require('vigour-element')
 var Observable = require('vigour-js/lib/observable')
 
+require('./less/imports.less')
 require('./config.less')
 require('./style.less')
 
@@ -55,7 +56,7 @@ app.set({
         labelsCaption: new ui.P('Pure labels:'),
         label: new ui.Label('Label:'),
         secondary: new ui.Label('Label:'),
-        grayscale: new ui.Label('Label:'),
+        blackwhite: new ui.Label('Label:'),
 
         labelsWithIconsCaption: new ui.P('Labels with Icons:'),
         labelWithIcons: new ui.IconLabel('email'),
@@ -74,7 +75,7 @@ app.set({
         large: new ui.Button({
           val:'Large',
           on:{
-            click(){
+            click() {
               app.set({
 
               })
@@ -89,7 +90,9 @@ app.set({
         primary: new ui.Button(),
         secondary: new ui.Button('Secondary'),
         tertiary: new ui.Button('Tertiary'),
-        grayscale: new ui.Button('Grayscale')
+        'grayscale-light': new ui.Button('Grayscale Light'),
+        'grayscale-dark': new ui.Button('Grayscale Dark'),
+        blackwhite: new ui.Button('Black n White')
       },
 
       formGroups: {
