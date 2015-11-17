@@ -11,8 +11,8 @@ aside.aside {
       padding: 1rem 0;
       .sizing;
 
-      .scheme(@secondary-scheme-inverse, false, false, true, children-color, border);
-      .transition(0.1s linear background);
+      .scheme(@secondary-scheme-inverse);
+      .scheme-additions(@secondary-scheme-inverse, true, children-color);
 
       &:not(:last-child) {
         border-bottom: 1px solid;
