@@ -35,8 +35,11 @@ app.set({
         title: new ui.H5('List items:'),
         node: 'section',
 
-        titleSubtitle: new ui.P('Aside items:'),
-        aside: require('./components/lists')
+        listsTitle: new ui.P('Aside items:'),
+        aside: require('./components/lists').lists,
+
+        formsTitle: new ui.P('Form items:'),
+        forms: require('./components/lists').forms
       }
     },
 
@@ -62,6 +65,17 @@ app.set({
         blackwhite: new ui.Input('Black n White')
       },
 
+      selects: {
+        title: new ui.H5('Selects:'),
+        node: 'section',
+
+        colorCaption: new ui.P('Select colors:'),
+        primary: new ui.Select(),
+        secondary: new ui.Select(),
+        tertiary: new ui.Select(),
+        blackwhite: new ui.Select(),
+      },
+
       labels: {
         title: new ui.H5('Labels:'),
         node: 'section',
@@ -72,12 +86,28 @@ app.set({
         blackwhite: new ui.Label('Label:'),
 
         labelsWithIconsCaption: new ui.P('Labels with Icons:'),
-        labelWithIcons: new ui.Label('email'),
-        labelWithIcons2: new ui.Label('locked').set({
-          css: {
-            addClass: 'tertiary'
-          },
-        })
+        labelWithIcons: {
+          css: 'ui-label primary',
+          node: 'label',
+          caption: new ui.Icon('email'),
+          input: new ui.Input({
+            attributes: {
+              placeholder: 'E-mail',
+              type: 'email'
+            }
+          })
+        },
+        labelWithIcons2: {
+          css: 'ui-label tertiary',
+          node: 'label',
+          caption: new ui.Icon('locked'),
+          input: new ui.Input({
+            attributes: {
+              placeholder: 'Password',
+              type: 'password'
+            }
+          })
+        }
       },
 
       buttons: {
@@ -122,7 +152,11 @@ app.set({
 
         formGroupWithIcon: {
           css: 'ui-form-group',
-          input: new ui.Label('email'),
+          input: new ui.Label('email').set({
+            css: {
+              addClass: 'blackwhite'
+            }
+          }),
           button: new ui.Button('Button')
         }
       }

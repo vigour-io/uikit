@@ -40,6 +40,13 @@
       }
     }
 
+    .selects {
+      .ui-select {
+        vertical-align: top;
+        margin-right: .8rem;
+      }
+    }
+
     .labels {
       .ui-label {
         margin-right: .8rem;
@@ -50,6 +57,24 @@
       .ui-button {
         vertical-align: top;
         margin-right: .8rem;
+      }
+    }
+  }
+
+  aside {
+    &:not(:last-child) {
+      margin-bottom: 3rem;
+    }
+
+    width: 400px;
+    .scheme(@secondary-scheme-inverse);
+    padding: 20px 15px;
+    .radius(@input-radius);
+
+    ul.list {
+      button {
+        width: 100%;
+        margin: 1rem 0 0;
       }
     }
   }

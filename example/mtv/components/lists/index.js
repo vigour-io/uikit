@@ -12,7 +12,7 @@ Element.prototype.inject(
   require('vigour-element/lib/property/attributes')
 )
 
-module.exports = exports = new Element({
+module.exports.lists = new Element({
   node: 'aside',
   items: {
     css: 'list',
@@ -72,6 +72,10 @@ module.exports = exports = new Element({
       }
     }
   },
+})
+
+module.exports.forms = new Element({
+  node: 'aside',
   labels: {
     node: 'ul',
     css: 'list',
@@ -105,7 +109,37 @@ module.exports = exports = new Element({
         })
       }
     },
-    2: new ui.Button({
+    2: {
+      node: 'li',
+      css: 'item with label',
+      label: {
+        css: 'ui-label',
+        node: 'label',
+        caption: new ui.Icon('gender'),
+        select: new ui.Select({
+          options: {
+            placeholder: {
+              node: 'option',
+              attributes: {
+                disabled: 'disabled',
+                selected: 'selected',
+              },
+              text: 'Gender',
+              val: ''
+            },
+            male: {
+              node: 'option',
+              text: 'Male'
+            },
+            female: {
+              node: 'option',
+              text: 'Female'
+            }
+          }
+        })
+      }
+    },
+    10: new ui.Button({
       css: {
         addClass: 'large tertiary'
       }

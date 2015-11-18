@@ -1,95 +1,88 @@
-aside.aside {
-  width: 400px;
-  .scheme(@secondary-scheme-inverse);
-  padding: 15px;
-  .radius(@input-radius);
+ul.list {
+  > li.item {
+    height: 60px;
+    .sizing;
 
-  ul.list {
-    &:not(:last-child) {
-      margin-bottom: 4rem;
+    .scheme-interactive(@secondary-scheme-inverse, color);
+    .scheme-additions(@secondary-scheme-inverse, true, children-color);
+
+    .transition(0.1s linear color);
+
+    &.active {
+      .scheme-interactive(@tertiary-scheme, color);
     }
 
-    li.item {
-      height: 60px;
-      .sizing;
+    &:first-child {
+      border-top-style: solid;
+      border-top-width: 1px;
+    }
 
-      .scheme(@secondary-scheme-inverse);
-      .scheme-additions(@secondary-scheme-inverse, true, children-color);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
 
-      &.active {
-        .scheme(@tertiary-scheme);
-      }
+    cursor: pointer;
+    text-transform: capitalize;
 
-      &:first-child {
-        border-top-style: solid;
-        border-top-width: 1px;
-      }
+    .flex-display;
+    .flex-direction(row);
+    .align-items(center);
 
-      border-bottom-style: solid;
-      border-bottom-width: 1px;
-
-      cursor: pointer;
-      text-transform: capitalize;
-
+    &.horizontal,
+    .horizontal {
       .flex-display;
-      .flex-direction(row);
-      .align-items(center);
-
-      &.horizontal,
-      .horizontal {
-        .flex-display;
-        .flex-direction(column);
-        .align-items(flex-start);
-        width: 100%;
-      }
-
-      .ui-heading {
-        margin: 0;
-        line-height: 1.4;
-        font-weight: @font-regular;
-        .text-overflow;
-        .justify-content(center);
-      }
-
-      .ui-icon {
-        margin-right: 1rem;
-        .ui-h2;
-      }
-
-      &.with {
-        &.arrow {
-          &:after {
-            .icon('\e626');
-          }
-        }
-
-        &.label {
-          cursor: text;
-          width: 100%;
-
-          .ui-label {
-            .ui-label;
-            .secondary;
-            position: relative;
-            width: 100%;
-            height: 100%;
-
-            .ui-icon {
-              cursor: pointer;
-              .ui-h8;
-            }
-
-            .ui-input {
-              font-size: @h5;
-            }
-          }
-        }
-      }
-    }
-
-    button {
+      .flex-direction(column);
+      .align-items(flex-start);
       width: 100%;
-      margin: 1rem 0 0;
     }
+
+    .ui-heading {
+      margin: 0;
+      line-height: 1.4;
+      font-weight: @font-regular;
+      .text-overflow;
+      .justify-content(center);
+    }
+
+    .ui-icon {
+      margin-right: 1rem;
+      .ui-h2;
+    }
+
+    &.with {
+      &.arrow {
+        &:after {
+          .icon('\e626');
+        }
+      }
+
+      &.label {
+        cursor: text;
+        width: 100%;
+
+        .ui-label {
+          .ui-label;
+          .secondary;
+          position: relative;
+          width: 100%;
+          height: 100%;
+
+          .ui-icon {
+            cursor: pointer;
+            .ui-h8;
+          }
+
+          .ui-select,
+          .ui-input {
+            height: 100%;
+            font-size: @h5;
+          }
+        }
+      }
+    }
+  }
+
+  button {
+    width: 100%;
+    margin: 1rem 0 0;
   }
 }
