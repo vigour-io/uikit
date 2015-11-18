@@ -40,6 +40,13 @@ app.set({
 
         formsTitle: new ui.P('Form items:'),
         forms: require('./components/lists').forms
+      },
+
+      notifications: {
+        title: new ui.H3('Notifications:'),
+        node: 'section',
+
+        notification: require('./components/notification')
       }
     },
 
@@ -70,7 +77,16 @@ app.set({
         node: 'section',
 
         colorCaption: new ui.P('Select colors:'),
-        primary: new ui.Select(),
+        primary: new ui.Select({
+          options:{
+            one:{
+              text:'Nika Baller'
+            },
+            two:{
+              text:'Youzi Shiner'
+            }
+          }
+        }),
         secondary: new ui.Select(),
         tertiary: new ui.Select(),
         blackwhite: new ui.Select(),
@@ -80,10 +96,25 @@ app.set({
         title: new ui.H5('Labels:'),
         node: 'section',
 
-        labelsCaption: new ui.P('Pure labels:'),
-        label: new ui.Label('Label:'),
-        secondary: new ui.Label('Label:'),
-        blackwhite: new ui.Label('Label:'),
+        labelsCaption: new ui.P('Simple labels:'),
+        label: new ui.Label({
+          caption: {
+            text: 'Caption:'
+          },
+          input: new ui.Input()
+        }),
+        secondary: new ui.Label({
+          caption: {
+            text: 'Caption:'
+          },
+          input: new ui.Input()
+        }),
+        blackwhite: new ui.Label({
+          caption: {
+            text: 'Caption:'
+          },
+          input: new ui.Input()
+        }),
 
         labelsWithIconsCaption: new ui.P('Labels with Icons:'),
         labelWithIcons: {
@@ -187,7 +218,11 @@ app.set({
             },
             css: {
               addClass: 'blackwhite'
-            }
+            },
+            caption: {
+              text: 'Caption:'
+            },
+            input: new ui.Input()
           }),
           button: new ui.Button({
             css: {
