@@ -114,28 +114,57 @@ app.set({
         title: new ui.H5('Buttons:'),
         node: 'section',
 
-        sizesCaption: new ui.P('Button sizes:'),
-        large: new ui.Button({
-          val:'Large',
-          on:{
-            click() {
-              app.set({
+        sizes: {
+          title: new ui.P('Button sizes:'),
+          large: new ui.Button({
+            val:'Large',
+            on:{
+              click() {
+                app.set({
 
-              })
+                })
+              }
             }
-          }
-        }),
-        big: new ui.Button('Big'),
-        medium: new ui.Button('Medium'),
-        small: new ui.Button('Small'),
+          }),
+          big: new ui.Button('Big'),
+          medium: new ui.Button('Medium'),
+          small: new ui.Button('Small'),
+        },
 
-        colorCaption: new ui.P('Button colors:'),
-        primary: new ui.Button(),
-        secondary: new ui.Button('Secondary'),
-        tertiary: new ui.Button('Tertiary'),
-        'grayscale-light': new ui.Button('Grayscale Light'),
-        'grayscale-dark': new ui.Button('Grayscale Dark'),
-        blackwhite: new ui.Button('Black n White')
+        colors: {
+          title: new ui.P('Button colors:'),
+
+          primary: new ui.Button(),
+          secondary: new ui.Button('Secondary'),
+          tertiary: new ui.Button('Tertiary'),
+          'grayscale-light': new ui.Button('Grayscale Light'),
+          'grayscale-dark': new ui.Button('Grayscale Dark'),
+          blackwhite: new ui.Button('Black n White'),
+        },
+
+        types: {
+          title: new ui.P('Button types:'),
+
+          aside: new ui.Button('Register').set({
+            css: {
+              addClass: 'big tertiary aside-button'
+            }
+          }),
+          withIcon: new ui.Button('Register').set({
+            css: {
+              addClass: 'big tertiary'
+            },
+            text: 'Next',
+            facebook: new ui.Icon('right')
+          }),
+          iconic: new ui.Button('Register').set({
+            css: {
+              addClass: 'big tertiary iconic'
+            },
+            text: '',
+            facebook: new ui.Icon('right')
+          })
+        }
       },
 
       formGroups: {
@@ -152,12 +181,21 @@ app.set({
 
         formGroupWithIcon: {
           css: 'ui-form-group',
-          input: new ui.Label('email').set({
+          label: new ui.Label({
+            caption: {
+              text: 'Search'
+            },
             css: {
               addClass: 'blackwhite'
             }
           }),
-          button: new ui.Button('Button')
+          button: new ui.Button({
+            css: {
+              addClass: 'primary iconic'
+            },
+            text: '',
+            facebook: new ui.Icon('search')
+          })
         }
       }
     },
