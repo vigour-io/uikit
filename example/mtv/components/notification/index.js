@@ -9,20 +9,50 @@ Element.prototype.inject(
   require('vigour-element/lib/property/text'),
   require('vigour-element/lib/property/transform'),
   require('vigour-element/lib/property/css'),
-  require('vigour-element/lib/property/attributes')
+  require('vigour-element/lib/property/attributes'),
+  require('vigour-element/lib/events/css/animationEnd')
 )
 
-var tempButton = new ui.Button('Register').set({
+var tempButton = new ui.Button({
   css: {
     addClass: 'large iconic'
   },
   text: '',
-  facebook: new ui.Icon('close'),
+  icon: new ui.Icon('close'),
   on: {
     click() {
-      this.parent.setKey('css', {
+      var parent = this.parent
+      var holder = parent.parent
+      parent.on('animationEnd', function() {
+        setTimeout(function() {
+          holder.set({
+            notif: new Success()
+          })
+        }, 1000)
+        this.remove()
+      })
+      parent.setKey('css', {
         removeClass: 'fadeInDown',
         addClass: 'animated fadeOut'
+      })
+    }
+  }
+}).Constructor
+
+var Success = new ui.Notification({
+  css: {
+    addClass: 'quinary fadeInDown'
+  },
+  icon: new ui.Icon('correct'),
+  caption: {
+    title: new ui.H7('Invalid entry, please revise.')
+  },
+  button: new tempButton(),
+  on: {
+    click() {
+      this.setKey('css', {
+        removeClass: 'fadeOut',
+        addClass: 'animated fadeInDown'
       })
     }
   }
@@ -34,24 +64,7 @@ module.exports = new Element({
     aside: {
       node: 'aside',
       css: 'notification',
-      notif: new ui.Notification({
-        css: {
-          addClass: 'quinary'
-        },
-        icon: new ui.Icon('correct'),
-        caption: {
-          title: new ui.H7('Invalid entry, please revise.')
-        },
-        button: new tempButton(),
-        on: {
-          click() {
-            this.setKey('css', {
-              removeClass: 'fadeOut',
-              addClass: 'animated fadeInDown'
-            })
-          }
-        }
-      })
+      notif: new Success()
     }
   },
 
