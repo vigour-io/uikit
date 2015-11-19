@@ -10,10 +10,6 @@ var app = new Element({
 
 var ui = require('~/lib')
 
-document.body.addEventListener('touchstart', function (event) {
-  event.preventDefault()
-})
-
 Element.prototype.inject(
   require('vigour-element/lib/property/text'),
   require('vigour-element/lib/property/css'),
@@ -25,9 +21,6 @@ Element.prototype.inject(
 )
 
 app.set({
-  on: {
-  },
-
   header: require('./components/header'),
   container: {
     css: 'main',
@@ -49,7 +42,9 @@ app.set({
         primary: new ui.Input('Primary'),
         secondary: new ui.Input('Secondary'),
         tertiary: new ui.Input('Tertiary'),
-        grayscale: new ui.Input('Grayscale')
+        'grayscale-light': new ui.Input('Grayscale Light'),
+        'grayscale-dark': new ui.Input('Grayscale Dark'),
+        blackwhite: new ui.Input('Black n White')
       },
 
       labels: {
@@ -62,8 +57,8 @@ app.set({
         grayscale: new ui.Label('Label:'),
 
         labelsWithIconsCaption: new ui.P('Labels with Icons:'),
-        labelWithIcons: new ui.IconLabel('email'),
-        labelWithIcons2: new ui.IconLabel('locked').set({
+        labelWithIcons: new ui.Label('email'),
+        labelWithIcons2: new ui.Label('locked').set({
           css: {
             addClass: 'tertiary'
           },
@@ -110,7 +105,7 @@ app.set({
 
         formGroupWithIcon: {
           css: 'ui-form-group',
-          input: new ui.IconLabel('email'),
+          input: new ui.Label('email'),
           button: new ui.Button('Button')
         }
       }

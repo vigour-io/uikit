@@ -27,5 +27,5 @@ var logo = new Element({
 module.exports = exports = new Element({
   node: 'header',
   logo: logo,
-  hamburger: new Icon('hamburger')
+  menu: new Icon('menu')
 })

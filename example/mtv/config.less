@@ -1,0 +1,80 @@
+/**
+ * MTV Config
+ * ----------------------------------------------
+ * MTV config on top of Scratch and current showcase.
+ * All settings gonna be here in one file.
+ */
+
+/**
+ * Document settings
+ */
+@body-size: 1.3rem;
+
+/**
+ * Icons
+ */
+@icon-family: 'mtvPlayIcons';
+// @icon-external-link
+@import url('https://i.icomoon.io/public/1760d3d9bc/MTVPlayV2/style.css');
+
+
+/**
+ * Typography
+ */
+@font-sans-serif: 'Open Sans';
+// @font-external-link
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,700italic,600italic,700,800,800italic,300,300italic');
+
+// weights
+@font-slim:      300;
+@font-extrabold: 800;
+
+
+/**
+ * Colors
+ */
+@purple: #3B1D58;
+@purple-dark: #241431;
+@purple-light: #5d4078;
+@purple-additional: #ac99b9;
+
+@yellow: #FFE900;
+
+@pink: #F62759;
+
+
+/**
+ * Color priorities
+ */
+// primary
+@primary:                   @pink;
+
+// secondary
+@secondary:                 @purple;
+@secondary-focus:           @primary;
+@secondary-contrast-focus:  @primary-contrast-focus;
+@secondary-border:          @purple-light;
+@secondary-additional:      @purple-additional;
+
+// tertiary
+@tertiary:                  @yellow;
+@tertiary-hover:            darken(@tertiary, 3%);
+@tertiary-focus:            @primary;
+@tertiary-contrast:         @secondary;
+@tertiary-contrast-hover:   @secondary-hover;
+@tertiary-contrast-focus:   @primary-contrast-focus;
+
+
+/**
+ * Forms
+ */
+@button-weight: @font-semibold;
+
+@input-radius: 4px;
+
+@input-small-radius: 4px;
+
+@input-big-radius: 4px;
+@input-big-padding: 1rem;
+
+@input-large-radius: 4px;
