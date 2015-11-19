@@ -28,7 +28,7 @@ module.exports = new Element({
                 parent.set({
                   notif: new ui.Success()
                 })
-              }, 10000)
+              }, 1000)
             }
           }
         }
@@ -48,9 +48,9 @@ module.exports = new Element({
               var parent = this.parent
               setTimeout(function () {
                 parent.set({
-                  notif: new ui.Success()
+                  notif: new ui.Warning()
                 })
-              }, 10000)
+              }, 1000)
             }
           }
         }
@@ -70,9 +70,9 @@ module.exports = new Element({
               var parent = this.parent
               setTimeout(function () {
                 parent.set({
-                  notif: new ui.Success()
+                  notif: new ui.Error()
                 })
-              }, 10000)
+              }, 1000)
             }
           }
         }
