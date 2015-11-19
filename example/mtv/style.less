@@ -8,10 +8,20 @@
   > section {
     padding: 2rem 0;
 
+    > section {
+      padding: 2rem 0 0;
+    }
+
     > section > .title,
+    > div > .title,
     > .title {
       text-transform: uppercase;
       color: @grayscale-dark;
+
+      & + section {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
     }
   }
 
@@ -21,7 +31,6 @@
 
   .forms {
     > section {
-      margin-bottom: 4rem;
 
       &:last-child {
         margin-bottom: 0;
@@ -71,11 +80,17 @@
     padding: 20px 15px;
     .radius(@input-radius);
 
-    ul.list {
-      button {
-        width: 100%;
-        margin: 1rem 0 0;
-      }
+    &.notification {
+      .scheme(@grayscale-light-scheme-inverse);
+    }
+
+    .ui-row {
+      .ui-row(@secondary-scheme-inverse);
+    }
+
+    .large.ui-button:not(.iconic) {
+      width: 100%;
+      margin: 1rem 0 0;
     }
   }
 }
