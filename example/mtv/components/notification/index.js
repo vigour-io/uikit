@@ -13,58 +13,26 @@ Element.prototype.inject(
   require('vigour-element/lib/events/css/animationEnd')
 )
 
-var tempButton = new ui.Button({
-  css: {
-    addClass: 'large iconic'
-  },
-  text: '',
-  icon: new ui.Icon('close'),
-  on: {
-    click() {
-      var parent = this.parent
-      var holder = parent.parent
-      parent.on('animationEnd', function() {
-        setTimeout(function() {
-          holder.set({
-            notif: new Success()
-          })
-        }, 1000)
-        this.remove()
-      })
-      parent.setKey('css', {
-        removeClass: 'fadeInDown',
-        addClass: 'animated fadeOut'
-      })
-    }
-  }
-}).Constructor
-
-var Success = new ui.Notification({
-  css: {
-    addClass: 'quinary fadeInDown'
-  },
-  icon: new ui.Icon('correct'),
-  caption: {
-    title: new ui.H7('Invalid entry, please revise.')
-  },
-  button: new tempButton(),
-  on: {
-    click() {
-      this.setKey('css', {
-        removeClass: 'fadeOut',
-        addClass: 'animated fadeInDown'
-      })
-    }
-  }
-}).Constructor
-
 module.exports = new Element({
   0: {
     title: new ui.P('Success:'),
     aside: {
       node: 'aside',
       css: 'notification',
-      notif: new Success()
+      notif: new ui.Success({
+        on: {
+          click: {
+            bringBack: function () {
+              var parent = this.parent
+              setTimeout(function () {
+                parent.set({
+                  notif: new ui.Success()
+                })
+              }, 10000)
+            }
+          }
+        }
+      })
     }
   },
 
@@ -73,27 +41,17 @@ module.exports = new Element({
     aside: {
       node: 'aside',
       css: 'notification',
-      notif: new ui.Notification({
-        css: {
-          addClass: 'quaternary'
-        },
-        icon: new ui.Icon('warning'),
-        caption: {
-          title: new ui.H6('Please verify your account.'),
-          subtitle: new ui.H8({
-            text: 'We\'ve sent you an email.',
-            css: {
-              addClass: 'ui-additional'
-            }
-          })
-        },
-        button: new tempButton(),
+      notif: new ui.Warning({
         on: {
-          click() {
-            this.setKey('css', {
-              removeClass: 'fadeOut',
-              addClass: 'animated fadeInDown'
-            })
+          click: {
+            bringBack: function () {
+              var parent = this.parent
+              setTimeout(function () {
+                parent.set({
+                  notif: new ui.Success()
+                })
+              }, 10000)
+            }
           }
         }
       })
@@ -105,21 +63,17 @@ module.exports = new Element({
     aside: {
       node: 'aside',
       css: 'notification',
-      notif: new ui.Notification({
-        css: {
-          addClass: ''
-        },
-        icon: new ui.Icon('wrong'),
-        caption: {
-          title: new ui.H7('Invalid entry, please revise.')
-        },
-        button: new tempButton(),
+      notif: new ui.Error({
         on: {
-          click() {
-            this.setKey('css', {
-              removeClass: 'fadeOut',
-              addClass: 'animated fadeInDown'
-            })
+          click: {
+            bringBack: function () {
+              var parent = this.parent
+              setTimeout(function () {
+                parent.set({
+                  notif: new ui.Success()
+                })
+              }, 10000)
+            }
           }
         }
       })

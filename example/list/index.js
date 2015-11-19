@@ -9,6 +9,18 @@ var contentdata = new Observable(require('./data.json'))
 Element.prototype.inject(require('vigour-element/lib/property/text'))
 Observable.prototype.inject(require('vigour-js/lib/operator/subscribe'))
 
+var Title = new ui.H1({
+  text: {
+    $: 'title'
+  }
+}).Constructor
+
+var Description = new Element({
+  text: {
+    $: 'description'
+  }
+}).Constructor
+
 var TextElement = new Element({
   titlefield: {
     text: {
@@ -28,14 +40,14 @@ var Input = new Element({
   node: 'input',
   $: 'title',
   on: {
-    data () {
+    data() {
       var node = this.node
       var value = this.val
       if (node.value !== value) {
         node.value = value
       }
     },
-    keyup () {
+    keyup() {
       this.$subscribe.origin.val = this.node.value
     }
   }
