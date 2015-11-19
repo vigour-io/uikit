@@ -23,7 +23,7 @@ var TextElement = new Element({
   info: {
     nested: {
       text: {
-        $: 'description'
+        $: 'title'
       }
     }
   }
@@ -48,7 +48,7 @@ var Input = new Element({
 
 var app = new Element({
   node: document.body,
-  val: contentdata,
+  val: new Observable(new Observable(contentdata)),
   topbar: {
     text: 'topbar?!'
   },
@@ -60,4 +60,8 @@ var app = new Element({
     ChildConstructor: TextElement,
     $: 'shows'
   }
+})
+
+setTimeout(function(){
+  contentdata
 })
