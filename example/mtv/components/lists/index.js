@@ -29,23 +29,7 @@ module.exports.lists = new Element({
         title: new ui.H5('Language')
       }
     }),
-    2: new ui.SwitcherRow({
-        caption: {
-          title: new ui.H5('Newsletter'),
-          subtitle: new ui.H8({
-            text: 'We will never send you spam!',
-            css: {
-              addClass: 'ui-additional'
-            }
-          })
-        },
-        switcher: new ui.Switcher({
-          css: {
-            addClass: 'ui-quinary'
-          }
-        })
-    }),
-    3: new ui.Row({
+    2: new ui.Row({
       css: {
         addClass: 'active with arrow'
       },
@@ -59,7 +43,7 @@ module.exports.lists = new Element({
         })
       }
     }),
-    4: new ui.Row({
+    3: new ui.Row({
       css: {
         addClass: 'with arrow'
       },
@@ -73,6 +57,23 @@ module.exports.lists = new Element({
           }
         })
       }
+    }),
+    4: new ui.SwitcherRow({
+      icon: new ui.Icon('newsletter'),
+      caption: {
+        title: new ui.H5('Newsletter'),
+        subtitle: new ui.H8({
+          text: 'We will never send you spam!',
+          css: {
+            addClass: 'ui-additional'
+          }
+        })
+      },
+      switcher: new ui.Switcher({
+        css: {
+          addClass: 'ui-big'
+        }
+      })
     })
   },
 })
@@ -107,6 +108,30 @@ module.exports.forms = new Element({
             female: {
               node: 'option',
               text: 'Female'
+            }
+          }
+        })
+      }
+    }),
+    3: new ui.LabelRow({
+      label: {
+        caption: new ui.Icon('date'),
+        input: new ui.Select({
+          options: {
+            placeholder: {
+              text: 'Select Age'
+            },
+            below18: {
+              node: 'option',
+              text: 'Below 18'
+            },
+            '18to21': {
+              node: 'option',
+              text: '18 to 21'
+            },
+            above21: {
+              node: 'option',
+              text: 'Above 21'
             }
           }
         })
