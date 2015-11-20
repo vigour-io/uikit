@@ -29,19 +29,21 @@ module.exports.lists = new Element({
         title: new ui.H5('Language')
       }
     }),
-    2: new ui.Row({
-      css: {
-        addClass: 'with arrow'
-      },
-      caption: {
-        title: new ui.H5('Language'),
-        subtitle: new ui.H8({
-          text: 'Change language.',
+    2: new ui.SwitcherRow({
+        caption: {
+          title: new ui.H5('Newsletter'),
+          subtitle: new ui.H8({
+            text: 'We will never send you spam!',
+            css: {
+              addClass: 'ui-additional'
+            }
+          })
+        },
+        switcher: new ui.Switcher({
           css: {
-            addClass: 'ui-additional'
+            addClass: 'ui-quinary'
           }
         })
-      }
     }),
     3: new ui.Row({
       css: {

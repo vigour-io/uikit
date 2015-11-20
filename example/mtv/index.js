@@ -43,7 +43,7 @@ app.set({
       },
 
       notifications: {
-        title: new ui.H3('Notifications:'),
+        title: new ui.H5('Notifications:'),
         node: 'section',
 
         notification: require('./components/notification')
@@ -64,12 +64,12 @@ app.set({
         small: new ui.Input('Small'),
 
         colorCaption: new ui.P('Input colors:'),
-        primary: new ui.Input('Primary'),
-        secondary: new ui.Input('Secondary'),
-        tertiary: new ui.Input('Tertiary'),
-        'grayscale-light': new ui.Input('Grayscale Light'),
-        'grayscale-dark': new ui.Input('Grayscale Dark'),
-        blackwhite: new ui.Input('Black n White')
+        'ui-primary': new ui.Input('Primary'),
+        'ui-secondary': new ui.Input('Secondary'),
+        'ui-tertiary': new ui.Input('Tertiary'),
+        'ui-grayscale-light': new ui.Input('Grayscale Light'),
+        'ui-grayscale-dark': new ui.Input('Grayscale Dark'),
+        'ui-blackwhite': new ui.Input('Black n White')
       },
 
       selects: {
@@ -77,7 +77,7 @@ app.set({
         node: 'section',
 
         colorCaption: new ui.P('Select colors:'),
-        primary: new ui.Select({
+        'ui-primary': new ui.Select({
           options:{
             one:{
               text:'Nika Baller'
@@ -87,9 +87,9 @@ app.set({
             }
           }
         }),
-        secondary: new ui.Select(),
-        tertiary: new ui.Select(),
-        blackwhite: new ui.Select(),
+        'ui-secondary': new ui.Select(),
+        'ui-tertiary': new ui.Select(),
+        'ui-blackwhite': new ui.Select(),
       },
 
       labels: {
@@ -103,13 +103,13 @@ app.set({
           },
           input: new ui.Input()
         }),
-        secondary: new ui.Label({
+        'ui-secondary': new ui.Label({
           caption: {
             text: 'Caption:'
           },
           input: new ui.Input()
         }),
-        blackwhite: new ui.Label({
+        'ui-blackwhite': new ui.Label({
           caption: {
             text: 'Caption:'
           },
@@ -118,7 +118,7 @@ app.set({
 
         labelsWithIconsCaption: new ui.P('Labels with Icons:'),
         labelWithIcons: {
-          css: 'ui-label primary',
+          css: 'ui-label ui-primary',
           node: 'label',
           caption: new ui.Icon('email'),
           input: new ui.Input({
@@ -129,7 +129,7 @@ app.set({
           })
         },
         labelWithIcons2: {
-          css: 'ui-label tertiary',
+          css: 'ui-label ui-tertiary',
           node: 'label',
           caption: new ui.Icon('locked'),
           input: new ui.Input({
@@ -165,12 +165,12 @@ app.set({
         colors: {
           title: new ui.P('Button colors:'),
 
-          primary: new ui.Button(),
-          secondary: new ui.Button('Secondary'),
-          tertiary: new ui.Button('Tertiary'),
-          'grayscale-light': new ui.Button('Grayscale Light'),
-          'grayscale-dark': new ui.Button('Grayscale Dark'),
-          blackwhite: new ui.Button('Black n White'),
+          'ui-primary': new ui.Button(),
+          'ui-secondary': new ui.Button('Secondary'),
+          'ui-tertiary': new ui.Button('Tertiary'),
+          'ui-grayscale-light': new ui.Button('Grayscale Light'),
+          'ui-grayscale-dark': new ui.Button('Grayscale Dark'),
+          'ui-blackwhite': new ui.Button('Black n White'),
         },
 
         types: {
@@ -178,24 +178,38 @@ app.set({
 
           aside: new ui.Button('Register').set({
             css: {
-              addClass: 'big tertiary aside-button'
+              addClass: 'big ui-tertiary aside-button'
             }
           }),
           withIcon: new ui.Button('Register').set({
             css: {
-              addClass: 'big tertiary'
+              addClass: 'big ui-tertiary'
             },
             text: 'Next',
             facebook: new ui.Icon('right')
           }),
           iconic: new ui.Button('Register').set({
             css: {
-              addClass: 'big tertiary iconic'
+              addClass: 'big ui-tertiary iconic'
             },
             text: '',
             facebook: new ui.Icon('right')
           })
         }
+      },
+
+      switchers: {
+        title: new ui.H5('Switcher:'),
+        node: 'section',
+
+        'ui-primary': new ui.Switcher(),
+        'ui-secondary': new ui.Switcher(),
+        'ui-tertiary': new ui.Switcher(),
+        'ui-quaternary': new ui.Switcher(),
+        'ui-quinary': new ui.Switcher(),
+        'ui-grayscale-dark': new ui.Switcher(),
+        'ui-grayscale-light': new ui.Switcher(),
+        'ui-blackwhite': new ui.Switcher()
       },
 
       formGroups: {
@@ -217,7 +231,7 @@ app.set({
               text: 'Search'
             },
             css: {
-              addClass: 'blackwhite'
+              addClass: 'ui-blackwhite'
             },
             caption: {
               text: 'Caption:'
@@ -226,7 +240,7 @@ app.set({
           }),
           button: new ui.Button({
             css: {
-              addClass: 'primary iconic'
+              addClass: 'ui-primary iconic'
             },
             text: '',
             facebook: new ui.Icon('search')
@@ -240,18 +254,18 @@ app.set({
     // colors: {
     //   title: new ui.H3('Colors:'),
     //   node: 'section'
-    //   // primary: '',
-    //   // grayscale: '',
+    //   // 'ui-primary': '',
+    //   // 'ui-grayscale': '',
     //   // other: ''
     // },
 
     // colorsSchemes: {
     //   title: new ui.H3('Color models (schemes):'),
     //   node: 'section'
-    //   // primary: '',
-    //   // secondary: '',
-    //   // tertiary: '',
-    //   // grayscale: ''
+    //   // 'ui-primary': '',
+    //   // 'ui-secondary': '',
+    //   // 'ui-tertiary': '',
+    //   // 'ui-grayscale': ''
     // },
 
     typography: require('./components/typography')

@@ -47,8 +47,9 @@ module.exports = new Element({
             bringBack: function () {
               var parent = this.parent
               setTimeout(function () {
+                console.log(this)
                 parent.set({
-                  notif: new ui.Warning()
+                  notif: new ui.Warning(this.Constructor)
                 })
               }, 1000)
             }
