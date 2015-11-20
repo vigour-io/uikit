@@ -241,16 +241,14 @@ app.set({
         title: new ui.H5('Form Groups:'),
         node: 'section',
 
-        formGroup: {
-          css: 'ui-form-group',
+        formGroup: new ui.Group({
           input: new ui.Input('Input'),
           button: new ui.Button('Button')
-        },
+        }),
 
-        br: new ui.Br(),
+        br2: new ui.DoubleBr(),
 
-        formGroupWithIcon: {
-          css: 'ui-form-group',
+        formGroupWithIcon: new ui.Group({
           label: new ui.Label({
             caption: {
               text: 'Search'
@@ -270,7 +268,34 @@ app.set({
             text: '',
             facebook: new ui.Icon('search')
           })
-        }
+        }),
+
+        br: new ui.DoubleBr(),
+
+        formGroupWithButton: new ui.Group({
+          switcher: new ui.Switcher({
+            css: {
+              addClass: 'ui-secondary'
+            }
+          }),
+          label: new ui.Label({
+            caption: {
+              text: 'Search'
+            },
+            css: {
+              addClass: 'ui-primary'
+            },
+            caption: new ui.Icon('email'),
+            input: new ui.Input()
+          }),
+          button: new ui.Button({
+            css: {
+              addClass: 'ui-primary iconic'
+            },
+            text: '',
+            icon: new ui.Icon('search')
+          })
+        })
       }
     },
 

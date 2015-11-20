@@ -5,8 +5,6 @@ require('./style.less')
 var Element = require('vigour-element')
 var ui = require('~/lib')
 
-var Observable = require('vigour-js/lib/observable')
-
 Element.prototype.inject(
   require('vigour-element/lib/property/text'),
   require('vigour-element/lib/property/transform'),
@@ -72,9 +70,6 @@ module.exports.lists = new Element({
         })
       },
       switcher: new ui.Switcher({
-        checkbox: {
-          state: new Observable(false)
-        },
         css: {
           addClass: 'ui-big'
         }
@@ -124,15 +119,19 @@ module.exports.forms = new Element({
         input: new ui.Select({
           options: {
             placeholder: {
-              text: 'Gender'
+              text: 'Select Age'
             },
-            male: {
+            below18: {
               node: 'option',
-              text: 'Male'
+              text: 'Below 18'
             },
-            female: {
+            '18to21': {
               node: 'option',
-              text: 'Female'
+              text: '18 to 21'
+            },
+            above21: {
+              node: 'option',
+              text: 'Above 21'
             }
           }
         })
