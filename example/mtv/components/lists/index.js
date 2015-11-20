@@ -5,6 +5,8 @@ require('./style.less')
 var Element = require('vigour-element')
 var ui = require('~/lib')
 
+var Observable = require('vigour-js/lib/observable')
+
 Element.prototype.inject(
   require('vigour-element/lib/property/text'),
   require('vigour-element/lib/property/transform'),
@@ -29,23 +31,7 @@ module.exports.lists = new Element({
         title: new ui.H5('Language')
       }
     }),
-    2: new ui.SwitcherRow({
-        caption: {
-          title: new ui.H5('Newsletter'),
-          subtitle: new ui.H8({
-            text: 'We will never send you spam!',
-            css: {
-              addClass: 'ui-additional'
-            }
-          })
-        },
-        switcher: new ui.Switcher({
-          css: {
-            addClass: 'ui-quinary'
-          }
-        })
-    }),
-    3: new ui.Row({
+    2: new ui.Row({
       css: {
         addClass: 'active with arrow'
       },
@@ -59,7 +45,7 @@ module.exports.lists = new Element({
         })
       }
     }),
-    4: new ui.Row({
+    3: new ui.Row({
       css: {
         addClass: 'with arrow'
       },
@@ -73,6 +59,26 @@ module.exports.lists = new Element({
           }
         })
       }
+    }),
+    4: new ui.SwitcherRow({
+      icon: new ui.Icon('newsletter'),
+      caption: {
+        title: new ui.H5('Newsletter'),
+        subtitle: new ui.H8({
+          text: 'We will never send you spam!',
+          css: {
+            addClass: 'ui-additional'
+          }
+        })
+      },
+      switcher: new ui.Switcher({
+        checkbox: {
+          state: new Observable(false)
+        },
+        css: {
+          addClass: 'ui-big'
+        }
+      })
     })
   },
 })
@@ -95,6 +101,26 @@ module.exports.forms = new Element({
     2: new ui.LabelRow({
       label: {
         caption: new ui.Icon('gender'),
+        input: new ui.Select({
+          options: {
+            placeholder: {
+              text: 'Gender'
+            },
+            male: {
+              node: 'option',
+              text: 'Male'
+            },
+            female: {
+              node: 'option',
+              text: 'Female'
+            }
+          }
+        })
+      }
+    }),
+    3: new ui.LabelRow({
+      label: {
+        caption: new ui.Icon('date'),
         input: new ui.Select({
           options: {
             placeholder: {
