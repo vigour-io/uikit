@@ -14,70 +14,75 @@ Element.prototype.inject(
 )
 
 module.exports = new Element({
-  0: {
-    title: new ui.P('Success:'),
-    aside: {
-      node: 'aside',
-      css: 'notification',
-      notif: new ui.Success({
-        on: {
-          click: {
-            bringBack: function () {
-              var parent = this.parent
-              setTimeout(function () {
-                parent.set({
-                  notif: new ui.Success()
-                })
-              }, 1000)
-            }
-          }
-        }
-      })
-    }
-  },
+  title: new ui.H5('Notifications:'),
+  node: 'section',
 
-  1: {
-    title: new ui.P('Warning:'),
-    aside: {
-      node: 'aside',
-      css: 'notification',
-      notif: new ui.Warning({
-        on: {
-          click: {
-            bringBack: function () {
-              var parent = this.parent
-              setTimeout(function () {
-                console.log(this)
-                parent.set({
-                  notif: new ui.Warning(this.Constructor)
-                })
-              }, 1000)
+  notification: {
+    0: {
+      title: new ui.P('Success:'),
+      aside: {
+        node: 'aside',
+        css: 'notification',
+        notif: new ui.Success({
+          on: {
+            click: {
+              bringBack: function () {
+                var parent = this.parent
+                setTimeout(function () {
+                  parent.set({
+                    notif: new ui.Success()
+                  })
+                }, 1000)
+              }
             }
           }
-        }
-      })
-    }
-  },
+        })
+      }
+    },
 
-  2: {
-    title: new ui.P('Error:'),
-    aside: {
-      node: 'aside',
-      css: 'notification',
-      notif: new ui.Error({
-        on: {
-          click: {
-            bringBack: function () {
-              var parent = this.parent
-              setTimeout(function () {
-                parent.set({
-                  notif: new ui.Error()
-                })
-              }, 1000)
+    1: {
+      title: new ui.P('Warning:'),
+      aside: {
+        node: 'aside',
+        css: 'notification',
+        notif: new ui.Warning({
+          on: {
+            click: {
+              bringBack: function () {
+                var parent = this.parent
+                setTimeout(function () {
+                  console.log(this)
+                  parent.set({
+                    notif: new ui.Warning(this.Constructor)
+                  })
+                }, 1000)
+              }
             }
           }
-        }
-      })
+        })
+      }
+    },
+
+    2: {
+      title: new ui.P('Error:'),
+      aside: {
+        node: 'aside',
+        css: 'notification',
+        notif: new ui.Error({
+          on: {
+            click: {
+              bringBack: function () {
+                var parent = this.parent
+                setTimeout(function () {
+                  parent.set({
+                    notif: new ui.Error()
+                  })
+                }, 1000)
+              }
+            }
+          }
+        })
+      }
     }
   }
 })

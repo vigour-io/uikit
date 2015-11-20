@@ -1,6 +1,6 @@
 'use strict'
 var Element = require('vigour-element')
-var Observable = require('vigour-js/lib/observable')
+var ui = require('~/lib')
 
 require('./less/imports.less')
 require('./config.less')
@@ -9,8 +9,6 @@ require('./style.less')
 var app = new Element({
   node: document.body
 })
-
-var ui = require('~/lib')
 
 Element.prototype.inject(
   require('vigour-element/lib/property/text'),
@@ -42,281 +40,37 @@ app.set({
         forms: require('./components/lists').forms
       },
 
-      notifications: {
-        title: new ui.H5('Notifications:'),
-        node: 'section',
-
-        notification: require('./components/notification')
-      }
+      notifications: require('./components/notification')
     },
+
+    hr: new ui.Hr({
+      css: {
+        addClass: 'double'
+      }
+    }),
 
     forms: {
       title: new ui.H3('Forms:'),
       node: 'section',
-      inputs: {
-        title: new ui.H5('Inputs:'),
-        node: 'section',
 
-        sizesCaption: new ui.P('Input sizes:'),
-        large: new ui.Input('Large'),
-        big: new ui.Input('Big'),
-        medium: new ui.Input('Medium'),
-        small: new ui.Input('Small'),
+      inputs: require('./components/forms/inputs'),
 
-        colorCaption: new ui.P('Input colors:'),
-        'ui-primary': new ui.Input('Primary'),
-        'ui-secondary': new ui.Input('Secondary'),
-        'ui-tertiary': new ui.Input('Tertiary'),
-        'ui-grayscale-light': new ui.Input('Grayscale Light'),
-        'ui-grayscale-dark': new ui.Input('Grayscale Dark'),
-        'ui-blackwhite': new ui.Input('Black n White')
-      },
+      selects: require('./components/forms/selects'),
 
-      selects: {
-        title: new ui.H5('Selects:'),
-        node: 'section',
+      labels: require('./components/forms/labels'),
 
-        colorCaption: new ui.P('Select colors:'),
-        'ui-primary': new ui.Select({
-          options:{
-            one:{
-              text:'Nika Baller'
-            },
-            two:{
-              text:'Youzi Shiner'
-            }
-          }
-        }),
-        'ui-secondary': new ui.Select(),
-        'ui-tertiary': new ui.Select(),
-        'ui-blackwhite': new ui.Select(),
-      },
+      buttons: require('./components/forms/buttons'),
 
-      labels: {
-        title: new ui.H5('Labels:'),
-        node: 'section',
+      switchers: require('./components/forms/switchers'),
 
-        labelsCaption: new ui.P('Simple labels:'),
-        label: new ui.Label({
-          caption: {
-            text: 'Caption:'
-          },
-          input: new ui.Input()
-        }),
-        'ui-secondary': new ui.Label({
-          caption: {
-            text: 'Caption:'
-          },
-          input: new ui.Input()
-        }),
-        'ui-blackwhite': new ui.Label({
-          caption: {
-            text: 'Caption:'
-          },
-          input: new ui.Input()
-        }),
-
-        labelsWithIconsCaption: new ui.P('Labels with Icons:'),
-        labelWithIcons: {
-          css: 'ui-label ui-primary',
-          node: 'label',
-          caption: new ui.Icon('email'),
-          input: new ui.Input({
-            attributes: {
-              placeholder: 'E-mail',
-              type: 'email'
-            }
-          })
-        },
-        labelWithIcons2: {
-          css: 'ui-label ui-tertiary',
-          node: 'label',
-          caption: new ui.Icon('locked'),
-          input: new ui.Input({
-            attributes: {
-              placeholder: 'Password',
-              type: 'password'
-            }
-          })
-        }
-      },
-
-      buttons: {
-        title: new ui.H5('Buttons:'),
-        node: 'section',
-
-        sizes: {
-          title: new ui.P('Button sizes:'),
-          large: new ui.Button({
-            val:'Large',
-            on:{
-              click() {
-                app.set({
-
-                })
-              }
-            }
-          }),
-          big: new ui.Button('Big'),
-          medium: new ui.Button('Medium'),
-          small: new ui.Button('Small'),
-        },
-
-        colors: {
-          title: new ui.P('Button colors:'),
-
-          'ui-primary': new ui.Button(),
-          'ui-secondary': new ui.Button('Secondary'),
-          'ui-tertiary': new ui.Button('Tertiary'),
-          'ui-grayscale-light': new ui.Button('Grayscale Light'),
-          'ui-grayscale-dark': new ui.Button('Grayscale Dark'),
-          'ui-blackwhite': new ui.Button('Black n White'),
-        },
-
-        types: {
-          title: new ui.P('Button types:'),
-
-          aside: new ui.Button('Register').set({
-            css: {
-              addClass: 'big ui-tertiary aside-button'
-            }
-          }),
-          withIcon: new ui.Button('Register').set({
-            css: {
-              addClass: 'big ui-tertiary'
-            },
-            text: 'Next',
-            facebook: new ui.Icon('right')
-          }),
-          iconic: new ui.Button('Register').set({
-            css: {
-              addClass: 'big ui-tertiary iconic'
-            },
-            text: '',
-            facebook: new ui.Icon('right')
-          })
-        }
-      },
-
-      switchers: {
-        title: new ui.H5('Switcher:'),
-        node: 'section',
-
-        switcher: new ui.Switcher(),
-
-        sizes: {
-          title: new ui.P('Switcher sizes:'),
-          'ui-large': new ui.Switcher({
-            css: {
-              addClass: 'ui-large'
-            }
-          }),
-          'ui-big': new ui.Switcher({
-            css: {
-              addClass: 'ui-big'
-            }
-          }),
-          'ui-medium': new ui.Switcher(),
-          'ui-small': new ui.Switcher({
-            css: {
-              addClass: 'ui-small'
-            }
-          })
-        },
-
-        colors: {
-          title: new ui.P('Switcher colors:'),
-          'ui-primary': new ui.Switcher(),
-          'ui-secondary': new ui.Switcher(),
-          'ui-tertiary': new ui.Switcher(),
-          'ui-quaternary': new ui.Switcher(),
-          'ui-quinary': new ui.Switcher(),
-          'ui-grayscale-dark': new ui.Switcher(),
-          'ui-grayscale-light': new ui.Switcher(),
-          'ui-blackwhite': new ui.Switcher()
-        }
-      },
-
-      formGroups: {
-        title: new ui.H5('Form Groups:'),
-        node: 'section',
-
-        formGroup: new ui.Group({
-          input: new ui.Input('Input'),
-          button: new ui.Button('Button')
-        }),
-
-        br2: new ui.DoubleBr(),
-
-        formGroupWithIcon: new ui.Group({
-          label: new ui.Label({
-            caption: {
-              text: 'Search'
-            },
-            css: {
-              addClass: 'ui-blackwhite'
-            },
-            caption: {
-              text: 'Caption:'
-            },
-            input: new ui.Input()
-          }),
-          button: new ui.Button({
-            css: {
-              addClass: 'ui-primary iconic'
-            },
-            text: '',
-            facebook: new ui.Icon('search')
-          })
-        }),
-
-        br: new ui.DoubleBr(),
-
-        formGroupWithButton: new ui.Group({
-          switcher: new ui.Switcher({
-            css: {
-              addClass: 'ui-secondary'
-            }
-          }),
-          label: new ui.Label({
-            caption: {
-              text: 'Search'
-            },
-            css: {
-              addClass: 'ui-primary'
-            },
-            caption: new ui.Icon('email'),
-            input: new ui.Input()
-          }),
-          button: new ui.Button({
-            css: {
-              addClass: 'ui-primary iconic'
-            },
-            text: '',
-            icon: new ui.Icon('search')
-          })
-        })
-      }
+      groups: require('./components/forms/groups')
     },
 
-    hr: new ui.Hr(),
-
-    // colors: {
-    //   title: new ui.H3('Colors:'),
-    //   node: 'section'
-    //   // 'ui-primary': '',
-    //   // 'ui-grayscale': '',
-    //   // other: ''
-    // },
-
-    // colorsSchemes: {
-    //   title: new ui.H3('Color models (schemes):'),
-    //   node: 'section'
-    //   // 'ui-primary': '',
-    //   // 'ui-secondary': '',
-    //   // 'ui-tertiary': '',
-    //   // 'ui-grayscale': ''
-    // },
+    hr2: new ui.Hr({
+      css: {
+        addClass: 'double'
+      }
+    }),
 
     typography: require('./components/typography')
   }
