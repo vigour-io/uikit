@@ -1,3 +1,5 @@
+require('./style.less')
+
 var Element = require('vigour-element')
 var ui = require('~/lib')
 

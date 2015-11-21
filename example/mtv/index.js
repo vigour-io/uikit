@@ -29,6 +29,8 @@ app.set({
       title: new ui.H3('Components:'),
       node: 'section',
 
+      modals: require('./components/modal'),
+
       lists: {
         title: new ui.H5('List items:'),
         node: 'section',

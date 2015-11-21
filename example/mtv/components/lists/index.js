@@ -15,6 +15,7 @@ Element.prototype.inject(
 
 module.exports.lists = new Element({
   node: 'aside',
+  css: 'ui-background-secondary',
   items: {
     0: new ui.Row({
       caption: {
@@ -80,6 +81,7 @@ module.exports.lists = new Element({
 
 module.exports.forms = new Element({
   node: 'aside',
+  css: 'ui-background-secondary',
   labels: {
     0: new ui.LabelRow({
       label: {
@@ -139,7 +141,7 @@ module.exports.forms = new Element({
     }),
     10: new ui.Button({
       css: {
-        addClass: 'large tertiary'
+        addClass: 'ui-large ui-tertiary'
       }
     })
   }
