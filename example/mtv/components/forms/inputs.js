@@ -1,3 +1,5 @@
+require('./style.less')
+
 var Element = require('vigour-element')
 var ui = require('~/lib')
 
@@ -6,16 +8,16 @@ module.exports = new Element({
   node: 'section',
 
   sizesCaption: new ui.P('Input sizes:'),
-  large: new ui.Input('Large'),
-  big: new ui.Input('Big'),
-  medium: new ui.Input('Medium'),
-  small: new ui.Input('Small'),
+  'ui-large': new ui.Input(),
+  'ui-big': new ui.Input(),
+  'ui-medium': new ui.Input(),
+  'ui-small': new ui.Input(),
 
   colorCaption: new ui.P('Input colors:'),
-  'ui-primary': new ui.Input('Primary'),
-  'ui-secondary': new ui.Input('Secondary'),
-  'ui-tertiary': new ui.Input('Tertiary'),
-  'ui-grayscale-light': new ui.Input('Grayscale Light'),
-  'ui-grayscale-dark': new ui.Input('Grayscale Dark'),
-  'ui-blackwhite': new ui.Input('Black n White')
+  'ui-primary': new ui.Input(),
+  'ui-secondary': new ui.Input(),
+  'ui-tertiary': new ui.Input(),
+  'ui-grayscale-light': new ui.Input(),
+  'ui-grayscale-dark': new ui.Input(),
+  'ui-blackwhite': new ui.Input()
 })
