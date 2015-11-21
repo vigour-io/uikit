@@ -21,7 +21,7 @@ module.exports = new Element({
     title: new ui.P('Top bar:'),
     aside: {
       node: 'aside',
-      css: 'ui-background-grayscale-light',
+      css: 'ui-secondary',
       topbar: new ui.Topbar({
         left: new ui.Icon('left'),
         title: {
@@ -43,7 +43,10 @@ module.exports = new Element({
         right: new ui.Icon('close')
       }),
       content: {
-        text: 'hello there'
+        hello: {
+          node: 'span',
+          text: 'hello there'
+        }
       },
       bottombar: new ui.Bottombar({
         text: 'MTV Play - 1.2.81'
