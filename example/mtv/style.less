@@ -27,60 +27,6 @@
     width: 20%;
   }
 
-  .forms {
-    > section {
-
-      &:last-child {
-        margin-bottom: 0;
-      }
-    }
-
-    .ui-paragraph {
-      color: @midgray;
-      margin: 1.5rem 0 .5rem;
-    }
-
-    .inputs {
-      .ui-input {
-        vertical-align: top;
-        margin-right: .8rem;
-      }
-    }
-
-    .selects {
-      .ui-select {
-        vertical-align: top;
-        margin-right: .8rem;
-      }
-    }
-
-    .labels {
-      .ui-label {
-        margin-right: .8rem;
-      }
-    }
-
-    .buttons {
-      .ui-button {
-        vertical-align: top;
-        margin-right: .8rem;
-      }
-    }
-
-    .switchers {
-      .ui-switcher {
-        vertical-align: top;
-        margin-right: .8rem;
-      }
-    }
-
-    .groups {
-      .ui-form-group{
-        margin: 0 .8rem .8rem 0;
-      }
-    }
-  }
-
   aside {
     &:not(:last-child) {
       margin-bottom: 3rem;
@@ -88,22 +34,16 @@
 
     width: 400px;
     padding: 20px 15px;
-    .scheme(@secondary-scheme-inverse);
     .radius(@input-radius);
-
-    &.notification {
-      height: 100px;
-      .scheme(@grayscale-light-scheme-inverse);
-    }
 
     .labels,
     .items {
       .ui-row {
-        .ui-row-coloring(@secondary-scheme-inverse);
+        .ui-row-color(@secondary-scheme-inverse);
       }
     }
 
-    .large.ui-button:not(.iconic) {
+    .ui-button.ui-large:not(.iconic) {
       width: 100%;
       margin: 1rem 0 0;
     }

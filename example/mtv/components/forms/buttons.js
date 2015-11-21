@@ -1,3 +1,5 @@
+require('./style.less')
+
 var Element = require('vigour-element')
 var ui = require('~/lib')
 
@@ -7,7 +9,7 @@ module.exports = new Element({
 
   sizes: {
     title: new ui.P('Button sizes:'),
-    large: new ui.Button({
+    'ui-large': new ui.Button({
       val: 'Large',
       on: {
         click() {
@@ -17,9 +19,9 @@ module.exports = new Element({
         }
       }
     }),
-    big: new ui.Button('Big'),
-    medium: new ui.Button('Medium'),
-    small: new ui.Button('Small'),
+    'ui-big': new ui.Button('Big'),
+    'ui-medium': new ui.Button('Medium'),
+    'ui-small': new ui.Button('Small'),
   },
 
   colors: {
@@ -36,24 +38,24 @@ module.exports = new Element({
   types: {
     title: new ui.P('Button types:'),
 
-    aside: new ui.Button('Register').set({
+    italic: new ui.Button().set({
       css: {
-        addClass: 'big ui-tertiary aside-button'
+        addClass: 'ui-big ui-tertiary italic-button'
       }
     }),
     withIcon: new ui.Button('Register').set({
       css: {
-        addClass: 'big ui-tertiary'
+        addClass: 'ui-big ui-tertiary'
       },
       text: 'Next',
-      facebook: new ui.Icon('right')
+      icon: new ui.Icon('right')
     }),
     iconic: new ui.Button('Register').set({
       css: {
-        addClass: 'big ui-tertiary iconic'
+        addClass: 'ui-big ui-tertiary iconic'
       },
       text: '',
-      facebook: new ui.Icon('right')
+      icon: new ui.Icon('right')
     })
   }
 })
