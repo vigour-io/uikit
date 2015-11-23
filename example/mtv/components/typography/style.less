@@ -14,7 +14,14 @@
     }
   }
 
-  .ui-heading {
+  .monospace {
+    .ui-heading,
+    .ui-h2 {
+      font-family: @font-family-monospace;
+    }
+  }
+
+  .ui-heading:not(.title) {
     margin: .5rem 0 .6em;
     .text-overflow(ellipsis);
   }

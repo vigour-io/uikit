@@ -2,9 +2,7 @@
 var Element = require('vigour-element')
 var ui = require('~/lib')
 
-require('./less/imports.less')
-require('./config.less')
-require('./style.less')
+require('./less/style.less')
 
 var app = new Element({
   node: document.body
@@ -43,32 +41,6 @@ app.set({
       },
 
       notifications: require('./components/notification')
-    },
-
-    hr: new ui.Hr({
-      css: {
-        addClass: 'double'
-      }
-    }),
-
-    forms: {
-      title: new ui.H3('Forms:'),
-      node: 'section',
-
-      inputs: require('./components/forms/inputs'),
-      selects: require('./components/forms/selects'),
-      labels: require('./components/forms/labels'),
-      buttons: require('./components/forms/buttons'),
-      switchers: require('./components/forms/switchers'),
-      groups: require('./components/forms/groups')
-    },
-
-    hr2: new ui.Hr({
-      css: {
-        addClass: 'double'
-      }
-    }),
-
-    typography: require('./components/typography')
+    }
   }
 })

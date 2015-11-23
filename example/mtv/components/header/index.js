@@ -15,7 +15,7 @@ Element.prototype.inject(
 var logo = new Element({
   node: 'a',
   attributes: {
-    href: ''
+    href: '/example/mtv/'
   },
   icon: new Icon('logo'),
   title: {

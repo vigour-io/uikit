@@ -16,14 +16,11 @@ module.exports = new Element({
 
   formGroupWithIcon: new ui.Group({
     label: new ui.Label({
-      caption: {
-        text: 'Search'
-      },
       css: {
         addClass: 'ui-blackwhite'
       },
       caption: {
-        text: 'Caption:'
+        text: 'Search:'
       },
       input: new ui.Input()
     }),
@@ -45,9 +42,6 @@ module.exports = new Element({
       }
     }),
     label: new ui.Label({
-      caption: {
-        text: 'Search'
-      },
       css: {
         addClass: 'ui-primary'
       },
@@ -56,10 +50,9 @@ module.exports = new Element({
     }),
     button: new ui.Button({
       css: {
-        addClass: 'ui-primary iconic'
+        addClass: 'ui-secondary'
       },
-      text: '',
-      icon: new ui.Icon('search')
+      text: 'Subscribe'
     })
   })
 })
