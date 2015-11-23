@@ -11,6 +11,10 @@
 
   padding-top: 6rem;
 
+  @media @above-medium {
+    padding-top: 8rem;
+  }
+
   > section {
     > section {
       padding: 2rem 0 0;
@@ -38,7 +42,8 @@
       margin-bottom: 3rem;
     }
 
-    width: 400px;
+    .width-range(@modal-min-width, @modal-max-width);
+
     padding: 20px 15px;
     .radius(@input-radius);
 
