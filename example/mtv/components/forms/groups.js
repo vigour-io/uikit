@@ -7,6 +7,8 @@ module.exports = new Element({
   title: new ui.H5('Form Groups:'),
   node: 'section',
 
+  title1: new ui.P('With Button:'),
+
   formGroup: new ui.Group({
     input: new ui.Input('Input'),
     button: new ui.Button('Button')
@@ -14,6 +16,7 @@ module.exports = new Element({
 
   br2: new ui.DoubleBr(),
 
+  title2: new ui.P('With Label and iconic Button:'),
   formGroupWithIcon: new ui.Group({
     label: new ui.Label({
       css: {
@@ -34,6 +37,8 @@ module.exports = new Element({
   }),
 
   br: new ui.DoubleBr(),
+
+  title3: new ui.P('With Switcher, Label and iconic Button:'),
 
   formGroupWithButton: new ui.Group({
     switcher: new ui.Switcher({

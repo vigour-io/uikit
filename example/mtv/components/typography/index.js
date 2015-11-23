@@ -16,9 +16,9 @@ for (let i = 0; i < 10; i++) {
   headings[i] = new Element({
     caption: {
       node: 'span',
-      text: `h${i + 1} - ${parseInt(sizes[i] * BASE_FONT_SIZE)}px`
+      text: `h${i + 1} - ${ parseInt(sizes[i] * BASE_FONT_SIZE, 10) }px`
     },
-    header: new ui[`H${i+1}`](HEADER_TEXT)
+    header: new ui[`H${i + 1}`](HEADER_TEXT)
   })
 }
 
@@ -37,7 +37,7 @@ module.exports = exports = new Element({
 
   sansSerif: {
     family: {
-      title: "Sans Serif",
+      title: 'Sans Serif',
       list: new ui.List('a')
     },
     headings: new Headers({}),
@@ -126,7 +126,7 @@ module.exports = exports = new Element({
           css: 'ui-h2 ui-line-through',
           text: 'The'
         }
-      },
+      }
     }
   },
 
@@ -138,7 +138,7 @@ module.exports = exports = new Element({
 
   serif: {
     family: {
-      title: "Serif",
+      title: 'Serif',
       list: new ui.List('a')
     },
     headings: new Headers({}),
@@ -227,7 +227,7 @@ module.exports = exports = new Element({
           css: 'ui-h2 ui-line-through',
           text: 'The'
         }
-      },
+      }
     }
   },
 
@@ -239,7 +239,7 @@ module.exports = exports = new Element({
 
   monospace: {
     family: {
-      title: "Serif",
+      title: 'Monospace',
       list: new ui.List('a')
     },
     headings: new Headers({}),
@@ -328,7 +328,7 @@ module.exports = exports = new Element({
           css: 'ui-h2 ui-line-through',
           text: 'The'
         }
-      },
+      }
     }
   }
 })

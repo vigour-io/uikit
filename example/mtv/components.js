@@ -44,5 +44,7 @@ app.set({
 
       notifications: require('./components/notification')
     }
-  }
+  },
+
+  hr: new ui.Hr()
 })

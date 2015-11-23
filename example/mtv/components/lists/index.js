@@ -70,13 +70,9 @@ module.exports.lists = new Element({
           }
         })
       },
-      switcher: new ui.Switcher({
-        css: {
-          addClass: 'ui-big'
-        }
-      })
+      switcher: new ui.Switcher()
     })
-  },
+  }
 })
 
 module.exports.forms = new Element({

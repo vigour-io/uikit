@@ -1,10 +1,12 @@
 'use strict'
-var Element = require('vigour-element')
-var ui = require('~/lib')
 
 require('./less/style.less')
 
-var app = new Element({
+var Element = require('vigour-element')
+var ui = require('~/lib')
+
+var App = require('vigour-element/lib/app')
+var app = new App({
   node: document.body
 })
 
@@ -34,5 +36,7 @@ app.set({
       switchers: require('./components/forms/switchers'),
       groups: require('./components/forms/groups')
     }
-  }
+  },
+
+  hr: new ui.Hr()
 })

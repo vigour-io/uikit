@@ -1,8 +1,8 @@
 'use strict'
-var Element = require('vigour-element')
-var ui = require('~/lib')
 
 require('./less/style.less')
+
+var Element = require('vigour-element')
 
 var app = new Element({
   node: document.body
