@@ -9,7 +9,7 @@ Element.prototype.inject(
   require('vigour-js/lib/operator/subscribe')
 )
 
-var obs = window.obs = new Observable('asd')
+var obs = window.obs = new Observable('Observable')
 
 module.exports = new Element({
   title: new ui.H5('Inputs:'),
@@ -29,18 +29,11 @@ module.exports = new Element({
     text: obs
   }),
 
-  aside: new ui.P({
-    css: {
-      addClass: 'ui-primary'
-    },
-    prepend: 'asd',
-    text: obs
-  }),
-
   colorCaption: new ui.P('Input colors:'),
   'ui-primary': new ui.Input(),
   'ui-secondary': new ui.Input(),
   'ui-tertiary': new ui.Input(),
+  br: new ui.Br(),
   'ui-grayscale-light': new ui.Input(),
   'ui-grayscale-dark': new ui.Input(),
   'ui-blackwhite': new ui.Input()

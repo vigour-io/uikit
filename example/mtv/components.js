@@ -27,6 +27,8 @@ app.set({
       title: new ui.H3('Components:'),
       node: 'section',
 
+      progressbars: require('./components/progressbars'),
+
       modals: require('./components/modal'),
 
       lists: {
