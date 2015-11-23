@@ -56,15 +56,10 @@ app.set({
       node: 'section',
 
       inputs: require('./components/forms/inputs'),
-
       selects: require('./components/forms/selects'),
-
       labels: require('./components/forms/labels'),
-
       buttons: require('./components/forms/buttons'),
-
       switchers: require('./components/forms/switchers'),
-
       groups: require('./components/forms/groups')
     },
 
