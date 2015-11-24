@@ -9,7 +9,7 @@
   "scripts": {
     "start": "gaston",
     "test": "gaston test",
-    "build": "gaston build -s example/showcase -o . -i",
+    "build": "gaston build -s example/mtv -o . -i",
     "all": "npm run build && ./node_modules/.bin/vNative build",
     "ios": "npm run build && ./node_modules/.bin/vNative build --native '{\"selectedPlatforms\":\"ios\"}'",
     "android": "npm run build && ./node_modules/.bin/vNative build --native '{\"selectedPlatforms\":\"android\"}'",
