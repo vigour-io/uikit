@@ -4,7 +4,7 @@ require('./style.less')
 
 var Observable = require('vigour-js/lib/observable')
 var Element = require('vigour-element')
-var ui = require('~/lib')
+var ui = require('uikit/lib')
 
 const BASE_FONT_SIZE = 10
 const HEADER_TEXT = 'The quick brown fox jumps over the lazy dog.'

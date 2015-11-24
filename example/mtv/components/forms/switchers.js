@@ -1,7 +1,7 @@
 require('./style.less')
 
 var Element = require('vigour-element')
-var ui = require('~/lib')
+var ui = require('uikit/lib')
 
 var Observable = require('vigour-js/lib/observable')
 var binded = new Observable(true)

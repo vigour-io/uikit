@@ -1,6 +1,6 @@
 header.header {
   position: absolute;
-  z-index: 180;
+  z-index: 1001;
   width: 100%;
   height: 150px;
   overflow: hidden;
@@ -11,7 +11,7 @@ header.header {
     display: block;
     height: 105px;
     background: @primary;
-    .absolute(-75px, -50px);
+    .absolute(auto, -75px, -50px);
     width: calc(100% + 100px);
     z-index: 0;
     .rotate(-3.5deg);
@@ -27,7 +27,7 @@ header.header {
     display: block;
     height: 150px;
     background: @whitegray;
-    .absolute(-75px, -50px);
+    .absolute(auto, -75px, -50px);
     width: calc(100% + 200px);
     z-index: -1;
     .rotate(3.5deg);
@@ -60,7 +60,7 @@ header.header {
   }
 
   > .menu {
-    .absolute(16%, 2%);
+    .absolute(auto, 16%, 2%);
     float: right;
     font-size: 20px;
     cursor: pointer;

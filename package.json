@@ -13,7 +13,7 @@
     "all": "npm run build && ./node_modules/.bin/vNative build",
     "ios": "npm run build && ./node_modules/.bin/vNative build --native '{\"selectedPlatforms\":\"ios\"}'",
     "android": "npm run build && ./node_modules/.bin/vNative build --native '{\"selectedPlatforms\":\"android\"}'",
-    "samsungtv": "npm run build && ./node_modules/.bin/vNative build --native '{\"selectedPlatforms\":\"samsungtv\"}'"
+    "samsungtv": "npm run build && ./node_modulesui/.bin/vNative build --native '{\"selectedPlatforms\":\"samsungtv\"}'"
   },
   "repository": {
     "type": "git",
@@ -34,6 +34,9 @@
     "Shawn Inder <shawn@vigour.io"
   ],
   "gaston": {
+    "aliasify": {
+      "uikit": "."
+    },
     "source-maps": false,
     "less-options": {
       "strictMath": true

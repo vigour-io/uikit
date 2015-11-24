@@ -1,6 +1,6 @@
 'use strict'
 var Element = require('vigour-element')
-var ui = require('~/lib')
+var ui = require('uikit/lib')
 
 require('./less/style.less')
 

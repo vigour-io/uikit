@@ -2,12 +2,17 @@
 
 @import url('./animation.less');
 @import url('./button.less');
+@import url('./modal.less');
 @import url('./topbar.less');
 
 .main.container {
   width: 100%;
   z-index: 150;
   .sizing;
+
+  &:odd {
+    background: #f9f9f9;
+  }
 
   padding-top: 6rem;
 

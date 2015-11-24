@@ -1,7 +1,7 @@
 require('./style.less')
 
 var Element = require('vigour-element')
-var ui = require('~/lib')
+var ui = require('uikit/lib')
 
 module.exports = new Element({
   title: new ui.H5('Form Groups:'),
