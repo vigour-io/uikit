@@ -27,6 +27,11 @@ app.set({
       title: new ui.H3('Components:'),
       node: 'section',
 
+      images: {
+        title: new ui.H5('Images:'),
+        vigourLogo: new ui.Img('assets/img/icon.png')
+      },
+
       progressbars: require('./components/progressbars'),
 
       modals: require('./components/modal'),
