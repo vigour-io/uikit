@@ -1,6 +1,6 @@
 {
   "name": "vigour-uikit",
-  "version": "0.0.7",
+  "version": "0.1.0",
   "description": "uikit containing basic ui elements",
   "engines": {
     "node": "^4.1.1"
@@ -35,7 +35,9 @@
   ],
   "gaston": {
     "aliasify": {
-      "uikit": "."
+      "uikit": "./",
+      "vigour-js": "./node_modules/vigour-js",
+      "vigour-element": "./node_modules/vigour-element"
     },
     "source-maps": false,
     "less-options": {
@@ -48,11 +50,10 @@
     "url": "https://github.com/vigour-io/hub/issues"
   },
   "dependencies": {
-    "vigour-element": "0.0.3",
-    "vigour-js": "^0.2.2",
-    "vigour-status-bar": "^1.0.1",
-    "vigour-env": "^1.0.1",
-    "vigour-wrapper": "^1.0.0"
+    "vigour-element": "^0.1.1",
+    "vigour-env": "^1.0.3",
+    "vigour-status-bar": "^1.0.5",
+    "vigour-wrapper": "^2.0.8"
   },
   "homepage": "https://github.com/vigour-io/hub#readme",
   "vigour": {
