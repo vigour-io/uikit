@@ -1,13 +1,19 @@
 {
   "name": "vigour-uikit",
-  "version": "0.0.3",
+  "version": "0.0.7",
   "description": "uikit containing basic ui elements",
   "engines": {
     "node": "^4.1.1"
   },
   "main": "lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "gaston",
+    "test": "gaston test",
+    "build": "gaston build -s example/mtv -o . -i",
+    "all": "npm run build && ./node_modules/.bin/vNative build",
+    "ios": "npm run build && ./node_modules/.bin/vNative build --native '{\"selectedPlatforms\":\"ios\"}'",
+    "android": "npm run build && ./node_modules/.bin/vNative build --native '{\"selectedPlatforms\":\"android\"}'",
+    "samsungtv": "npm run build && ./node_modulesui/.bin/vNative build --native '{\"selectedPlatforms\":\"samsungtv\"}'"
   },
   "repository": {
     "type": "git",
@@ -22,11 +28,17 @@
     "xhr"
   ],
   "contributors": [
+    "Youri <youri@vigour.io",
     "Jim de Beer <jim@vigour.io>",
     "Nika Tomadze <nika@vigour.io>",
     "Shawn Inder <shawn@vigour.io"
   ],
   "gaston": {
+    "aliasify": {
+      "uikit": "./",
+      "vigour-js": "./node_modules/vigour-js",
+      "vigour-element": "./node_modules/vigour-element"
+    },
     "source-maps": false,
     "less-options": {
       "strictMath": true
@@ -38,12 +50,38 @@
     "url": "https://github.com/vigour-io/hub/issues"
   },
   "dependencies": {
-    "vigour-element": "0.0.3",
-    "vigour-js": "^0.2.2",
-    "vigour-scratch": "^1.1.2"
+    "vigour-element": "^0.1.1",
+    "vigour-env": "^1.0.3",
+    "vigour-status-bar": "^1.0.5",
+    "vigour-wrapper": "^2.0.8"
   },
   "homepage": "https://github.com/vigour-io/hub#readme",
   "vigour": {
+    "native": {
+      "plugins": [
+        "status-bar",
+        "env",
+        "network"
+      ],
+      "platforms": {
+        "ios": {
+          "productName": "Vigour UI Kit",
+          "organizationName": "Vigour",
+          "organizationIdentifier": "io.vigour.uikit",
+          "appIcon": "assets/img/icon.png",
+          "splashScreen": "assets/img/splash.png",
+          "buildNumber": "1",
+          "appIndexPath": "build.html",
+          "NSAllowsArbitraryLoads": true,
+          "assets": {
+            "build.html": true,
+            "build.js": true,
+            "build.css": true,
+            "assets": "*"
+          }
+        }
+      }
+    },
     "services": {
       "sentinel": {
         "branches": [],
