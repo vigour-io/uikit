@@ -35,7 +35,7 @@
   ],
   "gaston": {
     "aliasify": {
-      "uikit": "./",
+      "uikit": ".",
       "vigour-js": "./node_modules/vigour-js",
       "vigour-element": "./node_modules/vigour-element"
     },
