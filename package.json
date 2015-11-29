@@ -57,10 +57,10 @@
     "url": "https://github.com/vigour-io/hub/issues"
   },
   "dependencies": {
-    "vigour-element": "^0.1.1",
+    "vigour-element": "^0.1.2",
     "vigour-env": "^1.0.3",
     "vigour-status-bar": "^1.0.5",
-    "vigour-wrapper": "^2.0.8"
+    "vigour-wrapper": "^2.1.0"
   },
   "homepage": "https://github.com/vigour-io/hub#readme",
   "vigour": {
