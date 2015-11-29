@@ -10,6 +10,7 @@
     "start": "gaston",
     "test": "gaston test",
     "build": "gaston build -s example/mtv -o . -i",
+    "dist": "gaston dist",
     "all": "npm run build && ./node_modules/.bin/vNative build",
     "ios": "npm run build && ./node_modules/.bin/vNative build --native '{\"selectedPlatforms\":\"ios\"}'",
     "android": "npm run build && ./node_modules/.bin/vNative build --native '{\"selectedPlatforms\":\"android\"}'",
@@ -42,6 +43,12 @@
     "source-maps": false,
     "less-options": {
       "strictMath": true
+    },
+    "dist": {
+      "files": [
+        "build.*",
+        "assets/**/*.*"
+      ]
     }
   },
   "author": "Vigour.io <dev@vigour.io>",
