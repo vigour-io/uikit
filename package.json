@@ -50,6 +50,7 @@
     "url": "https://github.com/vigour-io/hub/issues"
   },
   "dependencies": {
+    "vigour-scratch": "^1.2.6",
     "vigour-element": "^0.1.1",
     "vigour-env": "^1.0.3",
     "vigour-status-bar": "^1.0.5",
