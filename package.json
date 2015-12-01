@@ -10,6 +10,7 @@
     "start": "gaston",
     "test": "gaston test",
     "build": "gaston build -s example/mtv -o . -i",
+    "dist": "gaston dist",
     "all": "npm run build && ./node_modules/.bin/vNative build",
     "ios": "npm run build && ./node_modules/.bin/vNative build --native '{\"selectedPlatforms\":\"ios\"}'",
     "android": "npm run build && ./node_modules/.bin/vNative build --native '{\"selectedPlatforms\":\"android\"}'",
@@ -35,13 +36,19 @@
   ],
   "gaston": {
     "aliasify": {
-      "uikit": "./",
+      "uikit": ".",
       "vigour-js": "./node_modules/vigour-js",
       "vigour-element": "./node_modules/vigour-element"
     },
     "source-maps": false,
     "less-options": {
       "strictMath": true
+    },
+    "dist": {
+      "files": [
+        "build.*",
+        "assets/**/*.*"
+      ]
     }
   },
   "author": "Vigour.io <dev@vigour.io>",
@@ -50,6 +57,7 @@
     "url": "https://github.com/vigour-io/hub/issues"
   },
   "dependencies": {
+    "vigour-scratch": "^1.2.6",
     "vigour-element": "^0.1.1",
     "vigour-env": "^1.0.3",
     "vigour-status-bar": "^1.0.5",
