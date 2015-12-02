@@ -57,7 +57,7 @@
     "url": "https://github.com/vigour-io/uikit/issues"
   },
   "dependencies": {
-    "vigour-js": "~0.3.0",
+    "vigour-js": "~0.3.8",
     "vigour-element": "~0.2.0",
     "vigour-scratch": "~1.3.0",
     "vigour-env": "~1.0.3",
