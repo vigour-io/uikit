@@ -12,10 +12,12 @@ Element.prototype.inject(
   require('vigour-element/lib/property/attributes')
 )
 
-var logo = new Element({
+var logo = window.logo = new Element({
   node: 'a',
-  attributes: {
-    href: '/example/mtv/'
+  on: {
+    click () {
+      window.location.reload()
+    }
   },
   icon: new Icon('logo'),
   title: {

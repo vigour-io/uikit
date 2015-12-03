@@ -13,7 +13,7 @@ Element.prototype.inject(
   require('vigour-element/lib/events/css/animationEnd')
 )
 
-module.exports = new Element({
+module.exports = window.modal = new Element({
   title: new ui.H5('Modal layout:'),
   node: 'section',
 
@@ -45,7 +45,7 @@ module.exports = new Element({
       content: {
         hello: {
           node: 'span',
-          text: 'hello there'
+          text: 'Hello World'
         }
       },
       bottombar: new ui.Bottombar({

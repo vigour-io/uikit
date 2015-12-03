@@ -137,7 +137,7 @@ module.exports.forms = new Element({
     }),
     10: new ui.Button({
       css: {
-        addClass: 'ui-large ui-tertiary'
+        addClass: 'ui-large ui-tertiary ui-modal-button'
       }
     })
   }

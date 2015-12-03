@@ -1,0 +1,82 @@
+/**
+ * Vijf Config
+ * ----------------------------------------------
+ * Vijf config on top of Scratch and current showcase.
+ * All settings gonna be here in one file.
+ */
+
+
+/**
+ * Icons
+ */
+@import url('https://i.icomoon.io/public/1760d3d9bc/SBSV2/style.css');
+
+
+/**
+ * Colors
+ */
+@blue: #00B0CB;
+
+@pink: #ED3575;
+
+@grayblue: #E6F4F4;
+
+@green: #7ACFCA;
+
+@lightgray: #DDDDDD;
+
+
+/**
+ * Color priorities
+ */
+// primary
+@primary:                   @pink;
+
+// secondary
+@secondary:                 @blue;
+@secondary-additional:      fade(white, 50%);
+@secondary-border:          darken(@secondary, 5%);
+
+// tertiary
+@tertiary:                  @grayblue;
+@tertiary-contrast:         @secondary;
+@tertiary-contrast-hover:   @secondary-hover;
+
+// quaternary
+@quaternary:                @green;
+@quaternary-additional:     fade(white, 70%);
+
+// quinary
+@quinary:                   @orange;
+@quinary-additional:        fade(@quinary, 30%);
+
+// blackwhite
+@blackwhite-contrast:       white;
+
+
+/**
+ * State colors
+ */
+
+@success-scheme: @primary-scheme-inverse;
+
+@warning-scheme: @secondary-scheme-inverse;
+
+@error-scheme: @quaternary-scheme-inverse;
+
+
+/**
+ * Modal configs
+ */
+@input-radius: 100px;
+@input-small-radius: 100px;
+@input-big-radius: 100px;
+@input-large-radius: 100px;
+
+
+/**
+ * Modal configs
+ */
+
+@modal-scheme: @primary-scheme-inverse;
+@modal-radius: 2px;
