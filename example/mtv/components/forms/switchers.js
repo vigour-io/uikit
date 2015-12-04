@@ -56,9 +56,6 @@ module.exports = new Element({
     }),
     'ui-grayscale-light': new ui.Switcher({
       state: binded
-    }),
-    'ui-blackwhite': new ui.Switcher({
-      state: binded
     })
   }
 })

@@ -11,14 +11,14 @@ module.exports = new Element({
   'ui-primary': new ui.Select({
     options: {
       one: {
-        text: 'Nika Baller'
+        text: 'One'
       },
       two: {
-        text: 'Youzi Shiner'
+        text: 'Two'
       }
     }
   }),
   'ui-secondary': new ui.Select(),
   'ui-tertiary': new ui.Select(),
-  'ui-blackwhite': new ui.Select(),
+  'ui-blackwhite': new ui.Select()
 })
