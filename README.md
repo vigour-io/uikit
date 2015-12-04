@@ -3,6 +3,6 @@
 [![Build Status](https://travis-ci.org/vigour-io/uikit.svg?branch=develop)](https://travis-ci.org/vigour-io/uikit)
 
 # uikit
-basic ui elements, handy for making uis for tools/servers
+basic ui elements, handy for reusing components while developing.
 
 <span style='color:red;'>**Always keep [scratch](http://github.com/vigour-io/scratch) up to dated.**</span>
