@@ -1,0 +1,88 @@
+/**
+ * Vier Config
+ * ----------------------------------------------
+ * Vier config on top of Scratch and current showcase.
+ * All settings gonna be here in one file.
+ */
+
+
+/**
+ * Icons
+ */
+@import url('https://i.icomoon.io/public/1760d3d9bc/SBSV2/style.css');
+
+
+/**
+ * Colors
+ */
+@blue: #0095C9;
+
+@green: #00AF89;
+@green-dark: #054250;
+
+@red: #E2415E;
+
+@pink: #D21B42;
+
+@orange: #FC4800;
+
+// grayscale
+@lightgray: #E3E3E3;
+
+@whitegray: #F0F0F0;
+
+
+/**
+ * Color priorities
+ */
+// primary
+@primary:                   @blue;
+
+// secondary
+@secondary:                 @red;
+@secondary-additional:      fade(white, 50%);
+@secondary-border:          darken(@secondary, 5%);
+
+// tertiary
+@tertiary:                  @green;
+@tertiary-contrast:         white;
+@tertiary-contrast-hover:   white;
+
+// quaternary
+@quaternary:                @pink;
+@quaternary-additional:     fade(white, 70%);
+
+// quinary
+@quinary:                   @orange;
+@quinary-additional:        fade(@quinary, 30%);
+
+// blackwhite
+@blackwhite-contrast:       white;
+
+
+/**
+ * State colors
+ */
+
+@success-scheme: @primary-scheme-inverse;
+
+@warning-scheme: @secondary-scheme-inverse;
+
+@error-scheme: @tertiary-scheme-inverse;
+
+
+/**
+ * Modal configs
+ */
+@input-radius: 100px;
+@input-small-radius: 100px;
+@input-big-radius: 100px;
+@input-large-radius: 100px;
+
+
+/**
+ * Modal configs
+ */
+
+@modal-scheme: @primary-scheme-inverse;
+@modal-radius: 2px;
