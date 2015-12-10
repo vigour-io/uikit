@@ -58,19 +58,6 @@ module.exports.lists = new Element({
           }
         })
       }
-    }),
-    4: new ui.SwitcherRow({
-      icon: new ui.Icon('newsletter'),
-      caption: {
-        title: new ui.H5('Newsletter'),
-        subtitle: new ui.H8({
-          text: 'We will never send you spam!',
-          css: {
-            addClass: 'ui-additional'
-          }
-        })
-      },
-      switcher: new ui.Switcher()
     })
   }
 })
@@ -134,6 +121,19 @@ module.exports.forms = new Element({
           }
         })
       }
+    }),
+    4: new ui.SwitcherRow({
+      icon: new ui.Icon('newsletter'),
+      caption: {
+        title: new ui.H5('Newsletter'),
+        subtitle: new ui.H8({
+          text: 'We will never send you spam!',
+          css: {
+            addClass: 'ui-additional'
+          }
+        })
+      },
+      switcher: new ui.Switcher()
     }),
     10: new ui.Button({
       css: {
