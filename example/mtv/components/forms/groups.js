@@ -27,10 +27,11 @@ module.exports = new Element({
 
   withLabelAndIcon: {
     title: new ui.P('With Label and iconic Button:'),
+
     group: new ui.FormGroup({
       label: new ui.Label({
-        css: {
-          addClass: 'ui-blackwhite'
+        ui: {
+          color: 'blackwhite'
         },
         caption: {
           text: 'Search:'
@@ -39,8 +40,8 @@ module.exports = new Element({
       }),
 
       button: new ui.Button({
-        css: {
-          addClass: 'ui-primary iconic'
+        ui: {
+          color: 'primary iconic'
         },
         text: '',
         facebook: new ui.Icon('search')
@@ -55,22 +56,22 @@ module.exports = new Element({
 
     group: new ui.FormGroup({
       switcher: new ui.Switcher({
-        css: {
-          addClass: 'ui-secondary'
+        ui: {
+          color: 'secondary'
         }
       }),
 
       label: new ui.Label({
-        css: {
-          addClass: 'ui-primary'
+        ui: {
+          color: 'primary'
         },
         caption: new ui.Icon('email'),
         input: new ui.Input()
       }),
 
       button: new ui.Button({
-        css: {
-          addClass: 'ui-secondary'
+        ui: {
+          color: 'secondary'
         },
         text: 'Subscribe'
       })

@@ -16,17 +16,33 @@ module.exports = new Element({
 
   sizes: {
     title: new ui.P('Button sizes:'),
-    'ui-large': new ui.Button({
-      val: 'Large',
+
+    0: new ui.Button({
+      ui: {
+        size: 'large'
+      },
+
       on: {
         click () {
           // app.set()
         }
       }
     }),
-    'ui-big': new ui.Button('Big'),
-    'ui-medium': new ui.Button('Medium'),
-    'ui-small': new ui.Button('Small')
+    1: new ui.Button({
+      ui: {
+        size: 'big'
+      }
+    }),
+    2: new ui.Button({
+      ui: {
+        size: 'medium'
+      }
+    }),
+    3: new ui.Button({
+      ui: {
+        size: 'small'
+      }
+    })
   },
 
   colors: {
