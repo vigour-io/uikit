@@ -1,0 +1,154 @@
+/**
+ * Label
+ * ----------------------------------------------
+ * Label element for reusable use.
+ */
+.ui-label {
+  display: inline-block;
+  font-size: @input-size;
+  height: @input-height;
+
+  cursor: text;
+  font-weight: @input-font-weight;
+
+  .flex-display(inline-flex);
+  .flex-direction(row);
+  .align-items(center);
+
+  @media @under-tablet {
+    display: block;
+    margin-bottom: @gap-small;
+
+    > .ui-input,
+    > .ui-button {
+      margin-bottom: 0;
+    }
+  }
+
+  .radius(3px);
+
+  &.ui-interactive {
+    .ui-form-element {
+      .transition(@input-transition-duration linear background);
+    }
+  }
+
+  > .caption {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: @input-height;
+    .padding-h(@input-padding);
+    padding-right: 0;
+
+    text-decoration: none;
+    outline: 0;
+  }
+
+  > .ui-input,
+  > .ui-select {
+    .flex(1);
+    background-color: transparent !important;
+
+    &:hover,
+    &:focus {
+      background-color: transparent !important;
+      // color: inherit !important;
+    }
+  }
+}
+
+
+/**
+ * Label colors
+ * ----------------------------------------------
+ * Default color set is primary
+ */
+.ui-label {
+  &.ui-primary {
+    > .ui-input,
+    > .ui-select {
+      .ui-primary;
+    }
+
+    > .ui-input {
+      .placeholder(fade(extract(@primary-scheme-inverse, 1), @placeholder-fading));
+    }
+  }
+
+  &.ui-secondary {
+    > .ui-input,
+    > .ui-select {
+      .ui-secondary;
+    }
+
+    > .ui-input {
+      .placeholder(fade(extract(@secondary-scheme-inverse, 1), @placeholder-fading));
+    }
+  }
+
+  &.ui-tertiary {
+    > .ui-input,
+    > .ui-select {
+      .ui-tertiary;
+    }
+
+    > .ui-input {
+      .placeholder(fade(extract(@tertiary-scheme-inverse, 1), @placeholder-fading));
+    }
+  }
+
+  &.ui-quaternary {
+    > .ui-input,
+    > .ui-select {
+      .ui-quaternary;
+    }
+
+    > .ui-input {
+      .placeholder(fade(extract(@quaternary-scheme-inverse, 1), @placeholder-fading));
+    }
+  }
+
+  &.ui-quinary {
+    > .ui-input,
+    > .ui-select {
+      .ui-quinary;
+    }
+
+    > .ui-input {
+      .placeholder(fade(extract(@quinary-scheme-inverse, 1), @placeholder-fading));
+    }
+  }
+
+  &.ui-grayscale-light {
+    > .ui-input,
+    > .ui-select {
+      .ui-grayscale-light;
+    }
+
+    > .ui-input {
+      .placeholder(fade(extract(@grayscale-light-scheme-inverse, 1), @placeholder-fading));
+    }
+  }
+
+  &.ui-grayscale-dark {
+    > .ui-input,
+    > .ui-select {
+      .ui-grayscale-dark;
+    }
+
+    > .ui-input {
+      .placeholder(fade(extract(@grayscale-dark-scheme-inverse, 1), @placeholder-fading));
+    }
+  }
+
+  &.ui-blackwhite {
+    > .ui-input,
+    > .ui-select {
+      .ui-blackwhite;
+    }
+
+    > .ui-input {
+      .placeholder(fade(extract(@blackwhite-scheme-inverse, 1), @placeholder-fading));
+    }
+  }
+}

@@ -1,0 +1,59 @@
+.fade (@color) {
+  .user-select;
+  z-index: 1000;
+  padding-right: (@gap * 2.5);
+  cursor: pointer;
+
+  .fixed(0, 0, 0, 0);
+  .size(100%);
+  .transition(linear .2s background-color);
+
+  background-color: fade(@color, 15%);
+
+  &:hover {
+    background-color: transparent;
+  }
+
+  &:after {
+    content: '';
+    .absolute(0, 0);
+    .fullsize;
+    .gradient-o(fade(@color, 50%), fade(@color, 5%));
+  }
+
+  @media screen and (max-width: @screen-small) {
+    padding-right: (@gap-small * 2.5);
+  }
+
+  > .close.button {
+    opacity: 1;
+    .transition-duration(.5s);
+    color: @darkgray;
+    .fixed(auto, @gap, @gap * .75);
+
+    @media screen and (max-width: @screen-small) {
+      .fixed(auto, @gap-small, @gap-small * .75);
+    }
+  }
+
+  &.closed {
+    pointer-events: none;
+    background-color: fade(@color, 0%);
+
+    > .close.button {
+      .transition-duration(.3s);
+      opacity: 0;
+    }
+  }
+}
+
+.ui-fading{
+  &,
+  &.ui-dark {
+    .fade(black);
+  }
+
+  &.ui-light {
+    .fade(white);
+  }
+}

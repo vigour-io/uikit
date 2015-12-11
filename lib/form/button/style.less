@@ -1,0 +1,116 @@
+/**
+ * Button
+ * ----------------------------------------------
+ * Button element for reusable use.
+ */
+
+.ui-button {
+  .sizing;
+  background: white;
+  height: @input-height;
+
+  display: inline-block;
+  vertical-align: top;
+  .padding-v(0);
+  .padding-h(@input-padding);
+
+  font-family: @body-family;
+  font-size: @body-size;
+  font-weight: @button-font-weight;
+
+  text-decoration: none;
+  outline: 0;
+  line-height: 1;
+  text-align: center;
+
+  @media @under-tablet {
+    margin-bottom: @gap-small;
+  }
+
+  .appearance;
+  .radius(@input-radius);
+
+  &.ui-interactive {
+    .transition(@input-transition-duration linear background);
+  }
+
+  > .ui-icon {
+    .margin-h(calc(@input-padding / 2));
+    font-style: 0.8em;
+  }
+}
+
+
+/**
+ * Button types
+ */
+
+.ui-button.iconic {
+  width: @input-height;
+  padding: 0;
+  min-width: 0;
+  line-height: 1;
+
+  > .ui-icon {
+    font-size: 1em;
+    .margin-h(0);
+  }
+}
+
+.ui-button.simple {
+  border: 0;
+  background: transparent;
+  .shadow(0 0 0);
+}
+
+
+/**
+ * Button sizes
+ */
+
+.ui-button {
+  &.ui-small {
+    font-size: @input-small-size;
+    height: @input-small-height;
+    line-height: @input-small-height;
+    .padding-h(@input-small-padding);
+    .radius(@input-small-radius);
+    min-width: 0;
+
+    &.iconic {
+      width: @input-small-height;
+      padding: 0;
+      min-width: 0;
+    }
+  }
+
+  &.ui-big {
+    font-size: @input-big-size;
+    height: @input-big-height;
+    line-height: @input-big-height;
+    .padding-h(@input-big-padding);
+    .radius(@input-big-radius);
+    min-width: 15rem;
+
+    &.iconic {
+      width: @input-big-height;
+      padding: 0;
+      min-width: 0;
+    }
+  }
+
+  &.ui-large {
+    font-size: @input-large-size;
+    .padding-h(@input-large-padding);
+    height: @input-large-height;
+    line-height: @input-large-height;
+    .radius(@input-large-radius);
+    min-width: 22rem;
+
+    &.iconic {
+      width: @input-large-height;
+      padding: 0;
+      min-width: 0;
+    }
+  }
+}

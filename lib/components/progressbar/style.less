@@ -1,0 +1,81 @@
+.ui-progressbar {
+  .radius(@progressbar-radius);
+  height: @progressbar-height;
+  background-color: @progressbar-background !important;
+  margin-top: (@gap / 2);
+
+  .width-range(@progressbar-min-width, @progressbar-max-width);
+
+  .progress {
+    height: 100%;
+    display: block;
+    width: 50%;
+    .radius(@progressbar-radius);
+    .scheme(@progressbar-scheme);
+    .transition(width linear @transition-duration);
+  }
+}
+
+/**
+ * Notification colors
+ * ----------------------------------------------
+ * Default color set is primary
+ */
+.ui-progressbar {
+  // primary
+  &.ui-primary {
+    .progress {
+      .scheme(@primary-scheme-inverse);
+    }
+  }
+
+  // secondary
+  &.ui-secondary {
+    .progress {
+      .scheme(@secondary-scheme-inverse);
+    }
+  }
+
+  // tertiary
+  &.ui-tertiary {
+    .progress {
+      .scheme(@tertiary-scheme-inverse);
+    }
+  }
+
+  // quaternary
+  &.ui-quaternary {
+    .progress {
+      .scheme(@quaternary-scheme-inverse);
+    }
+  }
+
+  // quinary
+  &.ui-quinary {
+    .progress {
+      .scheme(@quinary-scheme-inverse);
+    }
+  }
+
+  // tertiary
+  &.ui-grayscale-dark {
+    .progress {
+      .scheme(@grayscale-dark-scheme-inverse);
+    }
+  }
+
+  // quaternary
+  &.ui-grayscale-light {
+    .progress {
+      .scheme(@grayscale-light-scheme-inverse);
+    }
+  }
+
+  // quinary
+  &.ui-blackwhite {
+    .progress {
+      .scheme(@blackwhite-scheme-inverse);
+    }
+  }
+
+}

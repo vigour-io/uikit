@@ -1,0 +1,107 @@
+/**
+ * Mixin for coloring your row
+ * ----------------------------------------------
+ * If you use `.ui-row` class, it'll be
+ * absolutelly unstyled without this mixin.
+ * Only way to pass scheme is to use this mixin.
+
+ * @param {array} scheme
+ * @param {array} scheme for active items
+ *
+ * @example
+ * .ui-modal {
+ *   .content > .ui-row {
+ *     .ui-row-color(@primary-scheme-inverse);
+ *   }
+ * }
+ */
+.ui-row-color(@scheme: @row-scheme, @active-scheme: @tertiary-scheme) {
+
+  .scheme-interactive(@scheme, color);
+  .scheme-additions(@scheme, true, children-color);
+
+  .ui-select:not(.ui-dirty) {
+    color: fade(extract(@scheme, 1), @placeholder-fading);
+  }
+
+  &:first-child {
+    border-top-style: solid;
+    border-top-width: 1px;
+  }
+
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+
+  &.active {
+    color: extract(@active-scheme, 8);
+  }
+}
+
+/**
+ * Default row style and behaviour
+ * ----------------------------------------------
+ * It's default row layout which can be matched
+ * for any type of row. Using flaxbox to easily
+ * rearrange items.
+ */
+.ui-row {
+  height: 60px;
+  .sizing;
+
+  .transition(0.1s linear color);
+
+  cursor: pointer;
+
+  .flex-display;
+  .flex-direction(row);
+  .align-items(center);
+
+  &.caption,
+  > .caption {
+    .flex-display;
+    .flex-direction(column);
+    .align-items(flex-start);
+    .flex(1);
+    width: 100%;
+  }
+
+  .ui-heading {
+    margin: 0;
+    line-height: 1.4;
+    font-weight: @body-weight;
+    .text-overflow;
+    .justify-content(center);
+  }
+
+  > .ui-button {
+    @media @under-tablet {
+      margin-bottom: 0;
+    }
+  }
+
+  > .ui-icon {
+    .ui-h2;
+
+    &:first-child {
+      margin-right: .3em;
+    }
+
+    &:last-child {
+      margin-left: .3em;
+    }
+  }
+
+  &.with {
+    &.arrow {
+      &:after {
+        .icon('\e626');
+      }
+    }
+
+    &.lock {
+      &:after {
+        .icon('\e613');
+      }
+    }
+  }
+}

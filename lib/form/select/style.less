@@ -1,0 +1,172 @@
+/**
+ * Selets
+ * ----------------------------------------------
+ * Selet element for reusable use.
+ */
+
+.ui-select {
+  .flex-display(inline-flex);
+  .flex-direction(row);
+  .align-items(center);
+
+  .radius(@input-radius);
+
+  padding-right: 0.5em;
+
+  font-family: @body-family;
+  font-size: @input-size;
+  font-weight: @input-font-weight;
+
+  .scheme(@input-scheme);
+
+  &.ui-interactive {
+    .scheme-interactive(@input-scheme, both, both);
+    .transition(@input-transition-duration linear background);
+  }
+
+  &:not(.ui-dirty),
+  &.ui-interactive:not(.ui-dirty) {
+    color: fade(extract(@input-scheme, 4), @placeholder-fading);
+  }
+
+  > .ui-icon {
+    margin: 0;
+    margin-left: -1.5em;
+    pointer-events: none;
+    .flex-order(2);
+  }
+
+  > select {
+    .flex-order(1);
+    .sizing;
+    min-width: 12rem;
+    height: @input-height;
+
+    display: inline-block;
+    vertical-align: middle;
+    .padding-h(@input-padding, calc(@input-padding * 3));
+
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+
+    .flex(1);
+    background: transparent;
+    background: none;
+    color: inherit;
+
+    text-decoration: none;
+    outline: 0;
+    border: 0;
+    line-height: @input-height;
+
+    .appearance;
+  }
+
+  @media @under-tablet {
+    margin-bottom: @gap-small;
+  }
+}
+
+
+/**
+ * Input sizes
+ */
+.ui-select {
+  &.ui-primary {
+    .scheme(@primary-scheme-inverse);
+
+    &:not(.ui-dirty) {
+      color: fade(extract(@primary-scheme, 4), @placeholder-fading);
+    }
+  }
+
+  &.ui-secondary {
+    .scheme(@secondary-scheme-inverse);
+
+    &:not(.ui-dirty) {
+      color: fade(extract(@secondary-scheme, 4), @placeholder-fading);
+    }
+  }
+
+  &.ui-tertiary {
+    .scheme(@tertiary-scheme-inverse);
+
+    &:not(.ui-dirty) {
+      color: fade(extract(@tertiary-scheme, 4), @placeholder-fading);
+    }
+  }
+
+  &.ui-quaternary {
+    .scheme(@quaternary-scheme-inverse);
+
+    &:not(.ui-dirty) {
+      color: fade(extract(@quaternary-scheme, 4), @placeholder-fading);
+    }
+  }
+
+  &.ui-quinary {
+    .scheme(@quinary-scheme-inverse);
+
+    &:not(.ui-dirty) {
+      color: fade(extract(@quinary-scheme, 4), @placeholder-fading);
+    }
+  }
+
+  &.ui-grayscale-light {
+    .scheme(@grayscale-light-scheme-inverse);
+
+    &:not(.ui-dirty) {
+      color: fade(extract(@grayscale-light-scheme, 4), @placeholder-fading);
+    }
+  }
+
+  &.ui-grayscale-dark {
+    .scheme(@grayscale-dark-scheme-inverse);
+
+    &:not(.ui-dirty) {
+      color: fade(extract(@grayscale-dark-scheme, 4), @placeholder-fading);
+    }
+  }
+
+  &.ui-blackwhite {
+    .scheme(@blackwhite-scheme-inverse);
+
+    &:not(.ui-dirty) {
+      color: fade(extract(@blackwhite-scheme, 4), @placeholder-fading);
+    }
+  }
+}
+
+
+/**
+ * Input sizes
+ */
+.ui-select {
+  &.small {
+    height: @input-small-height;
+    line-height: @input-small-height;
+    font-size: @input-small-size;
+    .padding-h(@input-small-padding);
+    .radius(@input-small-radius);
+    min-width: 0;
+  }
+
+  &.big {
+    height: @input-big-height;
+    line-height: @input-big-height;
+    font-size: @input-big-size;
+    .padding-h(@input-big-padding);
+    .radius(@input-big-radius);
+    min-width: 15rem;
+  }
+
+  &.large {
+    height: @input-large-height;
+    line-height: @input-large-height;
+    font-size: @input-large-size;
+    .padding-h(@input-large-padding);
+    .radius(@input-large-radius);
+    min-width: 22rem;
+  }
+}

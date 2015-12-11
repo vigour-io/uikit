@@ -1,0 +1,99 @@
+.ui-notification {
+  .padding-h(calc(@input-padding * 2), 0);
+  .shadow(0 2px 3px 0 rgba(0,0,0,0.3));
+  cursor: default;
+
+  .radius(@modal-radius);
+  .group-radius(@modal-radius);
+
+  .ui-row;
+  .ui-row-color(@primary-scheme-inverse);
+
+  border: 0 !important;
+
+  > .ui-icon {
+    margin-right: @input-padding !important;
+  }
+
+  > .ui-button.iconic {
+    width: calc(@input-large-height * 1.2);
+    background: rgba(0, 0, 0, 0.1);
+    margin-top: 0;
+    height: 100%;
+    font-size: 1.4em;
+    cursor: pointer;
+  }
+}
+
+/**
+ * Notification colors
+ * ----------------------------------------------
+ * Default color set is primary
+ */
+.ui-notification {
+
+  // primary
+  &.ui-primary {
+    .ui-row-color(@primary-scheme-inverse);
+  }
+
+  // secondary
+  &.ui-secondary {
+    .ui-row-color(@secondary-scheme-inverse);
+  }
+
+  // tertiary
+  &.ui-tertiary {
+    .ui-row-color(@tertiary-scheme-inverse);
+  }
+
+  // quaternary
+  &.ui-quaternary {
+    .ui-row-color(@quaternary-scheme-inverse);
+  }
+
+  // quinary
+  &.ui-quinary {
+    .ui-row-color(@quinary-scheme-inverse);
+  }
+
+  // tertiary
+  &.ui-grayscale-dark {
+    .ui-row-color(@grayscale-dark-scheme-inverse);
+  }
+
+  // quaternary
+  &.ui-grayscale-light {
+    .ui-row-color(@grayscale-light-scheme-inverse);
+  }
+
+  // quinary
+  &.ui-blackwhite {
+    .ui-row-color(@blackwhite-scheme-inverse);
+  }
+
+}
+
+/**
+ * State colors for notifications
+ * ----------------------------------------------
+ * Default color set is success
+ */
+.ui-notification {
+
+  // success
+  &.ui-success {
+    .ui-row-color(@success-scheme);
+  }
+
+  // warning
+  &.ui-warning {
+    .ui-row-color(@warning-scheme);
+  }
+
+  // error
+  &.ui-error {
+    .ui-row-color(@error-scheme);
+  }
+
+}
