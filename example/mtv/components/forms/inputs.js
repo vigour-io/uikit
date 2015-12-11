@@ -3,6 +3,13 @@ require('./style.less')
 var Element = require('vigour-element')
 var ui = require('uikit/lib')
 
+Element.prototype.inject(
+  require('vigour-element/lib/property/text'),
+  require('vigour-element/lib/property/transform'),
+  require('vigour-element/lib/property/css'),
+  require('vigour-element/lib/property/attributes')
+)
+
 var Observable = require('vigour-js/lib/observable')
 var binded = new Observable('Observable')
 

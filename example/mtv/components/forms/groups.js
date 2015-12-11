@@ -3,13 +3,20 @@ require('./style.less')
 var Element = require('vigour-element')
 var ui = require('uikit/lib')
 
+Element.prototype.inject(
+  require('vigour-element/lib/property/text'),
+  require('vigour-element/lib/property/transform'),
+  require('vigour-element/lib/property/css'),
+  require('vigour-element/lib/property/attributes')
+)
+
 module.exports = new Element({
   title: new ui.H5('Form Groups:'),
   node: 'section',
 
   title1: new ui.P('With Button:'),
 
-  formGroup: new ui.Group({
+  formGroup: new ui.FormGroup({
     input: new ui.Input('Input'),
     button: new ui.Button('Button')
   }),
@@ -17,7 +24,7 @@ module.exports = new Element({
   br2: new ui.DoubleBr(),
 
   title2: new ui.P('With Label and iconic Button:'),
-  formGroupWithIcon: new ui.Group({
+  formGroupWithIcon: new ui.FormGroup({
     label: new ui.Label({
       css: {
         addClass: 'ui-blackwhite'
@@ -40,7 +47,7 @@ module.exports = new Element({
 
   title3: new ui.P('With Switcher, Label and iconic Button:'),
 
-  formGroupWithButton: new ui.Group({
+  formGroupWithButton: new ui.FormGroup({
     switcher: new ui.Switcher({
       css: {
         addClass: 'ui-secondary'
