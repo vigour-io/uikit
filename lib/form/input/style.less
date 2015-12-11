@@ -24,12 +24,8 @@
   .appearance;
   .radius(@input-radius);
 
-  .scheme(@input-scheme);
-  .placeholder(fade(extract(@input-scheme, 1), @placeholder-fading));
-
   &.ui-interactive {
     .transition(@input-transition-duration linear background);
-    .scheme-interactive(@input-scheme, both, both);
   }
 }
 

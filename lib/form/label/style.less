@@ -4,12 +4,13 @@
  * Label element for reusable use.
  */
 .ui-label {
-  display: inline-block;
   font-size: @input-size;
   height: @input-height;
 
   cursor: text;
   font-weight: @input-font-weight;
+
+  .radius(@input-radius);
 
   .flex-display(inline-flex);
   .flex-direction(row);
@@ -25,8 +26,6 @@
     }
   }
 
-  .radius(3px);
-
   &.ui-interactive {
     .ui-form-element {
       .transition(@input-transition-duration linear background);
@@ -37,8 +36,7 @@
     display: inline-block;
     vertical-align: middle;
     line-height: @input-height;
-    .padding-h(@input-padding);
-    padding-right: 0;
+    .margin-h(@input-padding, 0);
 
     text-decoration: none;
     outline: 0;
@@ -65,8 +63,7 @@
  */
 .ui-label {
   &.ui-primary {
-    > .ui-input,
-    > .ui-select {
+    > .ui-form-element {
       .ui-primary;
     }
 
@@ -76,8 +73,7 @@
   }
 
   &.ui-secondary {
-    > .ui-input,
-    > .ui-select {
+    > .ui-form-element {
       .ui-secondary;
     }
 
@@ -87,8 +83,7 @@
   }
 
   &.ui-tertiary {
-    > .ui-input,
-    > .ui-select {
+    > .ui-form-element {
       .ui-tertiary;
     }
 
@@ -98,8 +93,7 @@
   }
 
   &.ui-quaternary {
-    > .ui-input,
-    > .ui-select {
+    > .ui-form-element {
       .ui-quaternary;
     }
 
@@ -109,8 +103,7 @@
   }
 
   &.ui-quinary {
-    > .ui-input,
-    > .ui-select {
+    > .ui-form-element {
       .ui-quinary;
     }
 
@@ -120,8 +113,7 @@
   }
 
   &.ui-grayscale-light {
-    > .ui-input,
-    > .ui-select {
+    > .ui-form-element {
       .ui-grayscale-light;
     }
 
@@ -131,8 +123,7 @@
   }
 
   &.ui-grayscale-dark {
-    > .ui-input,
-    > .ui-select {
+    > .ui-form-element {
       .ui-grayscale-dark;
     }
 
@@ -142,13 +133,75 @@
   }
 
   &.ui-blackwhite {
-    > .ui-input,
-    > .ui-select {
+    > .ui-form-element {
       .ui-blackwhite;
     }
 
     > .ui-input {
       .placeholder(fade(extract(@blackwhite-scheme-inverse, 1), @placeholder-fading));
+    }
+  }
+}
+
+
+/**
+ * label sizes
+ */
+.ui-label {
+  &.ui-small {
+    height: @input-small-height;
+    line-height: @input-small-height;
+    font-size: @input-small-size;
+    .radius(@input-small-radius);
+
+    > .caption {
+      .margin-h(@input-small-padding, 0);
+    }
+
+    > .ui-input {
+      .ui-input.ui-small;
+    }
+
+    > .ui-select {
+      .ui-select.ui-small;
+    }
+  }
+
+  &.ui-big {
+    height: @input-big-height;
+    line-height: @input-big-height;
+    font-size: @input-big-size;
+    .radius(@input-big-radius);
+
+    > .caption {
+      .margin-h(@input-big-padding, 0);
+    }
+
+    > .ui-input {
+      .ui-input.ui-big;
+    }
+
+    > .ui-select {
+      .ui-select.ui-big;
+    }
+  }
+
+  &.ui-large {
+    height: @input-large-height;
+    line-height: @input-large-height;
+    font-size: @input-large-size;
+    .radius(@input-large-radius);
+
+    > .caption {
+      .margin-h(@input-large-padding, 0);
+    }
+
+    > .ui-input {
+      .ui-input.ui-large;
+    }
+
+    > .ui-select {
+      .ui-select.ui-large;
     }
   }
 }

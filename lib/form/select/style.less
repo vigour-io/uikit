@@ -17,16 +17,8 @@
   font-size: @input-size;
   font-weight: @input-font-weight;
 
-  .scheme(@input-scheme);
-
   &.ui-interactive {
-    .scheme-interactive(@input-scheme, both, both);
     .transition(@input-transition-duration linear background);
-  }
-
-  &:not(.ui-dirty),
-  &.ui-interactive:not(.ui-dirty) {
-    color: fade(extract(@input-scheme, 4), @placeholder-fading);
   }
 
   > .ui-icon {
@@ -44,7 +36,7 @@
 
     display: inline-block;
     vertical-align: middle;
-    .padding-h(@input-padding, calc(@input-padding * 3));
+    .padding-h(@input-padding, calc(@input-padding * 4));
 
     font-family: inherit;
     font-size: inherit;
@@ -74,64 +66,48 @@
  */
 .ui-select {
   &.ui-primary {
-    .scheme(@primary-scheme-inverse);
-
     &:not(.ui-dirty) {
       color: fade(extract(@primary-scheme, 4), @placeholder-fading);
     }
   }
 
   &.ui-secondary {
-    .scheme(@secondary-scheme-inverse);
-
     &:not(.ui-dirty) {
       color: fade(extract(@secondary-scheme, 4), @placeholder-fading);
     }
   }
 
   &.ui-tertiary {
-    .scheme(@tertiary-scheme-inverse);
-
     &:not(.ui-dirty) {
       color: fade(extract(@tertiary-scheme, 4), @placeholder-fading);
     }
   }
 
   &.ui-quaternary {
-    .scheme(@quaternary-scheme-inverse);
-
     &:not(.ui-dirty) {
       color: fade(extract(@quaternary-scheme, 4), @placeholder-fading);
     }
   }
 
   &.ui-quinary {
-    .scheme(@quinary-scheme-inverse);
-
     &:not(.ui-dirty) {
       color: fade(extract(@quinary-scheme, 4), @placeholder-fading);
     }
   }
 
   &.ui-grayscale-light {
-    .scheme(@grayscale-light-scheme-inverse);
-
     &:not(.ui-dirty) {
       color: fade(extract(@grayscale-light-scheme, 4), @placeholder-fading);
     }
   }
 
   &.ui-grayscale-dark {
-    .scheme(@grayscale-dark-scheme-inverse);
-
     &:not(.ui-dirty) {
       color: fade(extract(@grayscale-dark-scheme, 4), @placeholder-fading);
     }
   }
 
   &.ui-blackwhite {
-    .scheme(@blackwhite-scheme-inverse);
-
     &:not(.ui-dirty) {
       color: fade(extract(@blackwhite-scheme, 4), @placeholder-fading);
     }
@@ -143,30 +119,42 @@
  * Input sizes
  */
 .ui-select {
-  &.small {
+  &.ui-small {
     height: @input-small-height;
     line-height: @input-small-height;
     font-size: @input-small-size;
-    .padding-h(@input-small-padding);
     .radius(@input-small-radius);
     min-width: 0;
+    padding-right: calc(@input-small-padding / 2);
+
+    select {
+      .padding-h(@input-small-padding, calc(@input-small-padding * 4));
+    }
   }
 
-  &.big {
+  &.ui-big {
     height: @input-big-height;
     line-height: @input-big-height;
     font-size: @input-big-size;
-    .padding-h(@input-big-padding);
     .radius(@input-big-radius);
     min-width: 15rem;
+    padding-right: calc(@input-big-padding / 2);
+
+    select {
+      .padding-h(@input-big-padding, calc(@input-big-padding * 4));
+    }
   }
 
-  &.large {
+  &.ui-large {
     height: @input-large-height;
     line-height: @input-large-height;
     font-size: @input-large-size;
-    .padding-h(@input-large-padding);
     .radius(@input-large-radius);
     min-width: 22rem;
+    padding-right: calc(@input-large-padding / 2);
+
+    select {
+      .padding-h(@input-large-padding, calc(@input-large-padding * 4));
+    }
   }
 }
