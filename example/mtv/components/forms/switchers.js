@@ -3,6 +3,13 @@ require('./style.less')
 var Element = require('vigour-element')
 var ui = require('uikit/lib')
 
+Element.prototype.inject(
+  require('vigour-element/lib/property/text'),
+  require('vigour-element/lib/property/transform'),
+  require('vigour-element/lib/property/css'),
+  require('vigour-element/lib/property/attributes')
+)
+
 var Observable = require('vigour-js/lib/observable')
 var binded = new Observable(true)
 
@@ -16,46 +23,78 @@ module.exports = new Element({
 
   sizes: {
     title: new ui.P('Switcher sizes:'),
-    'ui-large': new ui.Switcher({
-      css: {
-        addClass: 'ui-large'
+    0: new ui.Switcher({
+      ui: {
+        size: 'large'
       }
     }),
-    'ui-big': new ui.Switcher({
-      css: {
-        addClass: 'ui-big'
+    1: new ui.Switcher({
+      ui: {
+        size: 'big'
       }
     }),
-    'ui-medium': new ui.Switcher(),
-    'ui-small': new ui.Switcher({
-      css: {
-        addClass: 'ui-small'
+    2: new ui.Switcher({
+      ui: {
+        size: 'medium'
+      }
+    }),
+    3: new ui.Switcher({
+      ui: {
+        size: 'small'
       }
     })
   },
 
   colors: {
     title: new ui.P('Switcher colors:'),
-    'ui-primary': new ui.Switcher({
-      state: binded
+
+    0: new ui.Switcher({
+      state: binded,
+      ui: {
+        color: 'primary'
+      }
     }),
-    'ui-secondary': new ui.Switcher({
-      state: binded
+
+    1: new ui.Switcher({
+      state: binded,
+      ui: {
+        color: 'secondary'
+      }
     }),
-    'ui-tertiary': new ui.Switcher({
-      state: binded
+
+    2: new ui.Switcher({
+      state: binded,
+      ui: {
+        color: 'tertiary'
+      }
     }),
-    'ui-quaternary': new ui.Switcher({
-      state: binded
+
+    3: new ui.Switcher({
+      state: binded,
+      ui: {
+        color: 'quaternary'
+      }
     }),
-    'ui-quinary': new ui.Switcher({
-      state: binded
+
+    4: new ui.Switcher({
+      state: binded,
+      ui: {
+        color: 'quinary'
+      }
     }),
-    'ui-grayscale-dark': new ui.Switcher({
-      state: binded
+
+    5: new ui.Switcher({
+      state: binded,
+      ui: {
+        color: 'grayscale-dark'
+      }
     }),
-    'ui-grayscale-light': new ui.Switcher({
-      state: binded
+
+    6: new ui.Switcher({
+      state: binded,
+      ui: {
+        color: 'grayscale-light'
+      }
     })
   }
 })

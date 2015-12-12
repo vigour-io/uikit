@@ -1,0 +1,83 @@
+/**
+ * Form item groups
+ * ----------------------------------------------
+ * Grouped form elements.
+ */
+
+.group-radius(@radius) {
+  > .ui-button,
+  > .ui-input,
+  > .ui-label {
+    .radius(0);
+
+    &:first-child:not(:last-child) {
+      border-right: 0;
+      .radius(@radius 0 0 @radius);
+    }
+
+    &:last-child:not(:first-child) {
+      .radius(0 @radius @radius 0);
+      border-left: 0;
+    }
+  }
+}
+
+.ui-form-group {
+  .clearfix;
+
+  .flex-display(inline-flex);
+  .flex-direction(row);
+
+  .radius(@input-radius);
+  .group-radius(@input-radius);
+
+  > .ui-switcher {
+    &,
+    > input {
+      .radius(0);
+    }
+
+    > span {
+      .radius(0);
+    }
+
+    &:first-child:not(:last-child) {
+      &,
+      > input {
+        .radius(50px 0 0 50px);
+      }
+
+      > span {
+        .radius(50px);
+      }
+    }
+
+    &:last-child:not(:first-child) {
+      &,
+      > input {
+        .radius(0 50px 50px 0);
+      }
+
+      > span {
+        .radius(50px);
+      }
+    }
+  }
+}
+
+.inverse() {
+  > .ui-button,
+  > .ui-input,
+  > .ui-label,
+  > .ui-switcher {
+    &:first-child:not(:last-child) {
+      .radius(0 @input-radius @input-radius 0);
+      border-left: 0;
+
+      &:focus ~ .ui-button {
+        border-right: 0;
+        .radius(@input-radius 0 0 @input-radius);
+      }
+    }
+  }
+}

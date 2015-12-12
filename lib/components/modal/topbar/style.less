@@ -1,0 +1,33 @@
+.ui-topbar {
+  .flex-display;
+  .flex-direction(row);
+  .justify-content(space-between);
+
+  background: rgba(255, 255, 255, @topbar-light-fading);
+  font-size: @topbar-font-size;
+  position: relative;
+  z-index: 100;
+
+  .title {
+    text-align: @topbar-text-align;
+    font-weight: @topbar-font-weight;
+    .flex(1);
+    .text-overflow;
+    padding: @topbar-padding 0;
+    .flex-order(2);
+  }
+
+  > div {
+    padding: @topbar-padding;
+  }
+
+  > .ui-icon {
+    width: @topbar-font-size;
+    padding: @topbar-padding;
+    cursor: pointer;
+
+    &.close {
+      .flex-order(3);
+    }
+  }
+}

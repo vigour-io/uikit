@@ -1,0 +1,101 @@
+.ui-input {
+  .sizing;
+  min-width: 12rem;
+  height: @input-height;
+
+  display: inline-block;
+  vertical-align: middle;
+  vertical-align: top;
+  .padding-h(@input-padding);
+
+  font-family: @body-family;
+  font-size: @input-size;
+  font-weight: @input-font-weight;
+
+  text-decoration: none;
+  outline: 0;
+  border: 0;
+  line-height: @input-height;
+
+  @media @under-tablet {
+    margin-bottom: @gap-small;
+  }
+
+  .appearance;
+  .radius(@input-radius);
+
+  &.ui-interactive {
+    .transition(@input-transition-duration linear background);
+  }
+}
+
+
+/**
+ * Input colors
+ */
+.ui-input {
+  &.ui-primary {
+    .placeholder(fade(extract(@primary-scheme-inverse, 1), @placeholder-fading));
+  }
+
+  &.ui-secondary {
+    .placeholder(fade(extract(@secondary-scheme-inverse, 1), @placeholder-fading));
+  }
+
+  &.ui-tertiary {
+    .placeholder(fade(extract(@tertiary-scheme-inverse, 1), @placeholder-fading));
+  }
+
+  &.ui-quaternary {
+    .placeholder(fade(extract(@quaternary-scheme-inverse, 1), @placeholder-fading));
+  }
+
+  &.ui-quinary {
+    .placeholder(fade(extract(@quinary-scheme-inverse, 1), @placeholder-fading));
+  }
+
+  &.ui-grayscale-light {
+    .placeholder(fade(extract(@grayscale-light-scheme-inverse, 1), @placeholder-fading));
+  }
+
+  &.ui-grayscale-dark {
+    .placeholder(fade(extract(@grayscale-dark-scheme-inverse, 1), @placeholder-fading));
+  }
+
+  &.ui-blackwhite {
+    .placeholder(fade(extract(@blackwhite-scheme-inverse, 1), @placeholder-fading));
+  }
+}
+
+
+/**
+ * Input sizes
+ */
+.ui-input {
+  &.ui-small {
+    height: @input-small-height;
+    line-height: @input-small-height;
+    font-size: @input-small-size;
+    .padding-h(@input-small-padding);
+    .radius(@input-small-radius);
+    min-width: 0;
+  }
+
+  &.ui-big {
+    height: @input-big-height;
+    line-height: @input-big-height;
+    font-size: @input-big-size;
+    .padding-h(@input-big-padding);
+    .radius(@input-big-radius);
+    min-width: 15rem;
+  }
+
+  &.ui-large {
+    height: @input-large-height;
+    line-height: @input-large-height;
+    font-size: @input-large-size;
+    .padding-h(@input-large-padding);
+    .radius(@input-large-radius);
+    min-width: 22rem;
+  }
+}
