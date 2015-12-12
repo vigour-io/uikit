@@ -20,12 +20,6 @@ module.exports = new Element({
     0: new ui.Button({
       ui: {
         size: 'large'
-      },
-
-      on: {
-        click () {
-          // app.set()
-        }
       }
     }),
     1: new ui.Button({
@@ -48,32 +42,66 @@ module.exports = new Element({
   colors: {
     title: new ui.P('Button colors:'),
 
-    'ui-primary': new ui.Button(),
-    'ui-secondary': new ui.Button('Secondary'),
-    'ui-tertiary': new ui.Button('Tertiary'),
-    'ui-grayscale-light': new ui.Button('Grayscale Light'),
-    'ui-grayscale-dark': new ui.Button('Grayscale Dark'),
-    'ui-blackwhite': new ui.Button('Black n White')
+    0: new ui.Button({
+      ui: {
+        color: 'primary'
+      }
+    }),
+
+    1: new ui.Button({
+      ui: {
+        color: 'secondary'
+      }
+    }),
+
+    2: new ui.Button({
+      ui: {
+        color: 'tertiary'
+      }
+    }),
+
+    3: new ui.Button({
+      ui: {
+        color: 'grayscale-light'
+      }
+    }),
+
+    4: new ui.Button({
+      ui: {
+        color: 'grayscale-dark'
+      }
+    }),
+
+    5: new ui.Button({
+      ui: {
+        color: 'blackwhite'
+      }
+    })
   },
 
   types: {
     title: new ui.P('Button types:'),
 
-    italic: new ui.Button().set({
-      css: {
-        addClass: 'ui-big ui-tertiary italic-button'
+    italic: new ui.Button({
+      ui: {
+        color: 'tertiary',
+        size: 'big',
+        type: 'italic-button'
       }
     }),
-    withIcon: new ui.Button('Register').set({
-      css: {
-        addClass: 'ui-big ui-tertiary'
+    withIcon: new ui.Button({
+      ui: {
+        size: 'big',
+        color: 'tertiary'
       },
       text: 'Next',
       icon: new ui.Icon('right')
     }),
     iconic: new ui.Button('Register').set({
-      css: {
-        addClass: 'ui-big ui-tertiary iconic'
+      ui: {
+        size: 'big',
+        color: 'tertiary',
+        type: 'iconic'
       },
       text: '',
       icon: new ui.Icon('right')
