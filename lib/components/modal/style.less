@@ -1,17 +1,18 @@
+@import url('../row/style.less');
 @import url('../loader/style.less');
 
 .ui-modal {
   .flex-display;
   .flex-direction(column);
   .scheme(@modal-scheme);
-  .user-select;
-  overflow: hidden;
 
+  .user-select;
+
+  overflow: hidden;
   z-index: 1010;
   text-align: @modal-text-align;
 
-  width: 100%;
-  height: 100%;
+  .fullsize;
 
   > .content {
     .flex(1);

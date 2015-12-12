@@ -1,8 +1,8 @@
 .fade-color (@color) {
-  background-color: fade(@color, 15%);
+  background-color: fade(@color, 20%);
 
   &:after {
-    .gradient-o(fade(@color, 50%), fade(@color, 5%));
+    .gradient-o(fade(@color, 60%), fade(@color, 10%));
   }
 
   &.closed {
@@ -17,16 +17,10 @@
 .ui-fade {
   .user-select;
   z-index: 1000;
-  padding-right: (@gap * 2.5);
   cursor: pointer;
 
   .fixed(0, 0, 0, 0);
   .size(100%);
-  .transition(linear .2s background-color);
-
-  &:hover {
-    background-color: transparent;
-  }
 
   &:after {
     content: '';
@@ -34,16 +28,11 @@
     .fullsize;
   }
 
-  @media screen and (max-width: @screen-small) {
-    padding-right: (@gap-small * 2.5);
-  }
+  &.ui-interactive {
+    .transition(linear .2s background-color);
 
-  &.closed {
-    pointer-events: none;
-
-    > .close.button {
-      .transition-duration(.3s);
-      opacity: 0;
+    &:hover {
+      background-color: transparent;
     }
   }
 }

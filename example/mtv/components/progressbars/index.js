@@ -1,23 +1,20 @@
 'use strict'
 
-require('./style.less')
-
+// dependencies
 var Element = require('vigour-element')
 var ui = require('uikit/lib')
 
+// style
+require('./style.less')
+
+// injects
 Element.prototype.inject(
-  require('vigour-element/lib/property/text'),
-  require('vigour-element/lib/property/transform'),
-  require('vigour-element/lib/property/css'),
-  require('vigour-element/lib/property/attributes'),
-  require('vigour-element/lib/events/css/animationEnd')
+  require('vigour-element/lib/property/css')
 )
 
 module.exports = new Element({
   title: new ui.H5('Progress bars:'),
   node: 'section',
-
-  text: require('./style.less'),
 
   progressbar: {
     title: new ui.P('Default:'),
@@ -28,19 +25,39 @@ module.exports = new Element({
 
   colors: {
     title: new ui.P('Colors:'),
-    'ui-secondary': new ui.Progressbar({
+
+    0: new ui.Progressbar({
+      ui: {
+        color: 'secondary'
+      },
       state: Math.random() * 100
     }),
-    'ui-tertiary': new ui.Progressbar({
+
+    1: new ui.Progressbar({
+      ui: {
+        color: 'tertiary'
+      },
       state: Math.random() * 100
     }),
-    'ui-quaternary': new ui.Progressbar({
+
+    2: new ui.Progressbar({
+      ui: {
+        color: 'quaternary'
+      },
       state: Math.random() * 100
     }),
-    'ui-quinary': new ui.Progressbar({
+
+    3: new ui.Progressbar({
+      ui: {
+        color: 'quinary'
+      },
       state: Math.random() * 100
     }),
-    'ui-blackwhite': new ui.Progressbar({
+
+    4: new ui.Progressbar({
+      ui: {
+        color: 'blackwhite'
+      },
       state: Math.random() * 100
     })
   }

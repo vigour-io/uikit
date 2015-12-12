@@ -55,10 +55,34 @@ body {
       margin-bottom: 3rem;
     }
 
+    &.fade {
+      position: relative;
+      height: 18rem;
+
+      .bgimg('http://c.nikoloz.me/3N3U2l0I0i3M');
+
+      .ui-fade {
+        position: absolute;
+        width: 50%;
+
+        &:last-child {
+          left: 50%;
+
+          &:after {
+            .radius(0 @modal-radius @modal-radius 0);
+          }
+        }
+
+        &:after {
+          .radius(@modal-radius 0 0 @modal-radius);
+        }
+      }
+    }
+
     .width-range(@modal-min-width, @modal-max-width);
 
     padding: 20px 15px;
-    .radius(@input-radius);
+    .radius(@modal-radius);
 
     .labels,
     .items {
