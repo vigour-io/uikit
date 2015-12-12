@@ -7,47 +7,54 @@ module.exports = new Element({
   title: new ui.H5('Labels:'),
   node: 'section',
 
-  labelsCaption: new ui.P('Simple labels:'),
-  label: new ui.Label({
-    caption: {
-      text: 'Caption:'
-    },
-    input: new ui.Input()
-  }),
-  'ui-secondary': new ui.Label({
-    caption: {
-      text: 'Caption:'
-    },
-    input: new ui.Input()
-  }),
-  'ui-blackwhite': new ui.Label({
-    caption: {
-      text: 'Caption:'
-    },
-    input: new ui.Input()
-  }),
+  labels: {
+    title: new ui.P('Simple labels:'),
 
-  labelsWithIconsCaption: new ui.P('Labels with Icons:'),
-  labelWithIcons: {
-    css: 'ui-label ui-primary',
-    node: 'label',
-    caption: new ui.Icon('email'),
-    input: new ui.Input({
-      attributes: {
-        placeholder: 'E-mail',
-        type: 'email'
-      }
+    0: new ui.Label({
+      caption: {
+        text: 'Caption:'
+      },
+      input: new ui.Input()
+    }),
+
+    1: new ui.Label({
+      ui: {
+        color: 'tertiary'
+      },
+      caption: {
+        text: 'Caption:'
+      },
+      input: new ui.Input()
+    }),
+
+    2: new ui.Label({
+      ui: {
+        color: 'quinary'
+      },
+      caption: {
+        text: 'Caption:'
+      },
+      input: new ui.Input()
     })
   },
-  labelWithIcons2: {
-    css: 'ui-label ui-tertiary',
-    node: 'label',
-    caption: new ui.Icon('locked'),
-    input: new ui.Input({
-      attributes: {
-        placeholder: 'Password',
-        type: 'password'
-      }
+
+  iconLabels: {
+    title: new ui.P('Labels with Icons:'),
+
+    0: new ui.Label({
+      ui: {
+        color: 'primary'
+      },
+      caption: new ui.Icon('email'),
+      input: new ui.Email()
+    }),
+
+    1: new ui.Label({
+      ui: {
+        color: 'secondary'
+      },
+      caption: new ui.Icon('locked'),
+      input: new ui.Password()
     })
   }
 })

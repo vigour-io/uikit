@@ -3,25 +3,46 @@ require('./style.less')
 var Element = require('vigour-element')
 var ui = require('uikit/lib')
 
+Element.prototype.inject(
+  require('vigour-element/lib/property/text'),
+  require('vigour-element/lib/property/transform'),
+  require('vigour-element/lib/property/css'),
+  require('vigour-element/lib/property/attributes')
+)
+
 module.exports = new Element({
   title: new ui.H5('Buttons:'),
   node: 'section',
 
   sizes: {
     title: new ui.P('Button sizes:'),
-    'ui-large': new ui.Button({
-      val: 'Large',
-      on: {
-        click() {
-          app.set({
 
-          })
+    0: new ui.Button({
+      ui: {
+        size: 'large'
+      },
+
+      on: {
+        click () {
+          // app.set()
         }
       }
     }),
-    'ui-big': new ui.Button('Big'),
-    'ui-medium': new ui.Button('Medium'),
-    'ui-small': new ui.Button('Small'),
+    1: new ui.Button({
+      ui: {
+        size: 'big'
+      }
+    }),
+    2: new ui.Button({
+      ui: {
+        size: 'medium'
+      }
+    }),
+    3: new ui.Button({
+      ui: {
+        size: 'small'
+      }
+    })
   },
 
   colors: {
@@ -32,7 +53,7 @@ module.exports = new Element({
     'ui-tertiary': new ui.Button('Tertiary'),
     'ui-grayscale-light': new ui.Button('Grayscale Light'),
     'ui-grayscale-dark': new ui.Button('Grayscale Dark'),
-    'ui-blackwhite': new ui.Button('Black n White'),
+    'ui-blackwhite': new ui.Button('Black n White')
   },
 
   types: {

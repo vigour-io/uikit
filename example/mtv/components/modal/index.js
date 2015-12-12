@@ -23,11 +23,11 @@ module.exports = window.modal = new Element({
       node: 'aside',
       css: 'ui-secondary',
       topbar: new ui.Topbar({
-        left: new ui.Icon('left'),
+        back: new ui.Icon('left'),
         title: {
           text: 'Register'
         },
-        right: new ui.Icon('close')
+        close: new ui.Icon('close')
       })
     }
   },
@@ -36,11 +36,11 @@ module.exports = window.modal = new Element({
     title: new ui.P('Modal:'),
     modal: new ui.Modal({
       topbar: new ui.Topbar({
-        left: new ui.Icon('left'),
+        back: new ui.Icon('left'),
         title: {
           text: 'Register'
         },
-        right: new ui.Icon('close')
+        close: new ui.Icon('close')
       }),
       content: {
         hello: {

@@ -1,0 +1,36 @@
+.ui-overlay-loading {
+  .user-select;
+  position: relative;
+  z-index: 0;
+
+  &:before {
+    content: '';
+    opacity: 0;
+    background-color: @primary-focus;
+
+    .absolute(0, 0);
+    .fullsize;
+    .transition(0.8s linear transform, 0.1s border-radius);
+    .radius(@input-radius);
+  }
+
+  & ~ .loader {
+    opacity: 0;
+  }
+
+  &.ui-dirty {
+    z-index: 10;
+    pointer-events: none;
+
+    &:before {
+      cursor: default;
+      opacity: 1;
+      .radius(100%);
+      .transform(scale(10, 50) rotate(5deg));
+    }
+
+    & ~ .loader {
+      opacity: 1;
+    }
+  }
+}

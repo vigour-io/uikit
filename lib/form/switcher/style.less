@@ -1,0 +1,168 @@
+.ui-switcher {
+  position: relative;
+  display: inline-block;
+  // TODO: fix that
+  // width: (@input-height * 1.8rem);
+  width: 4.3rem;
+  height: @input-height;
+  background: rgba(0, 0, 0, 0.2) !important;
+  vertical-align: top;
+  .radius(50px);
+  cursor: pointer;
+
+  input {
+    .appearance;
+    .absolute(0, 0, 0, 0);
+    .fullsize;
+    .radius(50px);
+    .transition(@input-transition-duration background linear);
+    cursor: pointer;
+
+    &:checked {
+      background: @default-switcher-color;
+
+      + span {
+        .translate((@input-height * 0.8), 0);
+      }
+    }
+  }
+
+  span {
+    .transition(@input-transition-duration transform);
+    .radius(50px);
+    .shadow(0 0 1px 0 rgba(0,0,0,0.4));
+    pointer-events: none;
+    background: white;
+    position: absolute;
+    left: 0;
+    display: inline-block;
+    margin: .1rem;
+    width: (@input-height - .2rem);
+    height: (@input-height - .2rem);
+  }
+}
+
+
+/**
+ * Switcher Sizes
+ * ----------------------------------------------
+ * Default size is medium
+ */
+
+.ui-switcher {
+  &.ui-small {
+    width: (@input-small-height * 1.8);
+    height: @input-small-height;
+    input:checked {
+      + span {
+        .translate((@input-small-height * 0.8), 0);
+      }
+    }
+    span {
+      width: (@input-small-height - .2rem);
+      height: (@input-small-height - .2rem);
+    }
+  }
+
+  &.ui-big {
+    width: (@input-big-height * 1.8);
+    height: @input-big-height;
+    input:checked {
+      + span {
+        .translate((@input-big-height * 0.8), 0);
+      }
+    }
+    span {
+      margin: .2rem;
+      width: (@input-big-height - .4rem);
+      height: (@input-big-height - .4rem);
+    }
+  }
+
+  &.ui-large {
+    width: (@input-large-height * 1.8);
+    height: @input-large-height;
+    input:checked {
+      + span {
+        .translate((@input-large-height * 0.8), 0);
+      }
+    }
+    span {
+      margin: .2rem;
+      width: (@input-large-height - .4rem);
+      height: (@input-large-height - .4rem);
+    }
+  }
+}
+
+/**
+ * Switcher colors
+ * ----------------------------------------------
+ * Default color set is primary
+ */
+
+.ui-switcher {
+  &.ui-primary {
+    input {
+      &:checked {
+        background: @primary;
+      }
+    }
+  }
+
+  &.ui-secondary {
+    input {
+      &:checked {
+        background: @secondary;
+      }
+    }
+  }
+
+  &.ui-tertiary {
+    input {
+      &:checked {
+        background: @tertiary;
+      }
+    }
+  }
+
+  &.ui-quaternary {
+    input {
+      &:checked {
+        background: @quaternary;
+      }
+    }
+  }
+
+  &.ui-quinary {
+    input {
+      &:checked {
+        background: @quinary;
+      }
+    }
+  }
+
+  &.ui-grayscale-dark {
+    input {
+      &:checked {
+        background: @grayscale-dark;
+      }
+    }
+  }
+
+  &.ui-grayscale-light {
+    input {
+      &:checked {
+        background: @grayscale-light;
+      }
+    }
+  }
+
+  &.ui-blackwhite {
+    input {
+      &:checked {
+        background: @blackwhite;
+      }
+    }
+  }
+}

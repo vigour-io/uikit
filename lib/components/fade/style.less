@@ -1,0 +1,52 @@
+.fade-color (@color) {
+  background-color: fade(@color, 20%);
+
+  &:after {
+    .gradient-o(fade(@color, 60%), fade(@color, 10%));
+  }
+
+  &.closed {
+    background-color: fade(@color, 0%);
+  }
+}
+
+
+/**
+ * Fade
+ */
+.ui-fade {
+  .user-select;
+  z-index: 1000;
+  cursor: pointer;
+
+  .fixed(0, 0, 0, 0);
+  .size(100%);
+
+  &:after {
+    content: '';
+    .absolute(0, 0);
+    .fullsize;
+  }
+
+  &.ui-interactive {
+    .transition(linear .2s background-color);
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+}
+
+
+/**
+ * fade Colors
+ */
+.ui-fade {
+  &.ui-fade-dark {
+    .fade-color(black);
+  }
+
+  &.ui-fade-light {
+    .fade-color(white);
+  }
+}

@@ -1,0 +1,160 @@
+/**
+ * Selets
+ * ----------------------------------------------
+ * Selet element for reusable use.
+ */
+
+.ui-select {
+  .flex-display(inline-flex);
+  .flex-direction(row);
+  .align-items(center);
+
+  .radius(@input-radius);
+
+  padding-right: 0.5em;
+
+  font-family: @body-family;
+  font-size: @input-size;
+  font-weight: @input-font-weight;
+
+  &.ui-interactive {
+    .transition(@input-transition-duration linear background);
+  }
+
+  > .ui-icon {
+    margin: 0;
+    margin-left: -1.5em;
+    pointer-events: none;
+    .flex-order(2);
+  }
+
+  > select {
+    .flex-order(1);
+    .sizing;
+    min-width: 12rem;
+    height: @input-height;
+
+    display: inline-block;
+    vertical-align: middle;
+    .padding-h(@input-padding, calc(@input-padding * 4));
+
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+
+    .flex(1);
+    background: transparent;
+    background: none;
+    color: inherit;
+
+    text-decoration: none;
+    outline: 0;
+    border: 0;
+    line-height: @input-height;
+
+    .appearance;
+  }
+
+  @media @under-tablet {
+    margin-bottom: @gap-small;
+  }
+}
+
+
+/**
+ * Input sizes
+ */
+.ui-select {
+  &.ui-primary {
+    &:not(.ui-dirty) {
+      color: fade(extract(@primary-scheme, 4), @placeholder-fading);
+    }
+  }
+
+  &.ui-secondary {
+    &:not(.ui-dirty) {
+      color: fade(extract(@secondary-scheme, 4), @placeholder-fading);
+    }
+  }
+
+  &.ui-tertiary {
+    &:not(.ui-dirty) {
+      color: fade(extract(@tertiary-scheme, 4), @placeholder-fading);
+    }
+  }
+
+  &.ui-quaternary {
+    &:not(.ui-dirty) {
+      color: fade(extract(@quaternary-scheme, 4), @placeholder-fading);
+    }
+  }
+
+  &.ui-quinary {
+    &:not(.ui-dirty) {
+      color: fade(extract(@quinary-scheme, 4), @placeholder-fading);
+    }
+  }
+
+  &.ui-grayscale-light {
+    &:not(.ui-dirty) {
+      color: fade(extract(@grayscale-light-scheme, 4), @placeholder-fading);
+    }
+  }
+
+  &.ui-grayscale-dark {
+    &:not(.ui-dirty) {
+      color: fade(extract(@grayscale-dark-scheme, 4), @placeholder-fading);
+    }
+  }
+
+  &.ui-blackwhite {
+    &:not(.ui-dirty) {
+      color: fade(extract(@blackwhite-scheme, 4), @placeholder-fading);
+    }
+  }
+}
+
+
+/**
+ * Input sizes
+ */
+.ui-select {
+  &.ui-small {
+    height: @input-small-height;
+    line-height: @input-small-height;
+    font-size: @input-small-size;
+    .radius(@input-small-radius);
+    min-width: 0;
+    padding-right: calc(@input-small-padding / 2);
+
+    select {
+      .padding-h(@input-small-padding, calc(@input-small-padding * 4));
+    }
+  }
+
+  &.ui-big {
+    height: @input-big-height;
+    line-height: @input-big-height;
+    font-size: @input-big-size;
+    .radius(@input-big-radius);
+    min-width: 15rem;
+    padding-right: calc(@input-big-padding / 2);
+
+    select {
+      .padding-h(@input-big-padding, calc(@input-big-padding * 4));
+    }
+  }
+
+  &.ui-large {
+    height: @input-large-height;
+    line-height: @input-large-height;
+    font-size: @input-large-size;
+    .radius(@input-large-radius);
+    min-width: 22rem;
+    padding-right: calc(@input-large-padding / 2);
+
+    select {
+      .padding-h(@input-large-padding, calc(@input-large-padding * 4));
+    }
+  }
+}

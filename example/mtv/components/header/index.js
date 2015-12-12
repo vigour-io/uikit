@@ -3,7 +3,7 @@
 require('./style.less')
 
 var Element = require('vigour-element')
-var Icon = require('~/lib/icon')
+var ui = require('uikit/lib')
 
 Element.prototype.inject(
   require('vigour-element/lib/property/text'),
@@ -19,7 +19,7 @@ var logo = window.logo = new Element({
       window.location.reload()
     }
   },
-  icon: new Icon('logo'),
+  icon: new ui.Icon('logo'),
   title: {
     text: 'UIKit',
     node: 'span'
@@ -29,5 +29,5 @@ var logo = window.logo = new Element({
 module.exports = exports = new Element({
   node: 'header',
   logo: logo,
-  menu: new Icon('menu')
+  menu: new ui.Icon('menu')
 })

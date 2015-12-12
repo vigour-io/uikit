@@ -36,6 +36,24 @@ app.set({
 
       modals: require('./components/modal'),
 
+      fade: {
+        title: new ui.H5('Fade:'),
+        node: 'section',
+
+        aside: {
+          node: 'aside',
+          css: 'fade ui-background-primary',
+
+          fade: new ui.Fade({
+            ui: {
+              color: 'fade-light'
+            }
+          }),
+
+          fade2: new ui.Fade()
+        }
+      },
+
       lists: {
         title: new ui.H5('List items:'),
         node: 'section',
