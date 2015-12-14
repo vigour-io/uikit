@@ -48,8 +48,6 @@
   height: 60px;
   .sizing;
 
-  .transition(0.1s linear color);
-
   cursor: pointer;
 
   .flex-display;
@@ -90,18 +88,21 @@
       margin-left: .3em;
     }
   }
+}
 
-  &.with {
-    &.arrow {
-      &:after {
-        .icon('\e626');
-      }
+/**
+ * states and types of row
+ */
+.ui-row {
+  &.ui-arrow {
+    &:after {
+      .icon('\e626');
     }
+  }
 
-    &.lock {
-      &:after {
-        .icon('\e613');
-      }
+  &.ui-locked {
+    &:after {
+      .icon('\e613');
     }
   }
 }

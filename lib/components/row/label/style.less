@@ -1,0 +1,49 @@
+@import url('../../../form/label/style.less')
+
+/**
+ * Label extension for Row
+ */
+
+.ui-row {
+  &.ui-label-row {
+    cursor: text;
+    width: 100%;
+
+    .label {
+      .ui-label;
+      .ui-secondary;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      margin-right: 0;
+
+      @media @under-tablet {
+        .flex-display;
+        margin-bottom: 0;
+      }
+
+      .ui-icon {
+        cursor: pointer;
+        .ui-h5;
+        // .padding-h(@gap);
+      }
+
+      .ui-select,
+      .ui-input {
+        @media @under-tablet {
+          margin-bottom: 0;
+        }
+
+        &,
+        & > select {
+          height: 100%;
+          font-size: @h5;
+        }
+      }
+
+      .ui-atom {
+        .radius(0);
+      }
+    }
+  }
+}
