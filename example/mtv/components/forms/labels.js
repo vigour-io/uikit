@@ -19,7 +19,7 @@ module.exports = new Element({
 
     1: new ui.Label({
       ui: {
-        color: 'tertiary'
+        scheme: 'tertiary'
       },
       caption: {
         text: 'Caption:'
@@ -29,7 +29,7 @@ module.exports = new Element({
 
     2: new ui.Label({
       ui: {
-        color: 'quinary'
+        scheme: 'quinary'
       },
       caption: {
         text: 'Caption:'
@@ -43,7 +43,7 @@ module.exports = new Element({
 
     0: new ui.Label({
       ui: {
-        color: 'primary'
+        scheme: 'primary'
       },
       caption: new ui.Icon('email'),
       input: new ui.Email()
@@ -51,7 +51,7 @@ module.exports = new Element({
 
     1: new ui.Label({
       ui: {
-        color: 'secondary'
+        scheme: 'secondary'
       },
       caption: new ui.Icon('locked'),
       input: new ui.Password()

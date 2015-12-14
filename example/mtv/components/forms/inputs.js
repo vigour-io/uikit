@@ -55,32 +55,32 @@ module.exports = new Element({
 
     0: new ui.Input({
       ui: {
-        color: 'primary'
+        scheme: 'primary'
       }
     }),
     1: new ui.Input({
       ui: {
-        color: 'secondary'
+        scheme: 'secondary'
       }
     }),
     2: new ui.Input({
       ui: {
-        color: 'tertiary'
+        scheme: 'tertiary'
       }
     }),
     3: new ui.Input({
       ui: {
-        color: 'quaternary'
+        scheme: 'quaternary'
       }
     }),
     4: new ui.Input({
       ui: {
-        color: 'quinary'
+        scheme: 'quinary'
       }
     }),
     5: new ui.Input({
       ui: {
-        color: 'blackwhite'
+        scheme: 'blackwhite'
       }
     })
   }

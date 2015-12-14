@@ -51,49 +51,49 @@ module.exports = new Element({
     0: new ui.Switcher({
       state: binded,
       ui: {
-        color: 'primary'
+        scheme: 'primary'
       }
     }),
 
     1: new ui.Switcher({
       state: binded,
       ui: {
-        color: 'secondary'
+        scheme: 'secondary'
       }
     }),
 
     2: new ui.Switcher({
       state: binded,
       ui: {
-        color: 'tertiary'
+        scheme: 'tertiary'
       }
     }),
 
     3: new ui.Switcher({
       state: binded,
       ui: {
-        color: 'quaternary'
+        scheme: 'quaternary'
       }
     }),
 
     4: new ui.Switcher({
       state: binded,
       ui: {
-        color: 'quinary'
+        scheme: 'quinary'
       }
     }),
 
     5: new ui.Switcher({
       state: binded,
       ui: {
-        color: 'grayscale-dark'
+        scheme: 'grayscale-dark'
       }
     }),
 
     6: new ui.Switcher({
       state: binded,
       ui: {
-        color: 'grayscale-light'
+        scheme: 'grayscale-light'
       }
     })
   }

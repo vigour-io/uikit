@@ -31,7 +31,7 @@ module.exports = new Element({
     group: new ui.FormGroup({
       label: new ui.Label({
         ui: {
-          color: 'blackwhite'
+          scheme: 'blackwhite'
         },
         caption: {
           text: 'Search:'
@@ -41,7 +41,7 @@ module.exports = new Element({
 
       button: new ui.Button({
         ui: {
-          color: 'primary iconic'
+          scheme: 'primary iconic'
         },
         text: '',
         facebook: new ui.Icon('search')
@@ -57,13 +57,13 @@ module.exports = new Element({
     group: new ui.FormGroup({
       switcher: new ui.Switcher({
         ui: {
-          color: 'secondary'
+          scheme: 'secondary'
         }
       }),
 
       label: new ui.Label({
         ui: {
-          color: 'primary'
+          scheme: 'primary'
         },
         caption: new ui.Icon('email'),
         input: new ui.Input()
@@ -71,7 +71,7 @@ module.exports = new Element({
 
       button: new ui.Button({
         ui: {
-          color: 'secondary'
+          scheme: 'secondary'
         },
         text: 'Subscribe'
       })

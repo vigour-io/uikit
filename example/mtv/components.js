@@ -46,7 +46,7 @@ app.set({
 
           fade: new ui.Fade({
             ui: {
-              color: 'fade-light'
+              scheme: 'fade-light'
             }
           }),
 
@@ -58,11 +58,15 @@ app.set({
         title: new ui.H5('List items:'),
         node: 'section',
 
-        listsTitle: new ui.P('Aside items:'),
-        aside: require('./components/lists').lists,
+        aside: {
+          listsTitle: new ui.P('Aside items:'),
+          aside: require('./components/lists').lists
+        },
 
-        formsTitle: new ui.P('Form items:'),
-        forms: require('./components/lists').forms
+        asideForms: {
+          title: new ui.P('Form items:'),
+          aside: require('./components/lists').forms
+        }
       },
 
       notifications: require('./components/notification')

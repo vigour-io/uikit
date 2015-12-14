@@ -21,19 +21,19 @@ module.exports = new Element({
 
   1: new ui.Select({
     ui: {
-      color: 'primary'
+      scheme: 'primary'
     }
   }),
 
   2: new ui.Select({
     ui: {
-      color: 'grayscale-light'
+      scheme: 'grayscale-light'
     }
   }),
 
   3: new ui.Select({
     ui: {
-      color: 'secondary'
+      scheme: 'secondary'
     }
   })
 })

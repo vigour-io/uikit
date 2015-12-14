@@ -44,37 +44,37 @@ module.exports = new Element({
 
     0: new ui.Button({
       ui: {
-        color: 'primary'
+        scheme: 'primary'
       }
     }),
 
     1: new ui.Button({
       ui: {
-        color: 'secondary'
+        scheme: 'secondary'
       }
     }),
 
     2: new ui.Button({
       ui: {
-        color: 'tertiary'
+        scheme: 'tertiary'
       }
     }),
 
     3: new ui.Button({
       ui: {
-        color: 'grayscale-light'
+        scheme: 'grayscale-light'
       }
     }),
 
     4: new ui.Button({
       ui: {
-        color: 'grayscale-dark'
+        scheme: 'grayscale-dark'
       }
     }),
 
     5: new ui.Button({
       ui: {
-        color: 'blackwhite'
+        scheme: 'blackwhite'
       }
     })
   },
@@ -84,7 +84,7 @@ module.exports = new Element({
 
     italic: new ui.Button({
       ui: {
-        color: 'tertiary',
+        scheme: 'tertiary',
         size: 'big',
         type: 'italic-button'
       }
@@ -92,7 +92,7 @@ module.exports = new Element({
     withIcon: new ui.Button({
       ui: {
         size: 'big',
-        color: 'tertiary'
+        scheme: 'tertiary'
       },
       text: 'Next',
       icon: new ui.Icon('right')
@@ -100,7 +100,7 @@ module.exports = new Element({
     iconic: new ui.Button('Register').set({
       ui: {
         size: 'big',
-        color: 'tertiary',
+        scheme: 'tertiary',
         type: 'iconic'
       },
       text: '',
