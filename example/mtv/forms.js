@@ -22,8 +22,10 @@ Element.prototype.inject(
 
 app.set({
   header: require('./components/header'),
-  container: {
-    css: 'main',
+  container: new ui.Container({
+    css: {
+      addClass: 'main'
+    },
 
     forms: {
       title: new ui.H3('Forms:'),
@@ -36,7 +38,7 @@ app.set({
       switchers: require('./components/forms/switchers'),
       groups: require('./components/forms/groups')
     }
-  },
+  }),
 
   hr: new ui.Hr()
 })

@@ -1,0 +1,51 @@
+.ui-container {
+  .margin-h(auto);
+  .sizing;
+  margin-bottom: @gap;
+
+  @media @above-big {
+    .padding-h(@gap-big);
+  }
+
+  @media @under-big, @above-small {
+    .padding-h(@gap);
+  }
+
+  @media @under-small {
+    .padding-h(@gap-medium);
+  }
+
+  .transition(padding @transition);
+
+  &.ui-flexible {
+    max-width: none;
+  }
+
+  &.ui-large {
+    max-width: @container-large;
+  }
+
+  &.ui-big {
+    max-width: @container-big;
+  }
+
+  &.ui-medium {
+    max-width: @container-medium;
+  }
+
+  &.ui-small {
+    max-width: @container-small;
+  }
+
+  &.ui-tiny {
+    max-width: @container-tiny;
+  }
+
+  &.ui-tablet {
+    max-width: @container-tablet;
+  }
+
+  &.ui-mobile {
+    max-width: @container-mobile;
+  }
+}

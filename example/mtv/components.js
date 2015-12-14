@@ -20,8 +20,10 @@ Element.prototype.inject(
 
 app.set({
   header: require('./components/header'),
-  container: {
-    css: 'main',
+  container: new ui.Container({
+    css: {
+      addClass: 'main'
+    },
 
     components: {
       title: new ui.H3('Components:'),
@@ -71,7 +73,7 @@ app.set({
 
       notifications: require('./components/notification')
     }
-  },
+  }),
 
   hr: new ui.Hr()
 })
