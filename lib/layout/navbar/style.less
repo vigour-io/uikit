@@ -1,0 +1,80 @@
+.ui-navbar {
+  .flex-display;
+  .flex-direction(row);
+  .justify-content(space-between);
+  .align-items(center);
+
+  font-size: @navbar-font-size;
+  position: relative;
+  z-index: 100;
+
+  .title {
+    text-align: @navbar-text-align;
+    font-weight: @navbar-font-weight;
+    .flex(1);
+    .text-overflow;
+    padding: @navbar-padding 0;
+    .flex-order(2);
+  }
+
+  > div {
+    padding: @navbar-padding;
+  }
+
+  > .ui-icon {
+    width: @navbar-icon-size;
+    padding: @navbar-padding;
+    font-size: @navbar-icon-size;
+    cursor: pointer;
+
+    &.burger-arrow {
+      font-size: 0.9rem;
+      margin-left: -.4em;
+      opacity: .3;
+      color: black;
+      padding: 0;
+      width: auto;
+    }
+  }
+}
+
+// size mixin
+.ui-navbar-size (@padding: @navbar-padding) {
+  .title {
+    padding: @padding 0;
+  }
+
+  > div {
+    padding: @padding;
+  }
+
+  > .ui-icon {
+    padding: @padding;
+  }
+}
+
+// sizes
+.ui-navbar {
+  &.ui-big {
+    .ui-navbar-size(@gap);
+  }
+
+  &.ui-small {
+    .ui-navbar-size(@gap-small);
+  }
+}
+
+// if it's containers child
+.ui-container > .ui-navbar {
+  @media @above-big {
+    .margin-h(-@gap-big);
+  }
+
+  @media @under-big, @above-small {
+    .margin-h(-@gap);
+  }
+
+  @media @under-small {
+    .margin-h(-@gap-medium);
+  }
+}
