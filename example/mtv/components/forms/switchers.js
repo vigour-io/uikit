@@ -14,8 +14,9 @@ var Observable = require('vigour-js/lib/observable')
 var binded = new Observable(true)
 
 module.exports = new Element({
-  title: new ui.H5('Switcher:'),
   node: 'section',
+
+  title: new ui.H5('Switcher:'),
 
   switcher: new ui.Switcher({
     state: binded
@@ -23,22 +24,23 @@ module.exports = new Element({
 
   sizes: {
     title: new ui.P('Switcher sizes:'),
-    0: new ui.Switcher({
+
+    item0: new ui.Switcher({
       ui: {
         size: 'large'
       }
     }),
-    1: new ui.Switcher({
+    item1: new ui.Switcher({
       ui: {
         size: 'big'
       }
     }),
-    2: new ui.Switcher({
+    item2: new ui.Switcher({
       ui: {
         size: 'medium'
       }
     }),
-    3: new ui.Switcher({
+    item3: new ui.Switcher({
       ui: {
         size: 'small'
       }
@@ -48,49 +50,49 @@ module.exports = new Element({
   colors: {
     title: new ui.P('Switcher colors:'),
 
-    0: new ui.Switcher({
+    item0: new ui.Switcher({
       state: binded,
       ui: {
         scheme: 'primary'
       }
     }),
 
-    1: new ui.Switcher({
+    item1: new ui.Switcher({
       state: binded,
       ui: {
         scheme: 'secondary'
       }
     }),
 
-    2: new ui.Switcher({
+    item2: new ui.Switcher({
       state: binded,
       ui: {
         scheme: 'tertiary'
       }
     }),
 
-    3: new ui.Switcher({
+    item3: new ui.Switcher({
       state: binded,
       ui: {
         scheme: 'quaternary'
       }
     }),
 
-    4: new ui.Switcher({
+    item4: new ui.Switcher({
       state: binded,
       ui: {
         scheme: 'quinary'
       }
     }),
 
-    5: new ui.Switcher({
+    item5: new ui.Switcher({
       state: binded,
       ui: {
         scheme: 'grayscale-dark'
       }
     }),
 
-    6: new ui.Switcher({
+    item6: new ui.Switcher({
       state: binded,
       ui: {
         scheme: 'grayscale-light'

@@ -11,8 +11,9 @@ Element.prototype.inject(
 )
 
 module.exports = new Element({
-  title: new ui.H5('Form Groups:'),
   node: 'section',
+
+  title: new ui.H5('Form Groups:'),
 
   withButton: {
     title: new ui.P('With Button:'),
@@ -22,8 +23,6 @@ module.exports = new Element({
       button: new ui.Button('Button')
     })
   },
-
-  br0: new ui.DoubleBr(),
 
   withLabelAndIcon: {
     title: new ui.P('With Label and iconic Button:'),
@@ -48,8 +47,6 @@ module.exports = new Element({
       })
     })
   },
-
-  br1: new ui.DoubleBr(),
 
   withButtonAndSwitcher: {
     title: new ui.P('With Switcher, Label and iconic Button:'),

@@ -4,20 +4,21 @@ var Element = require('vigour-element')
 var ui = require('uikit/lib')
 
 module.exports = new Element({
-  title: new ui.H5('Labels:'),
   node: 'section',
+
+  title: new ui.H5('Labels:'),
 
   labels: {
     title: new ui.P('Simple labels:'),
 
-    0: new ui.Label({
+    item0: new ui.Label({
       caption: {
         text: 'Caption:'
       },
       input: new ui.Input()
     }),
 
-    1: new ui.Label({
+    item1: new ui.Label({
       ui: {
         scheme: 'tertiary'
       },
@@ -27,7 +28,7 @@ module.exports = new Element({
       input: new ui.Input()
     }),
 
-    2: new ui.Label({
+    item2: new ui.Label({
       ui: {
         scheme: 'quinary'
       },
@@ -41,7 +42,7 @@ module.exports = new Element({
   iconLabels: {
     title: new ui.P('Labels with Icons:'),
 
-    0: new ui.Label({
+    item0: new ui.Label({
       ui: {
         scheme: 'primary'
       },
@@ -49,7 +50,7 @@ module.exports = new Element({
       input: new ui.Email()
     }),
 
-    1: new ui.Label({
+    item1: new ui.Label({
       ui: {
         scheme: 'secondary'
       },

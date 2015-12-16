@@ -11,28 +11,29 @@ Element.prototype.inject(
 )
 
 module.exports = new Element({
-  title: new ui.H5('Buttons:'),
   node: 'section',
+
+  title: new ui.H5('Buttons:'),
 
   sizes: {
     title: new ui.P('Button sizes:'),
 
-    0: new ui.Button({
+    item0: new ui.Button({
       ui: {
         size: 'large'
       }
     }),
-    1: new ui.Button({
+    item1: new ui.Button({
       ui: {
         size: 'big'
       }
     }),
-    2: new ui.Button({
+    item2: new ui.Button({
       ui: {
         size: 'medium'
       }
     }),
-    3: new ui.Button({
+    item3: new ui.Button({
       ui: {
         size: 'small'
       }
@@ -42,37 +43,37 @@ module.exports = new Element({
   colors: {
     title: new ui.P('Button colors:'),
 
-    0: new ui.Button({
+    item0: new ui.Button({
       ui: {
         scheme: 'primary'
       }
     }),
 
-    1: new ui.Button({
+    item1: new ui.Button({
       ui: {
         scheme: 'secondary'
       }
     }),
 
-    2: new ui.Button({
+    item2: new ui.Button({
       ui: {
         scheme: 'tertiary'
       }
     }),
 
-    3: new ui.Button({
+    item3: new ui.Button({
       ui: {
         scheme: 'grayscale-light'
       }
     }),
 
-    4: new ui.Button({
+    item4: new ui.Button({
       ui: {
         scheme: 'grayscale-dark'
       }
     }),
 
-    5: new ui.Button({
+    item5: new ui.Button({
       ui: {
         scheme: 'blackwhite'
       }

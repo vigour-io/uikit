@@ -15,34 +15,35 @@ var Observable = require('vigour-js/lib/observable')
 var binded = new Observable('Observable')
 
 module.exports = new Element({
-  title: new ui.H5('Inputs:'),
   node: 'section',
+
+  title: new ui.H5('Inputs:'),
 
   sizes: {
     title: new ui.P('Input sizes:'),
 
-    0: new ui.Input({
+    item0: new ui.Input({
       text: binded,
       ui: {
         size: 'large'
       }
     }),
 
-    1: new ui.Input({
+    item1: new ui.Input({
       text: binded,
       ui: {
         size: 'big'
       }
     }),
 
-    2: new ui.Input({
+    item2: new ui.Input({
       text: binded,
       ui: {
         size: 'medium'
       }
     }),
 
-    3: new ui.Input({
+    item3: new ui.Input({
       text: binded,
       ui: {
         size: 'small'
@@ -53,32 +54,32 @@ module.exports = new Element({
   colors: {
     title: new ui.P('Input colors:'),
 
-    0: new ui.Input({
+    item0: new ui.Input({
       ui: {
         scheme: 'primary'
       }
     }),
-    1: new ui.Input({
+    item1: new ui.Input({
       ui: {
         scheme: 'secondary'
       }
     }),
-    2: new ui.Input({
+    item2: new ui.Input({
       ui: {
         scheme: 'tertiary'
       }
     }),
-    3: new ui.Input({
+    item3: new ui.Input({
       ui: {
         scheme: 'quaternary'
       }
     }),
-    4: new ui.Input({
+    item4: new ui.Input({
       ui: {
         scheme: 'quinary'
       }
     }),
-    5: new ui.Input({
+    item5: new ui.Input({
       ui: {
         scheme: 'blackwhite'
       }
