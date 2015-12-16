@@ -7,6 +7,7 @@
   font-size: @topbar-font-size;
   position: relative;
   z-index: 100;
+  line-height: 1;
 
   .title {
     text-align: @topbar-text-align;
@@ -25,24 +26,33 @@
     width: @topbar-font-size;
     padding: @topbar-padding;
     cursor: pointer;
+  }
+}
 
-    &.close {
-      .flex-order(3);
-    }
+
+
+// size mixin
+.ui-navbar-size (@padding: @navbar-padding) {
+  .title {
+    padding: @padding 0;
+  }
+
+  > div {
+    padding: @padding;
+  }
+
+  > .ui-icon {
+    padding: @padding;
   }
 }
 
 // size
 .ui-topbar {
   &.ui-big {
-    padding: @gap-big;
-  }
-
-  &.ui-medium {
-    padding: @gap-medium;
+    .ui-navbar-size(@gap);
   }
 
   &.ui-small {
-    padding: @gap-small;
+    .ui-navbar-size(@gap-small);
   }
 }
