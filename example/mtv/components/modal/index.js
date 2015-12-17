@@ -21,7 +21,7 @@ module.exports = window.modal = new Element({
     title: new ui.P('Top bar:'),
     aside: {
       node: 'aside',
-      css: 'ui-secondary',
+      css: 'ui-scheme-secondary ui-inverse',
       topbar: new ui.Topbar({
         back: new ui.Icon('left'),
         title: {

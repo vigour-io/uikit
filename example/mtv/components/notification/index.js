@@ -53,7 +53,7 @@ module.exports = new Element({
                 setTimeout(function () {
                   console.log(this)
                   parent.set({
-                    notif: new ui.Warning(this.Constructor)
+                    notif: new ui.Warning()
                   })
                 }, 1000)
               }

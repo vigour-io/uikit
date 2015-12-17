@@ -36,43 +36,75 @@
 .ui-notification {
 
   // primary
-  &.ui-primary {
-    .ui-row-color(@primary-scheme-inverse);
+  &.ui-scheme-primary {
+    .ui-row-color(@primary-scheme);
+
+    &.ui-inverse {
+      .ui-row-color(@primary-scheme-inverse);
+    }
   }
 
   // secondary
-  &.ui-secondary {
-    .ui-row-color(@secondary-scheme-inverse);
+  &.ui-scheme-secondary {
+    .ui-row-color(@secondary-scheme);
+
+    &.ui-inverse {
+      .ui-row-color(@primary-scheme-inverse);
+    }
   }
 
   // tertiary
-  &.ui-tertiary {
-    .ui-row-color(@tertiary-scheme-inverse);
+  &.ui-scheme-tertiary {
+    .ui-row-color(@tertiary-scheme);
+
+    &.ui-inverse {
+      .ui-row-color(@primary-scheme-inverse);
+    }
   }
 
   // quaternary
-  &.ui-quaternary {
-    .ui-row-color(@quaternary-scheme-inverse);
+  &.ui-scheme-quaternary {
+    .ui-row-color(@quaternary-scheme);
+
+    &.ui-inverse {
+      .ui-row-color(@primary-scheme-inverse);
+    }
   }
 
   // quinary
-  &.ui-quinary {
-    .ui-row-color(@quinary-scheme-inverse);
+  &.ui-scheme-quinary {
+    .ui-row-color(@quinary-scheme);
+
+    &.ui-inverse {
+      .ui-row-color(@primary-scheme-inverse);
+    }
   }
 
   // tertiary
-  &.ui-graydark {
-    .ui-row-color(@graydark-scheme-inverse);
+  &.ui-scheme-graydark {
+    .ui-row-color(@graydark-scheme);
+
+    &.ui-inverse {
+      .ui-row-color(@primary-scheme-inverse);
+    }
   }
 
   // quaternary
-  &.ui-graylight {
-    .ui-row-color(@graylight-scheme-inverse);
+  &.ui-scheme-graylight {
+    .ui-row-color(@graylight-scheme);
+
+    &.ui-inverse {
+      .ui-row-color(@primary-scheme-inverse);
+    }
   }
 
   // quinary
-  &.ui-blackwhite {
-    .ui-row-color(@blackwhite-scheme-inverse);
+  &.ui-scheme-blackwhite {
+    .ui-row-color(@blackwhite-scheme);
+
+    &.ui-inverse {
+      .ui-row-color(@primary-scheme-inverse);
+    }
   }
 
 }

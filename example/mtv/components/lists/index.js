@@ -10,7 +10,8 @@ Element.prototype.inject(
   require('vigour-element/lib/property/transform'),
   require('vigour-element/lib/property/css'),
   require('vigour-element/lib/property/order'),
-  require('vigour-element/lib/property/attributes')
+  require('vigour-element/lib/property/attributes'),
+  require('vigour-uikit/lib/property')
 )
 
 module.exports.lists = new Element({
@@ -24,7 +25,7 @@ module.exports.lists = new Element({
     }),
     1: new ui.Row({
       css: {
-        addClass: 'with arrow'
+        addClass: 'ui-arrow'
       },
       caption: {
         title: new ui.H5('Language')
@@ -32,7 +33,7 @@ module.exports.lists = new Element({
     }),
     2: new ui.Row({
       css: {
-        addClass: 'active with arrow'
+        addClass: 'ui-active ui-arrow'
       },
       caption: {
         title: new ui.H5('Language'),
@@ -46,7 +47,7 @@ module.exports.lists = new Element({
     }),
     3: new ui.Row({
       css: {
-        addClass: 'with arrow'
+        addClass: 'ui-arrow'
       },
       icon: new ui.Icon('menu'),
       caption: {
@@ -69,19 +70,33 @@ module.exports.forms = new Element({
     0: new ui.LabelRow({
       label: {
         caption: new ui.Icon('email'),
-        input: new ui.Email()
+        input: new ui.Email({
+          ui: {
+            scheme: 'secondary',
+            inverse: true
+          }
+        })
       }
     }),
     1: new ui.LabelRow({
       label: {
         caption: new ui.Icon('locked'),
-        input: new ui.Password()
+        input: new ui.Password({
+          ui: {
+            scheme: 'secondary',
+            inverse: true
+          }
+        })
       }
     }),
     2: new ui.LabelRow({
       label: {
         caption: new ui.Icon('gender'),
         input: new ui.Select({
+          ui: {
+            scheme: 'secondary',
+            inverse: true
+          },
           options: {
             placeholder: {
               text: 'Gender'
@@ -102,6 +117,10 @@ module.exports.forms = new Element({
       label: {
         caption: new ui.Icon('date'),
         input: new ui.Select({
+          ui: {
+            scheme: 'secondary',
+            inverse: true
+          },
           options: {
             placeholder: {
               text: 'Select Age'
@@ -137,7 +156,7 @@ module.exports.forms = new Element({
     }),
     10: new ui.Button({
       css: {
-        addClass: 'ui-large ui-tertiary ui-modal-button'
+        addClass: 'ui-large ui-scheme-tertiary ui-interactive ui-modal-button'
       }
     })
   }
