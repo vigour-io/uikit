@@ -21,14 +21,15 @@ Element.prototype.inject(
 
 app.set({
   header: require('./components/header'),
+
   container: new ui.Container({
     css: {
       addClass: 'main'
     },
 
     components: {
-      title: new ui.H3('Components:'),
       node: 'section',
+      title: new ui.H3('Components:'),
 
       images: {
         title: new ui.H5('Images:'),
@@ -40,8 +41,8 @@ app.set({
       modals: require('./components/modal'),
 
       fade: {
-        title: new ui.H5('Fade:'),
         node: 'section',
+        title: new ui.H5('Fade:'),
 
         aside: {
           node: 'aside',
@@ -58,8 +59,8 @@ app.set({
       },
 
       lists: {
-        title: new ui.H5('List items:'),
         node: 'section',
+        title: new ui.H5('List items:'),
 
         aside: {
           listsTitle: new ui.P('Aside items:'),

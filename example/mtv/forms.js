@@ -22,14 +22,15 @@ Element.prototype.inject(
 
 app.set({
   header: require('./components/header'),
+
   container: new ui.Container({
     css: {
       addClass: 'main'
     },
 
     forms: {
-      title: new ui.H3('Forms:'),
       node: 'section',
+      title: new ui.H3('Forms:'),
 
       inputs: require('./components/forms/inputs'),
       selects: require('./components/forms/selects'),

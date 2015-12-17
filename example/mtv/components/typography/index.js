@@ -13,8 +13,8 @@ Element.prototype.inject(
 )
 
 module.exports = exports = new Element({
-  title: new ui.H3('Typography:'),
   node: 'section',
+  title: new ui.H3('Typography:'),
 
   sansSerif: require('./sans-serif')
 

@@ -16,6 +16,7 @@ Element.prototype.inject(
 
 module.exports.lists = new Element({
   node: 'aside',
+
   css: 'ui-background-secondary',
   items: {
     0: new ui.Row({

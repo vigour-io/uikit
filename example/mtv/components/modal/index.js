@@ -14,8 +14,8 @@ Element.prototype.inject(
 )
 
 module.exports = window.modal = new Element({
-  title: new ui.H5('Modal layout:'),
   node: 'section',
+  title: new ui.H5('Modal layout:'),
 
   topbar: {
     title: new ui.P('Top bar:'),

@@ -13,8 +13,8 @@ Element.prototype.inject(
 )
 
 module.exports = new Element({
-  title: new ui.H5('Progress bars:'),
   node: 'section',
+  title: new ui.H5('Progress bars:'),
 
   progressbar: {
     title: new ui.P('Default:'),

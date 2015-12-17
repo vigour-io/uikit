@@ -14,19 +14,20 @@ Element.prototype.inject(
 )
 
 module.exports = new Element({
-  title: new ui.H5('Notifications:'),
   node: 'section',
+  title: new ui.H5('Notifications:'),
 
   notification: {
-    0: {
+    item0: {
       title: new ui.P('Success:'),
       aside: {
         node: 'aside',
         css: 'ui-background-graylight',
+
         notif: new ui.Success({
           on: {
             click: {
-              bringBack: function () {
+              bringBack1 () {
                 var parent = this.parent
                 setTimeout(function () {
                   parent.set({
@@ -40,18 +41,18 @@ module.exports = new Element({
       }
     },
 
-    1: {
+    item1: {
       title: new ui.P('Warning:'),
       aside: {
         node: 'aside',
         css: 'ui-background-graylight',
+
         notif: new ui.Warning({
           on: {
             click: {
-              bringBack: function () {
+              bringBack2 () {
                 var parent = this.parent
                 setTimeout(function () {
-                  console.log(this)
                   parent.set({
                     notif: new ui.Warning()
                   })
@@ -63,15 +64,16 @@ module.exports = new Element({
       }
     },
 
-    2: {
+    item2: {
       title: new ui.P('Error:'),
       aside: {
         node: 'aside',
         css: 'ui-background-graylight',
+
         notif: new ui.Error({
           on: {
             click: {
-              bringBack: function () {
+              bringBack3 () {
                 var parent = this.parent
                 setTimeout(function () {
                   parent.set({
