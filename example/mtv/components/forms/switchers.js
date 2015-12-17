@@ -53,49 +53,56 @@ module.exports = new Element({
     item0: new ui.Switcher({
       state: binded,
       ui: {
-        scheme: 'primary'
+        scheme: 'primary',
+        inverse: true
       }
     }),
 
     item1: new ui.Switcher({
       state: binded,
       ui: {
-        scheme: 'secondary'
+        scheme: 'secondary',
+        inverse: true
       }
     }),
 
     item2: new ui.Switcher({
       state: binded,
       ui: {
-        scheme: 'tertiary'
+        scheme: 'tertiary',
+        inverse: true
       }
     }),
 
     item3: new ui.Switcher({
       state: binded,
       ui: {
-        scheme: 'quaternary'
+        scheme: 'quaternary',
+        inverse: true
       }
     }),
 
     item4: new ui.Switcher({
       state: binded,
       ui: {
-        scheme: 'quinary'
+        scheme: 'quinary',
+        inverse: true
       }
     }),
 
     item5: new ui.Switcher({
       state: binded,
       ui: {
-        scheme: 'grayscale-dark'
+        scheme: 'graydark',
+        inverse: true
       }
     }),
 
     item6: new ui.Switcher({
       state: binded,
       ui: {
-        scheme: 'grayscale-light'
+        scheme: 'graylight',
+        inverse: true
       }
     })
   }

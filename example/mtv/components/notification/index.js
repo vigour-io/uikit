@@ -22,7 +22,7 @@ module.exports = new Element({
       title: new ui.P('Success:'),
       aside: {
         node: 'aside',
-        css: 'ui-background-grayscale-light',
+        css: 'ui-background-graylight',
         notif: new ui.Success({
           on: {
             click: {
@@ -44,7 +44,7 @@ module.exports = new Element({
       title: new ui.P('Warning:'),
       aside: {
         node: 'aside',
-        css: 'ui-background-grayscale-light',
+        css: 'ui-background-graylight',
         notif: new ui.Warning({
           on: {
             click: {
@@ -67,7 +67,7 @@ module.exports = new Element({
       title: new ui.P('Error:'),
       aside: {
         node: 'aside',
-        css: 'ui-background-grayscale-light',
+        css: 'ui-background-graylight',
         notif: new ui.Error({
           on: {
             click: {

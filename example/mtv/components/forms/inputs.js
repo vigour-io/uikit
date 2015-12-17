@@ -56,32 +56,38 @@ module.exports = new Element({
 
     item0: new ui.Input({
       ui: {
-        scheme: 'primary'
+        scheme: 'primary',
+        inverse: true
       }
     }),
     item1: new ui.Input({
       ui: {
-        scheme: 'secondary'
+        scheme: 'secondary',
+        inverse: true
       }
     }),
     item2: new ui.Input({
       ui: {
-        scheme: 'tertiary'
+        scheme: 'tertiary',
+        inverse: true
       }
     }),
     item3: new ui.Input({
       ui: {
-        scheme: 'quaternary'
+        scheme: 'quaternary',
+        inverse: true
       }
     }),
     item4: new ui.Input({
       ui: {
-        scheme: 'quinary'
+        scheme: 'quinary',
+        inverse: true
       }
     }),
     item5: new ui.Input({
       ui: {
-        scheme: 'blackwhite'
+        scheme: 'blackwhite',
+        inverse: true
       }
     })
   }

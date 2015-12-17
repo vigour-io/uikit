@@ -65,51 +65,83 @@
  * Input sizes
  */
 .ui-select {
-  &.ui-primary {
+  &.ui-scheme-primary {
     &:not(.ui-dirty) {
-      color: fade(extract(@primary-scheme, 4), @placeholder-fading);
+      color: fade(extract(@primary-scheme, 1), @placeholder-fading);
+    }
+
+    &.ui-inverse:not(.ui-dirty) {
+      color: fade(extract(@primary-scheme-inverse, 1), @placeholder-fading);
     }
   }
 
-  &.ui-secondary {
+  &.ui-scheme-secondary {
     &:not(.ui-dirty) {
-      color: fade(extract(@secondary-scheme, 4), @placeholder-fading);
+      color: fade(extract(@secondary-scheme, 1), @placeholder-fading);
+    }
+
+    &.ui-inverse:not(.ui-dirty) {
+      color: fade(extract(@secondary-scheme-inverse, 1), @placeholder-fading);
     }
   }
 
-  &.ui-tertiary {
+  &.ui-scheme-tertiary {
     &:not(.ui-dirty) {
-      color: fade(extract(@tertiary-scheme, 4), @placeholder-fading);
+      color: fade(extract(@tertiary-scheme, 1), @placeholder-fading);
+    }
+
+    &.ui-inverse:not(.ui-dirty) {
+      color: fade(extract(@tertiary-scheme-inverse, 1), @placeholder-fading);
     }
   }
 
-  &.ui-quaternary {
+  &.ui-scheme-quaternary {
     &:not(.ui-dirty) {
-      color: fade(extract(@quaternary-scheme, 4), @placeholder-fading);
+      color: fade(extract(@quaternary-scheme, 1), @placeholder-fading);
+    }
+
+    &.ui-inverse:not(.ui-dirty) {
+      color: fade(extract(@quaternary-scheme-inverse, 1), @placeholder-fading);
     }
   }
 
-  &.ui-quinary {
+  &.ui-scheme-quinary {
     &:not(.ui-dirty) {
-      color: fade(extract(@quinary-scheme, 4), @placeholder-fading);
+      color: fade(extract(@quinary-scheme, 1), @placeholder-fading);
+    }
+
+    &.ui-inverse:not(.ui-dirty) {
+      color: fade(extract(@quinary-scheme-inverse, 1), @placeholder-fading);
     }
   }
 
-  &.ui-grayscale-light {
+  &.ui-scheme-graylight {
     &:not(.ui-dirty) {
-      color: fade(extract(@grayscale-light-scheme, 4), @placeholder-fading);
+      color: fade(extract(@graylight-scheme, 1), @placeholder-fading);
+    }
+
+    &.ui-inverse:not(.ui-dirty) {
+      color: fade(extract(@graylight-scheme-inverse, 1), @placeholder-fading);
     }
   }
 
-  &.ui-grayscale-dark {
+  &.ui-scheme-graydark {
     &:not(.ui-dirty) {
-      color: fade(extract(@grayscale-dark-scheme, 4), @placeholder-fading);
+      color: fade(extract(@graydark-scheme, 1), @placeholder-fading);
+    }
+
+    &.ui-inverse:not(.ui-dirty) {
+      color: fade(extract(@graydark-scheme-inverse, 1), @placeholder-fading);
     }
   }
 
-  &.ui-blackwhite {
+  &.ui-scheme-blackwhite {
     &:not(.ui-dirty) {
-      color: fade(extract(@blackwhite-scheme, 4), @placeholder-fading);
+      color: fade(extract(@blackwhite-scheme, 1), @placeholder-fading);
+    }
+
+    &.ui-inverse:not(.ui-dirty) {
+      color: fade(extract(@blackwhite-scheme-inverse, 1), @placeholder-fading);
     }
   }
 }

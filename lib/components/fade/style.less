@@ -29,7 +29,7 @@
   }
 
   &.ui-interactive {
-    .transition(linear .2s background-color);
+    .transition(@transition background-color);
 
     &:hover {
       background-color: transparent;
@@ -42,11 +42,11 @@
  * fade Colors
  */
 .ui-fade {
-  &.ui-fade-dark {
+  &.ui-scheme-dark {
     .fade-color(black);
   }
 
-  &.ui-fade-light {
+  &.ui-scheme-light {
     .fade-color(white);
   }
 }

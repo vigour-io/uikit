@@ -24,19 +24,22 @@ module.exports = new Element({
 
     item1: new ui.Select({
       ui: {
-        scheme: 'primary'
+        scheme: 'primary',
+        inverse: true
       }
     }),
 
     item2: new ui.Select({
       ui: {
-        scheme: 'grayscale-light'
+        scheme: 'graylight',
+        inverse: true
       }
     }),
 
     item3: new ui.Select({
       ui: {
-        scheme: 'secondary'
+        scheme: 'secondary',
+        inverse: true
       }
     })
   }

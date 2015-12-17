@@ -6,11 +6,13 @@
     display: inherit;
   }
 
-  &:first-child:not(:last-child) {
-    margin-right: @gap-medium;
-  }
+  &.ui-in-row {
+    &:first-child:not(:last-child) {
+      margin-right: @gap-medium;
+    }
 
-  &:last-child:not(:first-child) {
-    margin-left: @gap-medium;
+    &:last-child:not(:first-child) {
+      margin-left: @gap-medium;
+    }
   }
 }

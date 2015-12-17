@@ -34,36 +34,68 @@
  * Input colors
  */
 .ui-input {
-  &.ui-primary {
-    .placeholder(fade(extract(@primary-scheme-inverse, 1), @placeholder-fading));
+  &.ui-scheme-primary {
+    .placeholder(fade(extract(@primary-scheme, 1), @placeholder-fading));
+
+    &.ui-inverse {
+      .placeholder(fade(extract(@primary-scheme-inverse, 1), @placeholder-fading));
+    }
   }
 
-  &.ui-secondary {
-    .placeholder(fade(extract(@secondary-scheme-inverse, 1), @placeholder-fading));
+  &.ui-scheme-secondary {
+    .placeholder(fade(extract(@secondary-scheme, 1), @placeholder-fading));
+
+    &.ui-inverse {
+      .placeholder(fade(extract(@secondary-scheme-inverse, 1), @placeholder-fading));
+    }
   }
 
-  &.ui-tertiary {
-    .placeholder(fade(extract(@tertiary-scheme-inverse, 1), @placeholder-fading));
+  &.ui-scheme-tertiary {
+    .placeholder(fade(extract(@tertiary-scheme, 1), @placeholder-fading));
+
+    &.ui-inverse {
+      .placeholder(fade(extract(@tertiary-scheme-inverse, 1), @placeholder-fading));
+    }
   }
 
-  &.ui-quaternary {
-    .placeholder(fade(extract(@quaternary-scheme-inverse, 1), @placeholder-fading));
+  &.ui-scheme-quaternary {
+    .placeholder(fade(extract(@quaternary-scheme, 1), @placeholder-fading));
+
+    &.ui-inverse {
+      .placeholder(fade(extract(@quaternary-scheme-inverse, 1), @placeholder-fading));
+    }
   }
 
-  &.ui-quinary {
-    .placeholder(fade(extract(@quinary-scheme-inverse, 1), @placeholder-fading));
+  &.ui-scheme-quinary {
+    .placeholder(fade(extract(@quinary-scheme, 1), @placeholder-fading));
+
+    &.ui-inverse {
+      .placeholder(fade(extract(@quinary-scheme-inverse, 1), @placeholder-fading));
+    }
   }
 
-  &.ui-grayscale-light {
-    .placeholder(fade(extract(@grayscale-light-scheme-inverse, 1), @placeholder-fading));
+  &.ui-scheme-graylight {
+    .placeholder(fade(extract(@graylight-scheme, 1), @placeholder-fading));
+
+    &.ui-inverse {
+      .placeholder(fade(extract(@graylight-scheme-inverse, 1), @placeholder-fading));
+    }
   }
 
-  &.ui-grayscale-dark {
-    .placeholder(fade(extract(@grayscale-dark-scheme-inverse, 1), @placeholder-fading));
+  &.ui-scheme-graydark {
+    .placeholder(fade(extract(@graydark-scheme, 1), @placeholder-fading));
+
+    &.ui-inverse {
+      .placeholder(fade(extract(@graydark-scheme-inverse, 1), @placeholder-fading));
+    }
   }
 
-  &.ui-blackwhite {
-    .placeholder(fade(extract(@blackwhite-scheme-inverse, 1), @placeholder-fading));
+  &.ui-scheme-blackwhite {
+    .placeholder(fade(extract(@blackwhite-scheme, 1), @placeholder-fading));
+
+    &.ui-inverse {
+      .placeholder(fade(extract(@blackwhite-scheme-inverse, 1), @placeholder-fading));
+    }
   }
 }
 

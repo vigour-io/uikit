@@ -45,37 +45,43 @@ module.exports = new Element({
 
     item0: new ui.Button({
       ui: {
-        scheme: 'primary'
+        scheme: 'primary',
+        inverse: true
       }
     }),
 
     item1: new ui.Button({
       ui: {
-        scheme: 'secondary'
+        scheme: 'secondary',
+        inverse: true
       }
     }),
 
     item2: new ui.Button({
       ui: {
-        scheme: 'tertiary'
+        scheme: 'tertiary',
+        inverse: true
       }
     }),
 
     item3: new ui.Button({
       ui: {
-        scheme: 'grayscale-light'
+        scheme: 'graylight',
+        inverse: true
       }
     }),
 
     item4: new ui.Button({
       ui: {
-        scheme: 'grayscale-dark'
+        scheme: 'graydark',
+        inverse: true
       }
     }),
 
     item5: new ui.Button({
       ui: {
-        scheme: 'blackwhite'
+        scheme: 'blackwhite',
+        inverse: true
       }
     })
   },
@@ -86,6 +92,7 @@ module.exports = new Element({
     italic: new ui.Button({
       ui: {
         scheme: 'tertiary',
+        inverse: true,
         size: 'big',
         type: 'italic-button'
       }
@@ -93,7 +100,8 @@ module.exports = new Element({
     withIcon: new ui.Button({
       ui: {
         size: 'big',
-        scheme: 'tertiary'
+        scheme: 'tertiary',
+        inverse: true
       },
       text: 'Next',
       icon: new ui.Icon('right')
@@ -102,6 +110,7 @@ module.exports = new Element({
       ui: {
         size: 'big',
         scheme: 'tertiary',
+        inverse: true,
         type: 'iconic'
       },
       text: '',

@@ -48,7 +48,7 @@ app.set({
 
           fade: new ui.Fade({
             ui: {
-              scheme: 'fade-light'
+              scheme: 'light'
             }
           }),
 

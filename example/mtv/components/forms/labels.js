@@ -20,7 +20,8 @@ module.exports = new Element({
 
     item1: new ui.Label({
       ui: {
-        scheme: 'tertiary'
+        scheme: 'tertiary',
+        inverse: true
       },
       caption: {
         text: 'Caption:'
@@ -30,7 +31,8 @@ module.exports = new Element({
 
     item2: new ui.Label({
       ui: {
-        scheme: 'quinary'
+        scheme: 'quinary',
+        inverse: true
       },
       caption: {
         text: 'Caption:'
@@ -44,7 +46,8 @@ module.exports = new Element({
 
     item0: new ui.Label({
       ui: {
-        scheme: 'primary'
+        scheme: 'primary',
+        inverse: true
       },
       caption: new ui.Icon('email'),
       input: new ui.Email()
@@ -52,7 +55,8 @@ module.exports = new Element({
 
     item1: new ui.Label({
       ui: {
-        scheme: 'secondary'
+        scheme: 'secondary',
+        inverse: true
       },
       caption: new ui.Icon('locked'),
       input: new ui.Password()
