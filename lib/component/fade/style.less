@@ -1,5 +1,5 @@
 .fade-color (@color) {
-  background-color: fade(@color, 20%);
+  background-color: fade(@color, 15%);
 
   &:after {
     .gradient-o(fade(@color, 60%), fade(@color, 10%));
@@ -29,7 +29,7 @@
   }
 
   &.ui-interactive {
-    .transition(@transition background-color);
+    .transition(.5s background-color);
 
     &:hover {
       background-color: transparent;
