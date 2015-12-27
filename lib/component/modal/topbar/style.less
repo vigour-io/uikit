@@ -9,12 +9,14 @@
   z-index: 100;
   line-height: 1;
 
-  &:first-child {
-    .radius(@modal-radius @modal-radius 0 0)
-  }
+  @media @above-mobile {
+    &:first-child {
+      .radius(@modal-radius @modal-radius 0 0)
+    }
 
-  &:last-child {
-    .radius(0 0 @modal-radius @modal-radius)
+    &:last-child {
+      .radius(0 0 @modal-radius @modal-radius)
+    }
   }
 
   .title {
