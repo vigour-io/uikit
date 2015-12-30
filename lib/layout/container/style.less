@@ -4,20 +4,16 @@
   margin-bottom: @gap;
   width: 100%;
 
-  @media @above-big {
+  @media all @above-big {
     .padding-h(@gap-big);
   }
 
-  @media @under-big, @above-small {
+  @media all @above-small @under-big {
     .padding-h(@gap);
   }
 
-  @media @under-small {
+  @media all @under-small {
     .padding-h(@gap-medium);
-  }
-
-  &.ui-flexible {
-    max-width: none;
   }
 
   &.ui-large {
