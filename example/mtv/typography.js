@@ -4,10 +4,7 @@ require('./less/style.less')
 
 var Element = require('vigour-element')
 var ui = require('uikit/lib')
-
-var app = new Element({
-  node: document.body
-})
+var app = require('./app')
 
 Element.prototype.inject(
   require('vigour-element/lib/property/text'),
