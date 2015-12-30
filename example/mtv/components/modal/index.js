@@ -10,7 +10,7 @@ Element.prototype.inject(
   require('vigour-element/lib/property/transform'),
   require('vigour-element/lib/property/css'),
   require('vigour-element/lib/property/attributes'),
-  require('vigour-element/lib/events/css/animationEnd')
+  require('vigour-element/lib/event/css/animationEnd')
 )
 
 module.exports = window.modal = new Element({
