@@ -1,7 +1,7 @@
 'use strict'
 
-require('./forms')
-require('./components')
-require('./typography')
+// require('./forms')
+// require('./components')
+// require('./typography')
 
 module.exports = require('./app')
