@@ -1,5 +1,5 @@
 var Element = require('vigour-element')
-var ui = require('uikit/lib')
+var ui = require('../../../../lib')
 var Headers = require('./headers')
 
 module.exports = new Element({

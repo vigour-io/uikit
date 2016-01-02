@@ -3,7 +3,7 @@
 require('./style.less')
 
 var Element = require('vigour-element')
-var ui = require('uikit/lib')
+var ui = require('../../../../lib')
 
 Element.prototype.inject(
   require('vigour-element/lib/property/text'),
@@ -11,7 +11,7 @@ Element.prototype.inject(
   require('vigour-element/lib/property/css'),
   require('vigour-element/lib/property/order'),
   require('vigour-element/lib/property/attributes'),
-  require('vigour-uikit/lib/property')
+  require('vigour-element/lib/property')
 )
 
 module.exports.lists = new Element({

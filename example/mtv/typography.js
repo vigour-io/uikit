@@ -3,7 +3,7 @@
 require('./less/style.less')
 
 var Element = require('vigour-element')
-var ui = require('uikit/lib')
+var ui = require('../../lib')
 var app = require('./app')
 
 Element.prototype.inject(

@@ -1,5 +1,6 @@
+'use strict'
 var Element = require('vigour-element')
-var ui = require('uikit/lib')
+var ui = require('../../../../lib')
 
 const BASE_FONT_SIZE = 10
 const HEADER_TEXT = 'The quick brown fox jumps over the lazy dog.'

@@ -1,7 +1,7 @@
 require('./style.less')
 
 var Element = require('vigour-element')
-var ui = require('uikit/lib')
+var ui = require('../../../../lib')
 
 module.exports = new Element({
   node: 'section',

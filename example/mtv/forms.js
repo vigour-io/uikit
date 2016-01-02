@@ -3,18 +3,18 @@
 require('./less/style.less')
 
 var Element = require('vigour-element')
-var ui = require('uikit/lib')
+var ui = require('../../lib')
 
 var app = require('./app')
 
-Element.prototype.inject(
-  require('vigour-element/lib/property/text'),
-  require('vigour-element/lib/property/css'),
-  require('vigour-element/lib/property/size'),
-  require('vigour-element/lib/property/scroll'),
-  require('vigour-element/lib/property/transform'),
-  require('vigour-element/lib/event/click')
-)
+// Element.prototype.inject(
+//   require('vigour-element/lib/property/text'),
+//   require('vigour-element/lib/property/css'),
+//   require('vigour-element/lib/property/size'),
+//   require('vigour-element/lib/property/scroll'),
+//   require('vigour-element/lib/property/transform'),
+//   require('vigour-element/lib/event/click')
+// )
 
 app.set({
   header: require('./components/header'),
@@ -39,3 +39,5 @@ app.set({
 
   hr: new ui.Hr()
 })
+
+// console.log(app)
