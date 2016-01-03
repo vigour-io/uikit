@@ -9,7 +9,7 @@ var fs = require('fs')
 var js = 'http://localhost:3032/build/build.js'
 var css = 'http://localhost:3032/build/build.css'
 
-var js = 'http://192.168.0.12:8108/bundle.js?$app=192.168.0.12:8108/example/mtv/index.js'
+var js = ''//'http://192.168.0.12:8108/bundle.js?$app=192.168.0.12:8108/example/mtv/index.js'
 var css = 'http://192.168.0.12:8108/bundle.css?$app=192.168.0.12:8108/example/mtv/index.js'
 // finish this and add as a util to element (util/server)
 
@@ -23,9 +23,11 @@ function make (js, css) {
   return str
 }
 
+// make parser later
+// ui-input ui-scheme-graylight ui-clean ui-atom ui-form-element ui-large a b c d e f g h (also bad)
+
 // this is it
 http.createServer(function (req, res) {
-  // console.log('????')
   var raw = new stream.Readable()
   var jstosend = js
   var csstosend = css
