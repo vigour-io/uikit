@@ -51,6 +51,7 @@ module.exports = new Element({
           on: {
             click: {
               bringBack2 () {
+                // console.log('?????????')
                 var parent = this.parent
                 setTimeout(function () {
                   parent.set({
