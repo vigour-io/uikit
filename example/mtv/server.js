@@ -14,13 +14,12 @@ var css = 'http://192.168.0.12:8108/bundle.css?$app=192.168.0.12:8108/example/mt
 // finish this and add as a util to element (util/server)
 
 function make (js, css) {
-  console.log(app)
-  var str = ''
-  // str += '<link href="' + css + '" rel="stylesheet" type="text/css">'
-  // str += '</head><body>'
+  var str = '<html>'
+  str += '<link href="' + css + '" rel="stylesheet" type="text/css">'
+  str += '</head><body>'
   str += app.val
   // str += '<script src="' + js + '" type="text/javascript"></script>'
-  // str += '</body></html>'
+  str += '</body></html>'
   return str
 }
 
