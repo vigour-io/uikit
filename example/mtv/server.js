@@ -18,7 +18,7 @@ function make (js, css) {
   str += '<link href="' + css + '" rel="stylesheet" type="text/css">'
   str += '</head><body>'
   str += app.val
-  // str += '<script src="' + js + '" type="text/javascript"></script>'
+  str += '<script src="' + js + '" type="text/javascript"></script>'
   str += '</body></html>'
   return str
 }
