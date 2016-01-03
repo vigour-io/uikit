@@ -9,7 +9,7 @@ var fs = require('fs')
 var js = 'http://localhost:3032/build/build.js'
 var css = 'http://localhost:3032/build/build.css'
 
-var js = ''//'http://192.168.0.12:8108/bundle.js?$app=192.168.0.12:8108/example/mtv/index.js'
+var js = 'http://192.168.0.12:8108/bundle.js?$app=192.168.0.12:8108/example/mtv/index.js'
 var css = 'http://192.168.0.12:8108/bundle.css?$app=192.168.0.12:8108/example/mtv/index.js'
 // finish this and add as a util to element (util/server)
 

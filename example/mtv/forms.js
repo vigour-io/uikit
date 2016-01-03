@@ -18,7 +18,6 @@ var app = require('./app')
 
 app.set({
   header: require('./components/header'),
-
   container: new ui.Container({
     css: {
       addClass: 'main'
@@ -36,8 +35,5 @@ app.set({
       groups: require('./components/forms/groups')
     }
   }),
-
   hr: new ui.Hr()
 })
-
-// console.log(app)
