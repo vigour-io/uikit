@@ -72,6 +72,7 @@ module.exports = new Element({
 
         notif: new ui.Error({
           on: {
+            // override is sitll borken
             click: {
               bringBack3 () {
                 var parent = this.parent
