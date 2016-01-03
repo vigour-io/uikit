@@ -1,5 +1,5 @@
-.fade-color (@color) {
-  background-color: fade(@color, 15%);
+.fade-color (@color, @percent: 15%) {
+  background-color: fade(@color, @percent);
 
   &:after {
     .gradient-o(fade(@color, 60%), fade(@color, 10%));
