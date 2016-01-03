@@ -4,7 +4,7 @@ require('./less/style.less')
 
 var app = require('./app')
 var Element = require('vigour-element')
-var ui = require('uikit/lib')
+var ui = require('../../lib')
 
 Element.prototype.inject(
   require('vigour-element/lib/property/text'),
@@ -17,10 +17,10 @@ Element.prototype.inject(
 
 console.log('--- start ---')
 app.set({
-  thing:new Element({
-    text:'yoyoyoyo',
+  thing: new Element({
+    text: 'yoyoyoyo',
     thing2: new Element({
-      text:'ballz'
+      text: 'ballz'
     })
   })
   // header: require('./components/header'),

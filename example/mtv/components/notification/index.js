@@ -3,7 +3,7 @@
 require('./style.less')
 
 var Element = require('vigour-element')
-var ui = require('uikit/lib')
+var ui = require('../../../../lib')
 
 Element.prototype.inject(
   require('vigour-element/lib/property/text'),
@@ -72,6 +72,7 @@ module.exports = new Element({
 
         notif: new ui.Error({
           on: {
+            // override is sitll borken
             click: {
               bringBack3 () {
                 var parent = this.parent

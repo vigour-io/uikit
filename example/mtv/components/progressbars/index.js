@@ -2,7 +2,7 @@
 
 // dependencies
 var Element = require('vigour-element')
-var ui = require('uikit/lib')
+var ui = require('../../../../lib')
 
 // style
 require('./style.less')

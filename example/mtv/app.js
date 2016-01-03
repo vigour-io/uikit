@@ -1,3 +1,4 @@
 'use strict'
 var App = require('vigour-element/lib/app')
-module.exports = new App()
+var Element = require('vigour-element')
+module.exports = App

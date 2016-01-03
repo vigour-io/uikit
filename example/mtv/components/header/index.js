@@ -3,7 +3,7 @@
 require('./style.less')
 
 var Element = require('vigour-element')
-var ui = require('uikit/lib')
+var ui = require('../../../../lib')
 
 Element.prototype.inject(
   require('vigour-element/lib/property/text'),
@@ -12,11 +12,11 @@ Element.prototype.inject(
   require('vigour-element/lib/property/attributes')
 )
 
-var logo = window.logo = new Element({
+var logo = global.logo = new Element({
   node: 'a',
   on: {
     click () {
-      window.location.reload()
+      global.location.reload()
     }
   },
   icon: new ui.Icon('logo'),

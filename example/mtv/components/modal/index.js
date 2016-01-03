@@ -3,7 +3,7 @@
 require('./style.less')
 
 var Element = require('vigour-element')
-var ui = require('uikit/lib')
+var ui = require('../../../../lib')
 
 Element.prototype.inject(
   require('vigour-element/lib/property/text'),
@@ -13,7 +13,7 @@ Element.prototype.inject(
   require('vigour-element/lib/event/css/animationEnd')
 )
 
-module.exports = window.modal = new Element({
+module.exports = global.modal = new Element({
   node: 'section',
   title: new ui.H5('Modal layout:'),
 
