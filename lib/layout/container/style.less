@@ -1,19 +1,19 @@
 .ui-container {
   .margin-h(auto);
   .sizing;
-  padding-bottom: @gap;
+  padding-bottom: @gutter;
   width: 100%;
 
   @media all @above-big {
-    .padding-h(@gap-big);
+    .padding-h(@gutter-large);
   }
 
   @media all @above-small @under-big {
-    .padding-h(@gap);
+    .padding-h(@gutter);
   }
 
   @media all @under-small {
-    .padding-h(@gap-medium);
+    .padding-h(@gutter-small);
   }
 
   &.ui-large {

@@ -56,25 +56,25 @@
 // sizes
 .ui-navbar {
   &.ui-big {
-    .ui-navbar-size(@gap);
+    .ui-navbar-size(@gutter);
   }
 
   &.ui-small {
-    .ui-navbar-size(@gap-small);
+    .ui-navbar-size(@gutter-tiny);
   }
 }
 
 // if it's containers child
 .ui-container > .ui-navbar {
   @media all @above-big {
-    .margin-h(-@gap-big);
+    .margin-h(-@gutter-large);
   }
 
   @media all @under-big, @above-small {
-    .margin-h(-@gap);
+    .margin-h(-@gutter);
   }
 
   @media all @under-small {
-    .margin-h(-@gap-medium);
+    .margin-h(-@gutter-small);
   }
 }
