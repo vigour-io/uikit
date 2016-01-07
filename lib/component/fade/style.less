@@ -1,13 +1,13 @@
 .fade-color (@color, @percent: 15%) {
   background-color: fade(@color, @percent);
 
-  &:after {
-    .gradient-o(fade(@color, 60%), fade(@color, 10%));
-  }
+  // &:after {
+  //   .gradient-o(fade(@color, 60%), fade(@color, 10%));
+  // }
 
   &.ui-interactive {
     &:hover {
-      background-color: transparent;
+      background-color: fade(@color, (@percent - 3%));
     }
   }
 }
@@ -24,11 +24,11 @@
   .fixed(0, 0, 0, 0);
   .size(100%);
 
-  &:after {
-    content: '';
-    .absolute(0, 0);
-    .fullsize;
-  }
+  // &:after {
+  //   content: '';
+  //   .absolute(0, 0);
+  //   .fullsize;
+  // }
 
   &.ui-interactive {
     .transition(0.3s linear background-color);
@@ -41,7 +41,7 @@
  */
 .ui-fade {
   &.ui-scheme-dark {
-    .fade-color(black);
+    .fade-color(darken(@secondary, 15%), 70%);
   }
 
   &.ui-scheme-light {
