@@ -42,3 +42,20 @@
 .ui-h10 {
   font-size: @h10;
 }
+
+body:not(.tv) {
+
+}
+
+body.tv {
+  .set-heading(@n, @i: 0) when (@i =< @n) {
+    @generated-variable: ~"h@{i}";
+    .ui-h@{i} {
+      .convertUnit(@@generated-variable, vh, font-size, 1.4);
+    }
+    .set-heading(@n, (@i + 1));
+  }
+
+  .set-heading(10);
+}
+
