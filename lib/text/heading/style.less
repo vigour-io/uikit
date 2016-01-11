@@ -1,44 +1,10 @@
-// sizes
-.ui-h0 {
-  font-size: @h0;
+// headings
+.set-heading(@n, @i: 0) when (@i =< @n) {
+  @generated-variable: ~"h@{i}";
+  .ui-h@{i} {
+    font-size: @@generated-variable;
+  }
+  .set-heading(@n, (@i + 1));
 }
 
-.ui-h1 {
-  font-size: @h1;
-}
-
-.ui-h2 {
-  font-size: @h2;
-}
-
-.ui-h3 {
-  font-size: @h3;
-}
-
-.ui-h4 {
-  font-size: @h4;
-}
-
-.ui-h5 {
-  font-size: @h5;
-}
-
-.ui-h6 {
-  font-size: @h6;
-}
-
-.ui-h7 {
-  font-size: @h7;
-}
-
-.ui-h8 {
-  font-size: @h8;
-}
-
-.ui-h9 {
-  font-size: @h9;
-}
-
-.ui-h10 {
-  font-size: @h10;
-}
+.set-heading(10);
