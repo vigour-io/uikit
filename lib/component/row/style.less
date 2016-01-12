@@ -54,6 +54,16 @@
   .flex-direction(row);
   .align-items(center);
 
+  > .ui-thumb {
+    &:first-child:not(:last-child) {
+      margin-right: @gutter-small;
+    }
+
+    &:last-child:not(:first-child) {
+      margin-left: @gutter-small;
+    }
+  }
+
   &.caption,
   > .caption {
     .flex-display;
