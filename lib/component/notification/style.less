@@ -37,7 +37,9 @@
 
   // primary
   &.ui-scheme-primary {
-    .ui-row-color(@primary-scheme);
+    &:not(.ui-inverse) {
+      .ui-row-color(@primary-scheme);
+    }
 
     &.ui-inverse {
       .ui-row-color(@primary-scheme-inverse);
@@ -46,7 +48,9 @@
 
   // secondary
   &.ui-scheme-secondary {
-    .ui-row-color(@secondary-scheme);
+    &:not(.ui-inverse) {
+      .ui-row-color(@secondary-scheme);
+    }
 
     &.ui-inverse {
       .ui-row-color(@primary-scheme-inverse);
@@ -55,7 +59,9 @@
 
   // tertiary
   &.ui-scheme-tertiary {
-    .ui-row-color(@tertiary-scheme);
+    &:not(.ui-inverse) {
+      .ui-row-color(@tertiary-scheme);
+    }
 
     &.ui-inverse {
       .ui-row-color(@primary-scheme-inverse);
@@ -64,7 +70,9 @@
 
   // quaternary
   &.ui-scheme-quaternary {
-    .ui-row-color(@quaternary-scheme);
+    &:not(.ui-inverse) {
+      .ui-row-color(@quaternary-scheme);
+    }
 
     &.ui-inverse {
       .ui-row-color(@primary-scheme-inverse);
@@ -73,7 +81,9 @@
 
   // quinary
   &.ui-scheme-quinary {
-    .ui-row-color(@quinary-scheme);
+    &:not(.ui-inverse) {
+      .ui-row-color(@quinary-scheme);
+    }
 
     &.ui-inverse {
       .ui-row-color(@primary-scheme-inverse);
@@ -82,7 +92,9 @@
 
   // tertiary
   &.ui-scheme-graydark {
-    .ui-row-color(@graydark-scheme);
+    &:not(.ui-inverse) {
+      .ui-row-color(@graydark-scheme);
+    }
 
     &.ui-inverse {
       .ui-row-color(@primary-scheme-inverse);
@@ -91,7 +103,9 @@
 
   // quaternary
   &.ui-scheme-graylight {
-    .ui-row-color(@graylight-scheme);
+    &:not(.ui-inverse) {
+      .ui-row-color(@graylight-scheme);
+    }
 
     &.ui-inverse {
       .ui-row-color(@primary-scheme-inverse);
@@ -100,7 +114,9 @@
 
   // quinary
   &.ui-scheme-blackwhite {
-    .ui-row-color(@blackwhite-scheme);
+    &:not(.ui-inverse) {
+      .ui-row-color(@blackwhite-scheme);
+    }
 
     &.ui-inverse {
       .ui-row-color(@primary-scheme-inverse);
