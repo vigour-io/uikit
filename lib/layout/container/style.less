@@ -5,15 +5,19 @@
   width: 100%;
 
   @media all @above-big {
+    .padding-h((@gutter-big * 2));
+  }
+
+  @media all @above-medium @under-big {
     .padding-h(@gutter-large);
   }
 
-  @media all @above-small @under-big {
+  @media all @above-small @under-medium {
     .padding-h(@gutter);
   }
 
   @media all @under-small {
-    .padding-h(@gutter-small);
+    .padding-h(@gutter-tiny);
   }
 
   &.ui-large {
