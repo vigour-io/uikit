@@ -2,7 +2,7 @@
 @import url('../row/style.less')
 
 .ui-notification {
-  .padding-h(calc(@input-padding * 2), 0);
+  .padding-h(@input-padding, 0);
   .shadow(0 2px 3px 0 rgba(0,0,0,0.3));
   cursor: default;
 
@@ -13,10 +13,6 @@
   .ui-row-color(@primary-scheme-inverse);
 
   border: 0 !important;
-
-  > .ui-icon {
-    margin-right: @input-padding !important;
-  }
 
   > .ui-button.ui-iconic {
     width: calc(@input-large-height * 1.2);
@@ -34,7 +30,6 @@
  * Default color set is primary
  */
 .ui-notification {
-
   // primary
   &.ui-scheme-primary {
     &:not(.ui-inverse) {
