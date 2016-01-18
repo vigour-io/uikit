@@ -18,6 +18,30 @@
     .radius(@input-radius);
   }
 
+  &.ui-scheme-facebook {
+    &:after {
+      background-color: darken(@facebook, 10%);
+    }
+  }
+
+  &.ui-scheme-primary {
+    &:after {
+      background-color: @primary;
+    }
+  }
+
+  &.ui-scheme-secondary {
+    &:after {
+      background-color: @secondary;
+    }
+  }
+
+  &.ui-scheme-tertiary {
+    &:after {
+      background-color: darken(@orange, 5%);
+    }
+  }
+
   & ~ .loader {
     opacity: 0;
   }
