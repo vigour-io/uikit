@@ -1,7 +1,7 @@
 .ui-progressbar {
   .radius(@progressbar-radius);
   height: @progressbar-height;
-  background-color: @progressbar-background !important;
+  background-color: @progressbar-background;
   margin-top: (@gutter / 2);
 
   .progress {
@@ -22,57 +22,73 @@
 .ui-progressbar {
   // primary
   &.ui-scheme-primary {
+    background: fade(@primary, 10%);
+
     > .progress {
-      .ui-scheme-primary.ui-inverse;
+      background: @primary;
     }
   }
 
   // secondary
   &.ui-scheme-secondary {
+    background: fade(@secondary, 10%);
+
     > .progress {
-      .ui-scheme-secondary.ui-inverse;
+      background: @secondary;
     }
   }
 
   // tertiary
   &.ui-scheme-tertiary {
+    background: fade(@tertiary, 10%);
+
     > .progress {
-      .ui-scheme-tertiary.ui-inverse;
+      background: @tertiary;
     }
   }
 
   // quaternary
   &.ui-scheme-quaternary {
+    background: fade(@quaternary, 10%);
+
     > .progress {
-      .ui-scheme-quaternary.ui-inverse;
+      background: @quaternary;
     }
   }
 
   // quinary
   &.ui-scheme-quinary {
+    background: fade(@quinary, 10%);
+
     > .progress {
-      .ui-scheme-quinary.ui-inverse;
+      background: @quinary;
     }
   }
 
   // tertiary
   &.ui-scheme-graydark {
+    background: fade(@graydark, 10%);
+
     > .progress {
-      .ui-scheme-graydark.ui-inverse;
+      background: @graydark;
     }
   }
 
   // quaternary
   &.ui-scheme-graylight {
+    background: fade(@graylight, 10%);
+
     > .progress {
-      .ui-scheme-graylight.ui-inverse;
+      background: @graylight;
     }
   }
 
   // quinary
   &.ui-scheme-blackwhite {
+    background: fade(@blackwhite, 10%);
+
     > .progress {
-      .ui-scheme-blackwhite.ui-inverse;
+      background: @blackwhite;
     }
   }
 
