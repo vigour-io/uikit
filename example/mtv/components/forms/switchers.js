@@ -26,22 +26,22 @@ module.exports = new Element({
     title: new ui.P('Switcher sizes:'),
 
     item0: new ui.Switcher({
-      ui: {
+      css: {
         size: 'large'
       }
     }),
     item1: new ui.Switcher({
-      ui: {
+      css: {
         size: 'big'
       }
     }),
     item2: new ui.Switcher({
-      ui: {
+      css: {
         size: 'medium'
       }
     }),
     item3: new ui.Switcher({
-      ui: {
+      css: {
         size: 'small'
       }
     })
@@ -52,7 +52,7 @@ module.exports = new Element({
 
     item0: new ui.Switcher({
       state: binded,
-      ui: {
+      css: {
         scheme: 'primary',
         inverse: true
       }
@@ -60,7 +60,7 @@ module.exports = new Element({
 
     item1: new ui.Switcher({
       state: binded,
-      ui: {
+      css: {
         scheme: 'secondary',
         inverse: true
       }
@@ -68,7 +68,7 @@ module.exports = new Element({
 
     item2: new ui.Switcher({
       state: binded,
-      ui: {
+      css: {
         scheme: 'tertiary',
         inverse: true
       }
@@ -76,7 +76,7 @@ module.exports = new Element({
 
     item3: new ui.Switcher({
       state: binded,
-      ui: {
+      css: {
         scheme: 'quaternary',
         inverse: true
       }
@@ -84,7 +84,7 @@ module.exports = new Element({
 
     item4: new ui.Switcher({
       state: binded,
-      ui: {
+      css: {
         scheme: 'quinary',
         inverse: true
       }
@@ -92,7 +92,7 @@ module.exports = new Element({
 
     item5: new ui.Switcher({
       state: binded,
-      ui: {
+      css: {
         scheme: 'graydark',
         inverse: true
       }
@@ -100,7 +100,7 @@ module.exports = new Element({
 
     item6: new ui.Switcher({
       state: binded,
-      ui: {
+      css: {
         scheme: 'graylight',
         inverse: true
       }

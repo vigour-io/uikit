@@ -27,35 +27,35 @@ module.exports = new Element({
     title: new ui.P('Colors:'),
 
     item0: new ui.Progressbar({
-      ui: {
+      css: {
         scheme: 'secondary'
       },
       state: Math.random() * 100
     }),
 
     item1: new ui.Progressbar({
-      ui: {
+      css: {
         scheme: 'tertiary'
       },
       state: Math.random() * 100
     }),
 
     item2: new ui.Progressbar({
-      ui: {
+      css: {
         scheme: 'quaternary'
       },
       state: Math.random() * 100
     }),
 
     item3: new ui.Progressbar({
-      ui: {
+      css: {
         scheme: 'quinary'
       },
       state: Math.random() * 100
     }),
 
     item4: new ui.Progressbar({
-      ui: {
+      css: {
         scheme: 'blackwhite'
       },
       state: Math.random() * 100

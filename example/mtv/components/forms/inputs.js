@@ -24,28 +24,28 @@ module.exports = new Element({
 
     item0: new ui.Input({
       text: binded,
-      ui: {
+      css: {
         size: 'large'
       }
     }),
 
     item1: new ui.Input({
       text: binded,
-      ui: {
+      css: {
         size: 'big'
       }
     }),
 
     item2: new ui.Input({
       text: binded,
-      ui: {
+      css: {
         size: 'medium'
       }
     }),
 
     item3: new ui.Input({
       text: binded,
-      ui: {
+      css: {
         size: 'small'
       }
     })
@@ -55,37 +55,37 @@ module.exports = new Element({
     title: new ui.P('Input colors:'),
 
     item0: new ui.Input({
-      ui: {
+      css: {
         scheme: 'primary',
         inverse: true
       }
     }),
     item1: new ui.Input({
-      ui: {
+      css: {
         scheme: 'secondary',
         inverse: true
       }
     }),
     item2: new ui.Input({
-      ui: {
+      css: {
         scheme: 'tertiary',
         inverse: true
       }
     }),
     item3: new ui.Input({
-      ui: {
+      css: {
         scheme: 'quaternary',
         inverse: true
       }
     }),
     item4: new ui.Input({
-      ui: {
+      css: {
         scheme: 'quinary',
         inverse: true
       }
     }),
     item5: new ui.Input({
-      ui: {
+      css: {
         scheme: 'blackwhite',
         inverse: true
       }

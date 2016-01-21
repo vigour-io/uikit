@@ -26,7 +26,7 @@ module.exports.lists = new Element({
     }),
     1: new ui.Row({
       css: {
-        addClass: 'ui-arrow'
+        add: 'ui-arrow'
       },
       caption: {
         title: new ui.H5('Language')
@@ -34,21 +34,21 @@ module.exports.lists = new Element({
     }),
     2: new ui.Row({
       css: {
-        addClass: 'ui-active ui-arrow'
+        add: 'ui-active ui-arrow'
       },
       caption: {
         title: new ui.H5('Language'),
         subtitle: new ui.H8({
           text: 'Change language.',
           css: {
-            addClass: 'ui-additional'
+            add: 'ui-additional'
           }
         })
       }
     }),
     3: new ui.Row({
       css: {
-        addClass: 'ui-arrow'
+        add: 'ui-arrow'
       },
       icon: new ui.Icon('menu'),
       caption: {
@@ -56,7 +56,7 @@ module.exports.lists = new Element({
         subtitle: new ui.H8({
           text: 'Change language.',
           css: {
-            addClass: 'ui-additional'
+            add: 'ui-additional'
           }
         })
       }
@@ -72,7 +72,7 @@ module.exports.forms = new Element({
       label: {
         caption: new ui.Icon('email'),
         input: new ui.Email({
-          ui: {
+          css: {
             scheme: 'secondary',
             inverse: true
           }
@@ -83,7 +83,7 @@ module.exports.forms = new Element({
       label: {
         caption: new ui.Icon('locked'),
         input: new ui.Password({
-          ui: {
+          css: {
             scheme: 'secondary',
             inverse: true
           }
@@ -94,7 +94,7 @@ module.exports.forms = new Element({
       label: {
         caption: new ui.Icon('gender'),
         input: new ui.Select({
-          ui: {
+          css: {
             scheme: 'secondary',
             inverse: true
           },
@@ -118,7 +118,7 @@ module.exports.forms = new Element({
       label: {
         caption: new ui.Icon('date'),
         input: new ui.Select({
-          ui: {
+          css: {
             scheme: 'secondary',
             inverse: true
           },
@@ -149,7 +149,7 @@ module.exports.forms = new Element({
         subtitle: new ui.H8({
           text: 'We will never send you spam!',
           css: {
-            addClass: 'ui-additional'
+            add: 'ui-additional'
           }
         })
       },
@@ -157,7 +157,7 @@ module.exports.forms = new Element({
     }),
     10: new ui.Button({
       css: {
-        addClass: 'ui-large ui-scheme-tertiary ui-interactive ui-modal-button'
+        add: 'ui-large ui-scheme-tertiary ui-interactive ui-modal-button'
       }
     })
   }
