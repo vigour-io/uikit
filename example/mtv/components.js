@@ -20,7 +20,7 @@ app.set({
     header: require('./components/header'),
     container: new ui.Container({
       css: {
-        addClass: 'main'
+        add: 'main'
       },
       components: {
         node: 'section',
@@ -38,7 +38,7 @@ app.set({
             node: 'aside',
             css: 'fade ui-background-primary',
             fade: new ui.Fade({
-              ui: {
+              css: {
                 scheme: 'light'
               }
             }),

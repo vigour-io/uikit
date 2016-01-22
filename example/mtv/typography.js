@@ -26,7 +26,7 @@ app.set({
   // header: require('./components/header'),
   // container: new ui.Container({
   //   css: {
-  //     addClass: 'main'
+  //     add: 'main'
   //   },
   //   typography: require('./components/typography')
   // })

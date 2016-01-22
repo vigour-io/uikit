@@ -19,22 +19,22 @@ module.exports = new Element({
     title: new ui.P('Button sizes:'),
 
     item0: new ui.Button({
-      ui: {
+      css: {
         size: 'large'
       }
     }),
     item1: new ui.Button({
-      ui: {
+      css: {
         size: 'big'
       }
     }),
     item2: new ui.Button({
-      ui: {
+      css: {
         size: 'medium'
       }
     }),
     item3: new ui.Button({
-      ui: {
+      css: {
         size: 'small'
       }
     })
@@ -44,42 +44,42 @@ module.exports = new Element({
     title: new ui.P('Button colors:'),
 
     item0: new ui.Button({
-      ui: {
+      css: {
         scheme: 'primary',
         inverse: true
       }
     }),
 
     item1: new ui.Button({
-      ui: {
+      css: {
         scheme: 'secondary',
         inverse: true
       }
     }),
 
     item2: new ui.Button({
-      ui: {
+      css: {
         scheme: 'tertiary',
         inverse: true
       }
     }),
 
     item3: new ui.Button({
-      ui: {
+      css: {
         scheme: 'graylight',
         inverse: true
       }
     }),
 
     item4: new ui.Button({
-      ui: {
+      css: {
         scheme: 'graydark',
         inverse: true
       }
     }),
 
     item5: new ui.Button({
-      ui: {
+      css: {
         scheme: 'blackwhite',
         inverse: true
       }
@@ -90,7 +90,7 @@ module.exports = new Element({
     title: new ui.P('Button types:'),
 
     italic: new ui.Button({
-      ui: {
+      css: {
         scheme: 'tertiary',
         inverse: true,
         size: 'big',
@@ -98,7 +98,7 @@ module.exports = new Element({
       }
     }),
     withIcon: new ui.Button({
-      ui: {
+      css: {
         size: 'big',
         scheme: 'tertiary',
         inverse: true
@@ -107,7 +107,7 @@ module.exports = new Element({
       icon: new ui.Icon('right')
     }),
     iconic: new ui.Button('Register').set({
-      ui: {
+      css: {
         size: 'big',
         scheme: 'tertiary',
         inverse: true,

@@ -19,7 +19,7 @@ module.exports = new Element({
     }),
 
     item1: new ui.Label({
-      ui: {
+      css: {
         scheme: 'tertiary',
         inverse: true
       },
@@ -30,7 +30,7 @@ module.exports = new Element({
     }),
 
     item2: new ui.Label({
-      ui: {
+      css: {
         scheme: 'quinary',
         inverse: true
       },
@@ -45,7 +45,7 @@ module.exports = new Element({
     title: new ui.P('Labels with Icons:'),
 
     item0: new ui.Label({
-      ui: {
+      css: {
         scheme: 'primary',
         inverse: true
       },
@@ -54,7 +54,7 @@ module.exports = new Element({
     }),
 
     item1: new ui.Label({
-      ui: {
+      css: {
         scheme: 'secondary',
         inverse: true
       },

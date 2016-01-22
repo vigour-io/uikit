@@ -20,7 +20,7 @@ module.exports = exports = new Element({
 
   // hr: new ui.Hr({
   //   css: {
-  //     addClass: 'double'
+  //     add: 'double'
   //   }
   // }),
 
@@ -28,7 +28,7 @@ module.exports = exports = new Element({
 
   // hr2: new ui.Hr({
   //   css: {
-  //     addClass: 'double'
+  //     add: 'double'
   //   }
   // }),
 

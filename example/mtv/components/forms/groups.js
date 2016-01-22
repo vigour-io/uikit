@@ -29,7 +29,7 @@ module.exports = new Element({
 
     group: new ui.FormGroup({
       label: new ui.Label({
-        ui: {
+        css: {
           scheme: 'blackwhite',
           inverse: true
         },
@@ -40,7 +40,7 @@ module.exports = new Element({
       }),
 
       button: new ui.Button({
-        ui: {
+        css: {
           scheme: 'primary iconic',
           inverse: true
         },
@@ -55,14 +55,14 @@ module.exports = new Element({
 
     group: new ui.FormGroup({
       switcher: new ui.Switcher({
-        ui: {
+        css: {
           scheme: 'secondary',
           inverse: true
         }
       }),
 
       label: new ui.Label({
-        ui: {
+        css: {
           scheme: 'primary',
           inverse: true
         },
@@ -71,7 +71,7 @@ module.exports = new Element({
       }),
 
       button: new ui.Button({
-        ui: {
+        css: {
           scheme: 'secondary',
           inverse: true
         },
