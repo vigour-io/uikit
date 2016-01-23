@@ -2,7 +2,7 @@
 require('./style.less')
 
 var app = require('vigour-element/lib/app')
-var Switcher = require('../../lib/switcher')
+var Switcher = require('../../lib/component/switcher')
 var Observable = require('vigour-js/lib/observable')
 var Element = require('vigour-element')
 
