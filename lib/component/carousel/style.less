@@ -1,0 +1,18 @@
+.ui-carousel {
+  > .items {
+    &.animate {
+      -webkit-transition: -webkit-transform 0.2s;
+      transition: transform 0.2s;
+    }
+    > * {
+      position: absolute;
+    }
+    &.untouched {
+      white-space: nowrap;
+      > * {
+        display: inline-block;
+        position: static;
+      }
+    }
+  }
+}
