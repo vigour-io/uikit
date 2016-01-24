@@ -14,7 +14,7 @@
 
     .absolute(0, 0);
     .fullsize;
-    .transition(~'@{duration} linear transform, 0.1s linear opacity');
+    .transition(@duration linear transform);
     .radius(@input-radius);
   }
 
@@ -53,7 +53,7 @@
       cursor: default;
       opacity: 1;
       .radius(100%);
-      .transform(scale(10, 30) rotate(5deg));
+      .transform(scale(3, 30) rotate(5deg));
     }
 
     & ~ .loader {
