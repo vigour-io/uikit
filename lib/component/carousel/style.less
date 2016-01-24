@@ -1,17 +1,113 @@
 .ui-carousel {
   > .items {
+    > div {
+      position: absolute;
+    }
+
     &.animate {
       -webkit-transition: -webkit-transform 0.2s;
       transition: transform 0.2s;
     }
-    > * {
-      position: absolute;
-    }
+
     &.untouched {
       white-space: nowrap;
-      > * {
+
+      > div {
         display: inline-block;
         position: static;
+      }
+    }
+  }
+
+  > .items {
+    position: relative;
+    height: calc(100% - 4px);
+
+    > div {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      color: white;
+
+      > .ui-thumb {
+        img {
+          width: 100%;
+        }
+
+        figcaption {
+          position: absolute;
+          width: 100%;
+          bottom: 0;
+          padding: @gutter-small @gutter;
+          overflow: hidden;
+
+          img {
+            .absolute(0, auto, auto, 0);
+            z-index: 0;
+            max-height: none;
+          }
+
+          .ui-heading {
+            position: relative;
+            z-index: 1;
+            margin: 0;
+            .text-overflow;
+          }
+        }
+      }
+    }
+  }
+
+  > .arrows {
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+
+    > .ui-icon {
+      padding: @gutter-small;
+    }
+
+    .left {
+      float: left;
+    }
+
+    .right {
+      float: right;
+    }
+  }
+
+  > .indicator {
+    .flex-display;
+    position: relative;
+    z-index: 2;
+
+    > div {
+      .flex(1);
+      height: 4px;
+
+      &:nth-child(1) {
+        background-color: @carousel-primary;
+      }
+
+      &:nth-child(2) {
+        background-color: @carousel-secondary;
+      }
+
+      &:nth-child(3) {
+        background-color: @carousel-tertiary;
+      }
+
+      &:nth-child(4) {
+        background-color: @carousel-quaternary;
+      }
+
+      &:nth-child(4) {
+        background-color: @carousel-quinary;
+      }
+
+      &.ui-active {
+        margin-top: -2px;
+        height: 6px;
       }
     }
   }
