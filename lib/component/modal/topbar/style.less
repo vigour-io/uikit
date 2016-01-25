@@ -26,16 +26,18 @@
     font-weight: @topbar-font-weight;
     .text-overflow;
     padding: @topbar-padding 0;
+
+    ~ .ui-icon,
+    ~ div {
+      text-align: right;
+      width: 6rem;
+      cursor: pointer;
+    }
   }
 
+  > .ui-icon,
   > div {
     padding: @topbar-padding;
-  }
-
-  > .ui-icon {
-    width: @topbar-font-size;
-    padding: @topbar-padding;
-    cursor: pointer;
   }
 }
 
