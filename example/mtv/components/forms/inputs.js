@@ -23,28 +23,28 @@ module.exports = new Element({
     title: new ui.P('Input sizes:'),
 
     item0: new ui.Input({
-      text: binded,
+      value: binded,
       css: {
         size: 'large'
       }
     }),
 
     item1: new ui.Input({
-      text: binded,
+      value: binded,
       css: {
         size: 'big'
       }
     }),
 
     item2: new ui.Input({
-      text: binded,
+      value: binded,
       css: {
         size: 'medium'
       }
     }),
 
     item3: new ui.Input({
-      text: binded,
+      value: binded,
       css: {
         size: 'small'
       }
