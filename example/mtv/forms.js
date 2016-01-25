@@ -31,7 +31,7 @@ app.set({
       selects: require('./components/forms/selects'),
       labels: require('./components/forms/labels'),
       buttons: require('./components/forms/buttons'),
-      switchers: require('./components/forms/switchers'),
+      toggles: require('./components/forms/toggles'),
       groups: require('./components/forms/groups')
     }
   }),

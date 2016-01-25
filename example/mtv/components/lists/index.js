@@ -142,7 +142,7 @@ module.exports.forms = new Element({
         })
       }
     }),
-    4: new ui.SwitcherRow({
+    4: new ui.ToggleRow({
       icon: new ui.Icon('newsletter'),
       caption: {
         title: new ui.H5('Newsletter'),
@@ -153,7 +153,7 @@ module.exports.forms = new Element({
           }
         })
       },
-      switcher: new ui.Switcher()
+      toggle: new ui.Toggle()
     }),
     10: new ui.Button({
       css: {

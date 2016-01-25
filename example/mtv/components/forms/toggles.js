@@ -16,31 +16,31 @@ var binded = new Observable(true)
 module.exports = new Element({
   node: 'section',
 
-  title: new ui.H5('Switcher:'),
+  title: new ui.H5('Toggle:'),
 
-  switcher: new ui.Switcher({
+  toggle: new ui.Toggle({
     state: binded
   }),
 
   sizes: {
-    title: new ui.P('Switcher sizes:'),
+    title: new ui.P('Toggle sizes:'),
 
-    item0: new ui.Switcher({
+    item0: new ui.Toggle({
       css: {
         size: 'large'
       }
     }),
-    item1: new ui.Switcher({
+    item1: new ui.Toggle({
       css: {
         size: 'big'
       }
     }),
-    item2: new ui.Switcher({
+    item2: new ui.Toggle({
       css: {
         size: 'medium'
       }
     }),
-    item3: new ui.Switcher({
+    item3: new ui.Toggle({
       css: {
         size: 'small'
       }
@@ -48,9 +48,9 @@ module.exports = new Element({
   },
 
   colors: {
-    title: new ui.P('Switcher colors:'),
+    title: new ui.P('Toggle colors:'),
 
-    item0: new ui.Switcher({
+    item0: new ui.Toggle({
       state: binded,
       css: {
         scheme: 'primary',
@@ -58,7 +58,7 @@ module.exports = new Element({
       }
     }),
 
-    item1: new ui.Switcher({
+    item1: new ui.Toggle({
       state: binded,
       css: {
         scheme: 'secondary',
@@ -66,7 +66,7 @@ module.exports = new Element({
       }
     }),
 
-    item2: new ui.Switcher({
+    item2: new ui.Toggle({
       state: binded,
       css: {
         scheme: 'tertiary',
@@ -74,7 +74,7 @@ module.exports = new Element({
       }
     }),
 
-    item3: new ui.Switcher({
+    item3: new ui.Toggle({
       state: binded,
       css: {
         scheme: 'quaternary',
@@ -82,7 +82,7 @@ module.exports = new Element({
       }
     }),
 
-    item4: new ui.Switcher({
+    item4: new ui.Toggle({
       state: binded,
       css: {
         scheme: 'quinary',
@@ -90,7 +90,7 @@ module.exports = new Element({
       }
     }),
 
-    item5: new ui.Switcher({
+    item5: new ui.Toggle({
       state: binded,
       css: {
         scheme: 'graydark',
@@ -98,7 +98,7 @@ module.exports = new Element({
       }
     }),
 
-    item6: new ui.Switcher({
+    item6: new ui.Toggle({
       state: binded,
       css: {
         scheme: 'graylight',

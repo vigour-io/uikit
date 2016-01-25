@@ -50,11 +50,11 @@ module.exports = new Element({
     })
   },
 
-  withButtonAndSwitcher: {
-    title: new ui.P('With Switcher, Label and iconic Button:'),
+  withButtonAndToggle: {
+    title: new ui.P('With Toggle, Label and iconic Button:'),
 
     group: new ui.FormGroup({
-      switcher: new ui.Switcher({
+      toggle: new ui.Toggle({
         css: {
           scheme: 'secondary',
           inverse: true
