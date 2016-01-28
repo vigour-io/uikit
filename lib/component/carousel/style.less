@@ -1,6 +1,9 @@
 .ui-carousel {
   > .items {
-    .absolute;
+    @media all @above-tablet {
+      .absolute;
+    }
+
     width: 100%;
     height: calc(100% - 4px);
 
