@@ -1,6 +1,7 @@
 .ui-carousel {
   > .items {
-    position: relative;
+    .absolute;
+    width: 100%;
     height: calc(100% - 4px);
 
     > div {
@@ -11,26 +12,34 @@
       color: white;
 
       > .ui-thumb {
+        height: 100%;
+
         img {
           width: 100%;
+          max-height: none;
+          max-width: none;
+          z-index: 0;
+          .ui-position-center-y;
+          left: 0;
         }
 
-        figcaption {
+        > figcaption {
           position: absolute;
+          bottom: 0;
           width: 100%;
           bottom: 0;
           padding: @gutter;
+          z-index: 1;
           overflow: hidden;
 
           img {
-            .absolute(0, auto, auto, 0);
-            z-index: 0;
-            max-height: none;
+            z-index: 1;
+            margin-top: -14%;
           }
 
-          .ui-heading {
+          > .ui-heading {
             position: relative;
-            z-index: 1;
+            z-index: 2;
             margin: 0;
             .text-overflow;
           }
