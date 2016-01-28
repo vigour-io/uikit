@@ -57,6 +57,19 @@
   }
 }
 
+.ui-button.ui-bordered {
+  border: 1px solid currentColor;
+  opacity: .7;
+
+  &:hover {
+    opacity: .9;
+  }
+
+  &:active {
+    opacity: 1;
+  }
+}
+
 .ui-button.ui-simple {
   border: 0;
   background: transparent;
@@ -90,7 +103,6 @@
     line-height: @input-big-height;
     .padding-h(@input-big-padding);
     .radius(@input-big-radius);
-    min-width: 15rem;
 
     &.iconic {
       width: @input-big-height;
