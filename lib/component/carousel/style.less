@@ -31,9 +31,16 @@
           bottom: 0;
           width: 100%;
           bottom: 0;
-          padding: @gutter;
           z-index: 1;
           overflow: hidden;
+
+          @media all @above-layout-breakpoint {
+            padding: @gutter;
+          }
+
+          @media all @under-layout-breakpoint {
+            padding: @gutter-small;
+          }
 
           img {
             z-index: 1;
