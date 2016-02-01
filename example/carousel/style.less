@@ -6,12 +6,17 @@ div {
   background: lightgrey;
   margin-left: 200px;
   height: 200px;
-  width: 400px;
+  width: 50%;
   .items {
     border-top:10px solid red;
     font-style: bold;
     font-size: 36px;
     > div {
+      box-sizing: border-box;
+      padding: 10px;
+      min-width: 50%;
+      height: 100px;
+      box-shadow: inset 0 0 0 1px red;
       color:red;
       width: 50%;
     }
@@ -20,4 +25,8 @@ div {
 
 button {
   border:10px solid grey;
+}
+
+.focused {
+  background: grey;
 }

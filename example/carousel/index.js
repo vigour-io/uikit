@@ -4,7 +4,6 @@ require('./style.less')
 var app = global.app = require('vigour-element/lib/app')
 var Carousel = require('../../lib/component/carousel')
 // var Observable = require('vigour-js/lib/observable')
-var Hub = require('vigour-hub')
 var Element = require('vigour-element')
 
 var hub = require('vigour-play/lib/app/hub')
@@ -27,39 +26,51 @@ hub.set({
   }
 })
 
+// var carousel = new Carousel({
+//   $: true,
+//   items: {
+//     ChildConstructor: new Element({
+//       $: 'number',
+//       text: {
+//         $: true
+//       }
+//     }),
+//     $collection: true
+//   }
+// })
+
 var carousel = new Carousel({
   $: true,
   items: {
     ChildConstructor: new Element({
-      $: 'title',
-      text: {
-        $: true
+      text () {
+        return this.parent.key
       }
     }),
-    $collection: true
+    one: {},
+    two: {},
+    three: {}
   }
 })
 
 app.set({
   holder: {
     $: true,
-    carousel: new Carousel({
-      $: true,
-      items: {
-        ChildConstructor: new Element({
-          $: 'title',
-          text: {
-            $: true
-          }
-        }),
-        $collection: true
-      }
-    })
+    carousel: carousel
+  },
+  left: {
+    node: 'button',
+    text: 'left',
+    // on: {
+    //   click () {
+    //     this.parent.moveLeft()
+    //   }
+    // }
   }
 })
 
 setTimeout(function () {
-  app.holder.val = hub.get('discover.carousel', {})
+  // app.holder.val = hub.get('shows.195.seasons', {})
 })
 
 // setInterval(function () {
