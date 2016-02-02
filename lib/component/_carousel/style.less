@@ -1,18 +1,5 @@
 .ui-carousel {
   > .items {
-    width: 100%;
-    .flex-display;
-    .flex-direction(row);
-    .flex-wrap(nowrap);
-    &.animate {
-      -webkit-transition: -webkit-transform 0.2s;
-      transition: transform 0.2s;
-    }
-  }
-}
-
-.ui-carousel {
-  > .items {
     @media all @above-tablet {
       .absolute;
     }
@@ -21,9 +8,10 @@
     height: calc(100% - 4px);
 
     > div {
-      position: relative;
+      position: absolute;
+      width: 100%;
       height: 100%;
-      min-width: 60%;
+      overflow: hidden;
       color: white;
 
       > .ui-thumb {
@@ -45,15 +33,6 @@
           bottom: 0;
           z-index: 1;
           overflow: hidden;
-          .transition(.4s ease opacity);
-
-          &:after {
-            content: '';
-            background: fade(@secondary, 25%);
-            .absolute;
-            .fullsize;
-            z-index: 2;
-          }
 
           @media all @above-layout-breakpoint {
             padding: @gutter;
@@ -73,43 +52,27 @@
             margin-top: -14%;
           }
 
-          &:after {
-            content: '';
-            background: fade(@secondary, 25%);
-            .absolute;
-            .fullsize;
-            z-index: 2;
-          }
-
           > .ui-heading {
             position: relative;
-            z-index: 3;
+            z-index: 2;
             margin: 0;
             .text-overflow;
           }
         }
       }
+    }
 
-      &:after {
-        content: '';
-        opacity: 0;
-        .transition(.4s ease opacity);
-        background: fade(@secondary, 75%);
-        .absolute;
-        .fullsize;
-      }
+    &.animate {
+      -webkit-transition: -webkit-transform 0.2s;
+      transition: transform 0.2s;
+    }
 
-      &.next,
-      &.previous {
-        &:after {
-          opacity: 1;
-        }
+    &.untouched {
+      white-space: nowrap;
 
-        > .ui-thumb {
-          > figcaption {
-            opacity: 0;
-          }
-        }
+      > div {
+        display: inline-block;
+        position: static;
       }
     }
   }
