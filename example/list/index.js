@@ -42,7 +42,7 @@ var TextElement = new Element({
 }).Constructor
 
 var Input = new Element({
-  node: 'input',
+  type: 'input',
   $: 'title',
   on: {
     data() {
@@ -59,7 +59,7 @@ var Input = new Element({
 }).Constructor
 
 var app = new Element({
-  node: document.body,
+  type: document.body,
   val: new Observable(new Observable(contentdata)),
   topbar: {
     text: 'topbar?!'

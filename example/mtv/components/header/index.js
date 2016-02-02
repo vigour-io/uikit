@@ -13,7 +13,7 @@ Element.prototype.inject(
 )
 
 var logo = global.logo = new Element({
-  node: 'a',
+  type: 'a',
   on: {
     click () {
       global.location.reload()
@@ -22,12 +22,12 @@ var logo = global.logo = new Element({
   icon: new ui.Icon('logo'),
   title: {
     text: 'UIKit',
-    node: 'span'
+    type: 'span'
   }
 })
 
 module.exports = exports = new Element({
-  node: 'header',
+  type: 'header',
   logo: logo,
   menu: new ui.Icon('menu')
 })

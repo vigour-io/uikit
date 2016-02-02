@@ -5,22 +5,14 @@ require('./style.less')
 var Element = require('vigour-element')
 var ui = require('../../../../lib')
 
-Element.prototype.inject(
-  require('vigour-element/lib/property/text'),
-  require('vigour-element/lib/property/transform'),
-  require('vigour-element/lib/property/css'),
-  require('vigour-element/lib/property/attributes'),
-  require('vigour-element/lib/event/css/animationEnd')
-)
-
 module.exports = global.modal = new Element({
-  node: 'section',
+  type: 'section',
   title: new ui.H5('Modal layout:'),
 
   topbar: {
     title: new ui.P('Top bar:'),
     aside: {
-      node: 'aside',
+      type: 'aside',
       css: 'ui-scheme-secondary ui-inverse',
       topbar: new ui.Topbar({
         back: new ui.Icon('left'),
@@ -44,7 +36,7 @@ module.exports = global.modal = new Element({
       }),
       content: {
         hello: {
-          node: 'span',
+          type: 'span',
           text: 'Hello World'
         }
       },

@@ -47,7 +47,7 @@ global.app = app.set({
     carousel: carousel,
     val: data,
     left: {
-      node: 'button',
+      type: 'button',
       text: 'left',
       on: {
         click () {
@@ -56,7 +56,7 @@ global.app = app.set({
       }
     },
     right: {
-      node: 'button',
+      type: 'button',
       text: 'right',
       on: {
         click () {

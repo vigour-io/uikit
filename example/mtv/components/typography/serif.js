@@ -9,7 +9,7 @@ module.exports = new Element({
   },
   headings: new Headers({}),
   weight: {
-    node: 'section',
+    type: 'section',
     slim: {
       caption: {
         text: 'slim'
@@ -66,7 +66,7 @@ module.exports = new Element({
     }
   },
   styles: {
-    node: 'section',
+    type: 'section',
     italic: {
       caption: {
         text: 'Italic'

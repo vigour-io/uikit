@@ -4,5 +4,6 @@ require('./forms')
 require('./components')
 require('./typography')
 
-module.exports = require('./app')
-console.timeEnd('end mtv set')
+// var Element = require('vigour-element')
+
+console.timeEnd('create mtv set')

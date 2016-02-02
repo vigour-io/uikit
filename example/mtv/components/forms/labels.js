@@ -4,7 +4,7 @@ var Element = require('vigour-element')
 var ui = require('../../../../lib')
 
 module.exports = new Element({
-  node: 'section',
+  type: 'section',
 
   title: new ui.H5('Labels:'),
 

@@ -3,19 +3,11 @@ require('./style.less')
 var Element = require('vigour-element')
 var ui = require('../../../../lib')
 
-Element.prototype.inject(
-  require('vigour-element/lib/property/text'),
-  require('vigour-element/lib/property/transform'),
-  require('vigour-element/lib/property/css'),
-  require('vigour-element/lib/property/attributes'),
-  require('../../../../lib/property')
-)
-
 var Observable = require('vigour-js/lib/observable')
 var binded = new Observable('Observable')
 
 module.exports = new Element({
-  node: 'section',
+  type: 'section',
 
   title: new ui.H5('Inputs:'),
 

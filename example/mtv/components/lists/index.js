@@ -5,17 +5,8 @@ require('./style.less')
 var Element = require('vigour-element')
 var ui = require('../../../../lib')
 
-Element.prototype.inject(
-  require('vigour-element/lib/property/text'),
-  require('vigour-element/lib/property/transform'),
-  require('vigour-element/lib/property/css'),
-  require('vigour-element/lib/property/order'),
-  require('vigour-element/lib/property/attributes'),
-  require('vigour-element/lib/property')
-)
-
 module.exports.lists = new Element({
-  node: 'aside',
+  type: 'aside',
 
   css: 'ui-background-secondary',
   items: {
@@ -65,7 +56,7 @@ module.exports.lists = new Element({
 })
 
 module.exports.forms = new Element({
-  node: 'aside',
+  type: 'aside',
   css: 'ui-background-secondary',
   labels: {
     0: new ui.LabelRow({
@@ -103,11 +94,11 @@ module.exports.forms = new Element({
               text: 'Gender'
             },
             male: {
-              node: 'option',
+              type: 'option',
               text: 'Male'
             },
             female: {
-              node: 'option',
+              type: 'option',
               text: 'Female'
             }
           }
@@ -127,15 +118,15 @@ module.exports.forms = new Element({
               text: 'Select Age'
             },
             below18: {
-              node: 'option',
+              type: 'option',
               text: 'Below 18'
             },
             '18to21': {
-              node: 'option',
+              type: 'option',
               text: '18 to 21'
             },
             above21: {
-              node: 'option',
+              type: 'option',
               text: 'Above 21'
             }
           }

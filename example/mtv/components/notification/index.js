@@ -5,23 +5,15 @@ require('./style.less')
 var Element = require('vigour-element')
 var ui = require('../../../../lib')
 
-Element.prototype.inject(
-  require('vigour-element/lib/property/text'),
-  require('vigour-element/lib/property/transform'),
-  require('vigour-element/lib/property/css'),
-  require('vigour-element/lib/property/attributes'),
-  require('vigour-element/lib/event/css/animationEnd')
-)
-
 module.exports = new Element({
-  node: 'section',
+  type: 'section',
   title: new ui.H5('Notifications:'),
 
   notification: {
     item0: {
       title: new ui.P('Success:'),
       aside: {
-        node: 'aside',
+        type: 'aside',
         css: 'ui-background-graylight',
 
         notif: new ui.Success({
@@ -44,7 +36,7 @@ module.exports = new Element({
     item1: {
       title: new ui.P('Warning:'),
       aside: {
-        node: 'aside',
+        type: 'aside',
         css: 'ui-background-graylight',
 
         notif: new ui.Warning({
@@ -68,7 +60,7 @@ module.exports = new Element({
     item2: {
       title: new ui.P('Error:'),
       aside: {
-        node: 'aside',
+        type: 'aside',
         css: 'ui-background-graylight',
 
         notif: new ui.Error({
