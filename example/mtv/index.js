@@ -1,8 +1,8 @@
 'use strict'
-console.time(1)
+console.time('create mtv set')
 require('./forms')
 require('./components')
 require('./typography')
 
 module.exports = require('./app')
-console.timeEnd(1)
+console.timeEnd('end mtv set')
