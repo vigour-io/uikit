@@ -34,6 +34,14 @@
           z-index: 1;
           overflow: hidden;
 
+          &:after {
+            content: '';
+            background: fade(@secondary, 25%);
+            .absolute;
+            .fullsize;
+            z-index: 2;
+          }
+
           @media all @above-layout-breakpoint {
             padding: @gutter;
           }
@@ -54,7 +62,7 @@
 
           > .ui-heading {
             position: relative;
-            z-index: 2;
+            z-index: 3;
             margin: 0;
             .text-overflow;
           }
