@@ -8,7 +8,7 @@ var app = require('vigour-element/lib/app')
 app.set({
   forms: {
     type: 'section',
-    title: new ui.H3('Forms:'),
+    title: new ui.H3('Forms:'), //so this stopped working...
     inputs: require('./components/forms/inputs'),
     selects: require('./components/forms/selects'),
     labels: require('./components/forms/labels'),
