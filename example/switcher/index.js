@@ -40,8 +40,6 @@ setInterval(function () {
   })
 }, 500)
 
-
-
 // setInterval(function () {
 //   let key = Math.random()
 //   var obs = new Observable({
