@@ -1,18 +1,5 @@
 .ui-carousel {
   > .items {
-    width: 100%;
-    .flex-display;
-    .flex-direction(row);
-    .flex-wrap(nowrap);
-    &.animate {
-      -webkit-transition: -webkit-transform 0.2s;
-      transition: transform 0.2s;
-    }
-  }
-}
-
-.ui-carousel {
-  > .items {
     @media all @above-tablet {
       .absolute;
     }
@@ -21,14 +8,13 @@
     height: calc(100% - 4px);
 
     > div {
-
+      position: absolute;
+      width: 100%;
       height: 100%;
-      // wrong?
-      min-width: 50%;
+      overflow: hidden;
       color: white;
 
       > .ui-thumb {
-
         height: 100%;
 
         img {
@@ -47,14 +33,6 @@
           bottom: 0;
           z-index: 1;
           overflow: hidden;
-
-          &:after {
-            content: '';
-            background: fade(@secondary, 25%);
-            .absolute;
-            .fullsize;
-            z-index: 2;
-          }
 
           @media all @above-layout-breakpoint {
             padding: @gutter;
@@ -76,11 +54,25 @@
 
           > .ui-heading {
             position: relative;
-            z-index: 3;
+            z-index: 2;
             margin: 0;
             .text-overflow;
           }
         }
+      }
+    }
+
+    &.animate {
+      -webkit-transition: -webkit-transform 0.2s;
+      transition: transform 0.2s;
+    }
+
+    &.untouched {
+      white-space: nowrap;
+
+      > div {
+        display: inline-block;
+        position: static;
       }
     }
   }
