@@ -45,7 +45,7 @@
           bottom: 0;
           z-index: 1;
           overflow: hidden;
-          .transition(@transition top);
+          .transition(.4s ease opacity);
 
           @media all @above-layout-breakpoint {
             padding: @gutter;
@@ -99,13 +99,7 @@
 
         > .ui-thumb {
           > figcaption {
-            bottom: auto;
-            .ui-position-center-y;
-
-            &:after,
-            figure {
-              opacity: 0;
-            }
+            opacity: 0;
           }
         }
       }
