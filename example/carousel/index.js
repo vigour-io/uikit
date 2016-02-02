@@ -49,7 +49,8 @@ var carousel = new Carousel({
     }),
     one: {},
     two: {},
-    three: {}
+    three: {},
+    four: {}
   }
 })
 
@@ -61,12 +62,21 @@ app.set({
   left: {
     node: 'button',
     text: 'left',
-    // on: {
-    //   click () {
-    //     this.parent.moveLeft()
-    //   }
-    // }
-  }
+    on: {
+      click () {
+        this.parent.holder.carousel.moveLeft()
+      }
+    }
+  },
+  right: {
+    node: 'button',
+    text: 'right',
+    on: {
+      click () {
+        this.parent.holder.carousel.moveRight()
+      }
+    }
+  },
 })
 
 setTimeout(function () {

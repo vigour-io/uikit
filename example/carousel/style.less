@@ -8,13 +8,14 @@ div {
   height: 200px;
   width: 50%;
   .items {
+    position: relative;
     border-top:10px solid red;
     font-style: bold;
     font-size: 36px;
     > div {
       box-sizing: border-box;
       padding: 10px;
-      min-width: 50%;
+      min-width: 50% !important;
       height: 100px;
       box-shadow: inset 0 0 0 1px red;
       color:red;
@@ -28,5 +29,5 @@ button {
 }
 
 .focused {
-  background: grey;
+  // background: grey;
 }

@@ -10,3 +10,121 @@
     }
   }
 }
+
+.ui-carousel {
+  > .items {
+    @media all @above-tablet {
+      .absolute;
+    }
+
+    width: 100%;
+    height: calc(100% - 4px);
+
+    > div {
+
+      height: 100%;
+      // wrong?
+      min-width: 50%;
+      color: white;
+
+      > .ui-thumb {
+
+        height: 100%;
+
+        img {
+          width: 100%;
+          max-height: none;
+          max-width: none;
+          z-index: 0;
+          .ui-position-center-y;
+          left: 0;
+        }
+
+        > figcaption {
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          bottom: 0;
+          z-index: 1;
+          overflow: hidden;
+
+          @media all @above-layout-breakpoint {
+            padding: @gutter;
+          }
+
+          @media all @under-layout-breakpoint {
+            padding: @gutter-small;
+          }
+
+          > .ui-thumb {
+            .absolute;
+            .fullsize;
+          }
+
+          img {
+            z-index: 1;
+            margin-top: -14%;
+          }
+
+          > .ui-heading {
+            position: relative;
+            z-index: 2;
+            margin: 0;
+            .text-overflow;
+          }
+        }
+      }
+    }
+  }
+
+  > .arrows {
+    width: 100%;
+    height: 0;
+    position: absolute;
+    z-index: 2;
+    .flex-display;
+    .justify-content(space-between);
+    .align-items(flex-end);
+
+    .ui-icon {
+      padding: @gutter-small;
+      cursor: pointer;
+    }
+  }
+
+  > .indicator {
+    .flex-display;
+    position: relative;
+    z-index: 2;
+
+    > div {
+      .flex(1);
+      height: 4px;
+
+      &:nth-child(1) {
+        background-color: @carousel-primary;
+      }
+
+      &:nth-child(2) {
+        background-color: @carousel-secondary;
+      }
+
+      &:nth-child(3) {
+        background-color: @carousel-tertiary;
+      }
+
+      &:nth-child(4) {
+        background-color: @carousel-quaternary;
+      }
+
+      &:nth-child(4) {
+        background-color: @carousel-quinary;
+      }
+
+      &.ui-active {
+        margin-top: -2px;
+        height: 6px;
+      }
+    }
+  }
+}
