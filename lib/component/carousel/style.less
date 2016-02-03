@@ -83,6 +83,24 @@
             .text-overflow;
           }
         }
+
+        > .ui-row {
+          .ui-position-center-y;
+          width: (100% / 3);
+          opacity: 0;
+          z-index: 1;
+          .transition(.5s ease opacity);
+
+          > .ui-icon {
+            .padding-h(@gutter-tiny);
+          }
+
+          > .header {
+            > .title {
+              // text-transform: uppercase;
+            }
+          }
+        }
       }
 
       @media all @above-tablet {
@@ -104,6 +122,35 @@
           > .ui-thumb {
             > figcaption {
               opacity: 0;
+            }
+
+            > .ui-row {
+              opacity: 1;
+            }
+          }
+        }
+
+        &.previous {
+          > .ui-thumb {
+            > .ui-row {
+              right: 0;
+              text-align: left;
+
+              > .ui-icon {
+                &:before {
+                  .icon('\e625')
+                }
+              }
+            }
+          }
+        }
+
+        &.next {
+          > .ui-thumb {
+            > .ui-row {
+              .flex-direction(row-reverse);
+              left: 0;
+              text-align: right;
             }
           }
         }
