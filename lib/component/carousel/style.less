@@ -6,6 +6,7 @@
     width: 100%;
     height: calc(100% - 4px);
     .absolute;
+    .user-select;
 
     &.animate {
       .transition(@transition transform);
@@ -90,7 +91,7 @@
           width: (100% / 3);
           opacity: 0;
           z-index: 1;
-          .transition(~".5s ease opacity");
+          .transition(.5s ease opacity);
 
           > .ui-icon {
             .padding-h(@gutter-small);
@@ -98,7 +99,7 @@
 
           > .header {
             > .title {
-              // text-transform: uppercase;
+              // .text-overflow;
             }
           }
         }
@@ -137,6 +138,12 @@
 
             &:after {
               background: fade(@secondary, 65%);
+            }
+          }
+
+          &:active {
+            &:after {
+              background: fade(@secondary, 45%);
             }
           }
 
