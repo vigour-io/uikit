@@ -1,30 +1,25 @@
 .ui-carousel {
   > .items {
-    width: 100%;
     .flex-display;
     .flex-direction(row);
     .flex-wrap(nowrap);
-    &.animate {
-      -webkit-transition: -webkit-transform 0.2s;
-      transition: transform 0.2s;
-    }
-  }
-}
-
-.ui-carousel {
-  > .items {
-    @media all @above-tablet {
-      .absolute;
-    }
-
     width: 100%;
     height: calc(100% - 4px);
+    .absolute;
+
+    &.animate {
+      .transition(@transition transform);
+    }
 
     > div {
       position: relative;
       height: 100%;
       min-width: 60%;
       color: white;
+
+      @media all @under-tablet {
+        min-width: 100%;
+      }
 
       > .ui-thumb {
         height: 100%;
@@ -90,24 +85,26 @@
         }
       }
 
-      &:after {
-        content: '';
-        opacity: 0;
-        .transition(.4s ease opacity);
-        background: fade(@secondary, 75%);
-        .absolute;
-        .fullsize;
-      }
-
-      &.next,
-      &.previous {
+      @media all @above-tablet {
         &:after {
-          opacity: 1;
+          content: '';
+          opacity: 0;
+          .transition(.4s ease opacity);
+          background: fade(@secondary, 75%);
+          .absolute;
+          .fullsize;
         }
 
-        > .ui-thumb {
-          > figcaption {
-            opacity: 0;
+        &.next,
+        &.previous {
+          &:after {
+            opacity: 1;
+          }
+
+          > .ui-thumb {
+            > figcaption {
+              opacity: 0;
+            }
           }
         }
       }
