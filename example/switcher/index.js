@@ -7,6 +7,13 @@ var Observable = require('vigour-js/lib/observable')
 var Element = require('vigour-element')
 
 var carousel = new Switcher({
+  config: {
+    axis: 'x',
+    transition: {
+      property: 'transform',
+      duration: 1000
+    }
+  },
   $: true,
   ChildConstructor: new Element({
     $: true,
@@ -33,23 +40,57 @@ global.app = app.set({
   }
 })
 
-setInterval(function () {
-  data.current.val = new Observable({
-    key: Math.random(),
-    title: Math.random()
-  })
-}, 500)
-
 // setInterval(function () {
-//   let key = Math.random()
-//   var obs = new Observable({
-//     // key: Math.random(),
-//     nested: {
-//       title: key
+//   data.current.val = new Observable({
+//     key: Math.random(),
+//     title: Math.random()
+//   })
+// }, 500)
+var cnt = 1
+var id = setInterval(function () {
+  let key = Math.random()
+  // var obs = new Observable({
+  //   // key: Math.random(),
+  //   nested: {
+  //     title: key
+  //   }
+  // })
+  // app.carousel.setKey('next', obs.nested)
+  // if (app.holder.carousel.ready) {
+    app.holder.carousel.setKey(key, {
+      text: 'flups:' + key
+    })
+  // }
+}, 40)
+
+setTimeout(function () {
+  app.holder.carousel.remove()
+  // console.log('CLEAR', app.holder.carousel.__prevdata)
+  clearInterval(id)
+}, 1000)
+
+// app.set({
+//   elem1: {
+//     x: 100,
+//     html: 'ONE',
+//     transition: {
+//       property: 'transform'
 //     }
-//   })
-//   // app.carousel.setKey('next', obs.nested)
-//   app.carousel.setKey(Math.random(), {
-//     text: 'flups'
-//   })
-// }, 1000)
+//   },
+//   // elem2: {
+//   //   x: 300,
+//   //   html: 'TWO'
+//   // }
+// })
+
+// setTimeout(()=>{
+//   console.log('------ remove!')
+//   // app.set({
+//   //   elem4: {
+//   //     x: 700,
+//   //     html: 'FOUR'
+//   //   }
+//   // })
+//   // app.elem1.remove()
+//   app.elem1.x.val = 300
+// },100)
