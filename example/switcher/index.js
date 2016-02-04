@@ -34,9 +34,10 @@ var data = new Observable({
 
 global.app = app.set({
   holder: {
-    $: true,
-    carousel: carousel,
-    val: data
+    carousel: new carousel.Constructor()
+  },
+  holder2: {
+    carousel: new carousel.Constructor()
   }
 })
 
@@ -46,25 +47,20 @@ global.app = app.set({
 //     title: Math.random()
 //   })
 // }, 500)
+
 var cnt = 1
 var id = setInterval(function () {
   let key = Math.random()
-  // var obs = new Observable({
-  //   // key: Math.random(),
-  //   nested: {
-  //     title: key
-  //   }
-  // })
-  // app.carousel.setKey('next', obs.nested)
-  // if (app.holder.carousel.ready) {
     app.holder.carousel.setKey(key, {
-      text: 'flups:' + key
+      html: 'flups:' + key
     })
-  // }
-}, 40)
+    app.holder2.carousel.setKey(key, {
+      html: 'haha:' + key
+    })
+}, 400)
 
 setTimeout(function () {
-  app.holder.carousel.remove()
+  app.holder.remove()
   // console.log('CLEAR', app.holder.carousel.__prevdata)
   clearInterval(id)
 }, 1000)
