@@ -72,7 +72,7 @@
 
           &:after {
             content: '';
-            background: fade(@secondary, 25%);
+            background: fade(extract(@carousel-scheme, 4), 25%);
             .absolute;
             .fullsize;
             z-index: 2;
@@ -91,7 +91,7 @@
           width: (100% / 3);
           opacity: 0;
           z-index: 1;
-          // .transition(.5s ease opacity);
+          .transition(.5s ease opacity);
 
           > .ui-icon {
             .padding-h(@gutter-small);
@@ -110,7 +110,7 @@
           content: '';
           opacity: 0;
           .transition(~".4s ease opacity, .4s ease background");
-          background: fade(@secondary, 75%);
+          background: fade(extract(@carousel-scheme, 4), 75%);
           .absolute;
           .fullsize;
         }
@@ -118,16 +118,13 @@
         &:hover {
           > .ui-thumb {
             > figcaption {
-              // .padding-v(@gutter-big);
+              .padding-v((@gutter / 7 * 8));
             }
           }
         }
 
         &.next,
         &.previous {
-
-          // pointer-events: none;
-
           &:after {
             opacity: 1;
           }
@@ -140,13 +137,13 @@
             }
 
             &:after {
-              background: fade(@secondary, 65%);
+              background: fade(extract(@carousel-scheme, 4), 65%);
             }
           }
 
           &:active {
             &:after {
-              background: fade(@secondary, 45%);
+              background: fade(extract(@carousel-scheme, 4), 45%);
             }
           }
 
