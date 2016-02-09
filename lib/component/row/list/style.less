@@ -1,11 +1,17 @@
 .ui-rows-list {
   > .ui-row {
-    &:first-child {
-      border-top-style: solid;
-      border-top-width: 1px;
+    &:before {
+      content: '';
+      border-bottom: solid 1px currentColor;
+      opacity: .2;
+      .absolute(0, auto, auto, 0);
+      width: 100%;
     }
 
-    border-bottom-style: solid;
-    border-bottom-width: 1px;
+    &:last-child {
+      &:before {
+        border-bottom: none;
+      }
+    }
   }
 }
