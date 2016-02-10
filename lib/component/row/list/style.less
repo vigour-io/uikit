@@ -2,7 +2,8 @@
   > .ui-row {
     &:before {
       content: '';
-      border-bottom: solid 1px currentColor;
+      height: 1px;
+      background: currentColor;
       opacity: .2;
       .absolute(0, auto, auto, 0);
       width: 100%;
@@ -10,7 +11,7 @@
 
     &:last-child {
       &:before {
-        border-bottom: none;
+        display: none;
       }
     }
   }
