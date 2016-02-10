@@ -44,14 +44,6 @@
           overflow: hidden;
           .transition(~".4s ease opacity, .2s ease padding");
 
-          &:after {
-            content: '';
-            background: fade(@secondary, 25%);
-            .absolute;
-            .fullsize;
-            z-index: 2;
-          }
-
           @media all @above-layout-breakpoint {
             padding: @gutter;
           }
@@ -72,7 +64,7 @@
 
           &:after {
             content: '';
-            background: fade(@secondary, 25%);
+            background: fade(extract(@carousel-scheme-active, 4), 25%);
             .absolute;
             .fullsize;
             z-index: 2;
